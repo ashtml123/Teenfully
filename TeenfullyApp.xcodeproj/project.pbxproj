@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */; };
-		3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2F2A68C07C005FD9B0 /* ContentView.swift */; };
+		3E987E302A68C07C005FD9B0 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2F2A68C07C005FD9B0 /* Homescreen.swift */; };
 		3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E312A68C07D005FD9B0 /* Assets.xcassets */; };
 		3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E342A68C07D005FD9B0 /* Preview Assets.xcassets */; };
 		3E987E3F2A68C07D005FD9B0 /* TeenfullyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E3E2A68C07D005FD9B0 /* TeenfullyAppTests.swift */; };
 		3E987E492A68C07D005FD9B0 /* TeenfullyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E482A68C07D005FD9B0 /* TeenfullyAppUITests.swift */; };
 		3E987E4B2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E4A2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift */; };
+		3E987E5B2A68C1C6005FD9B0 /* Dailycheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5A2A68C1C6005FD9B0 /* Dailycheckin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		3E987E2A2A68C07C005FD9B0 /* TeenfullyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenfullyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppApp.swift; sourceTree = "<group>"; };
-		3E987E2F2A68C07C005FD9B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3E987E2F2A68C07C005FD9B0 /* Homescreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homescreen.swift; sourceTree = "<group>"; };
 		3E987E312A68C07D005FD9B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E987E342A68C07D005FD9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E987E3A2A68C07D005FD9B0 /* TeenfullyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenfullyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		3E987E442A68C07D005FD9B0 /* TeenfullyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenfullyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E482A68C07D005FD9B0 /* TeenfullyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppUITests.swift; sourceTree = "<group>"; };
 		3E987E4A2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3E987E5A2A68C1C6005FD9B0 /* Dailycheckin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dailycheckin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
-				3E987E2F2A68C07C005FD9B0 /* ContentView.swift */,
+				3E987E572A68C090005FD9B0 /* View */,
 				3E987E312A68C07D005FD9B0 /* Assets.xcassets */,
 				3E987E332A68C07D005FD9B0 /* Preview Content */,
 			);
@@ -125,6 +127,15 @@
 				3E987E4A2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift */,
 			);
 			path = TeenfullyAppUITests;
+			sourceTree = "<group>";
+		};
+		3E987E572A68C090005FD9B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E987E2F2A68C07C005FD9B0 /* Homescreen.swift */,
+				3E987E5A2A68C1C6005FD9B0 /* Dailycheckin.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */,
+				3E987E302A68C07C005FD9B0 /* Homescreen.swift in Sources */,
+				3E987E5B2A68C1C6005FD9B0 /* Dailycheckin.swift in Sources */,
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
