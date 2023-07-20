@@ -2,7 +2,7 @@ import SwiftUI
 
 var name = "Ian"
 
-struct Homescreen: View {
+struct homeScreenView: View {
   var body: some View {
     ZStack() {
       Text("Welcome Back, \(name)!")
@@ -503,8 +503,8 @@ struct Homescreen: View {
   }
 }
 
-struct Homescreen_Previews: PreviewProvider {
+struct homeScreenView_Previews: PreviewProvider {
   static var previews: some View {
-    Homescreen()
+      homeScreenView()
   }
 }

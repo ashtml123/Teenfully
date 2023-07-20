@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct Dailycheckin: View {
+struct dailyCheckinView: View {
   var body: some View {
     ZStack() {
       Group {
@@ -300,8 +300,8 @@ struct Dailycheckin: View {
   }
 }
 
-struct Dailycheckin_Previews: PreviewProvider {
+struct dailyCheckinView_Previews: PreviewProvider {
   static var previews: some View {
-    Dailycheckin()
+      dailyCheckinView()
   }
 }
