@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */; };
-		3E987E302A68C07C005FD9B0 /* homeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2F2A68C07C005FD9B0 /* homeScreenView.swift */; };
+		3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2F2A68C07C005FD9B0 /* ContentView.swift */; };
 		3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E312A68C07D005FD9B0 /* Assets.xcassets */; };
 		3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E342A68C07D005FD9B0 /* Preview Assets.xcassets */; };
 		3E987E3F2A68C07D005FD9B0 /* TeenfullyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E3E2A68C07D005FD9B0 /* TeenfullyAppTests.swift */; };
@@ -19,6 +19,7 @@
 		3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5E2A68CB46005FD9B0 /* meditateView.swift */; };
 		3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E602A68CB8B005FD9B0 /* meditatingView.swift */; };
 		3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E622A68CBB3005FD9B0 /* libraryView.swift */; };
+		3E9880552A6B1C0F0096D59A /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9880542A6B1C0F0096D59A /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 /* Begin PBXFileReference section */
 		3E987E2A2A68C07C005FD9B0 /* TeenfullyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenfullyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppApp.swift; sourceTree = "<group>"; };
-		3E987E2F2A68C07C005FD9B0 /* homeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenView.swift; sourceTree = "<group>"; };
+		3E987E2F2A68C07C005FD9B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E987E312A68C07D005FD9B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E987E342A68C07D005FD9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E987E3A2A68C07D005FD9B0 /* TeenfullyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenfullyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +55,7 @@
 		3E987E5E2A68CB46005FD9B0 /* meditateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditateView.swift; sourceTree = "<group>"; };
 		3E987E602A68CB8B005FD9B0 /* meditatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditatingView.swift; sourceTree = "<group>"; };
 		3E987E622A68CBB3005FD9B0 /* libraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryView.swift; sourceTree = "<group>"; };
+		3E9880542A6B1C0F0096D59A /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,8 @@
 		3E987E572A68C090005FD9B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3E987E2F2A68C07C005FD9B0 /* homeScreenView.swift */,
+				3E987E2F2A68C07C005FD9B0 /* ContentView.swift */,
+				3E9880542A6B1C0F0096D59A /* SwiftUIView.swift */,
 				3E987E5A2A68C1C6005FD9B0 /* dailyCheckinView.swift */,
 				3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */,
 				3E987E5E2A68CB46005FD9B0 /* meditateView.swift */,
@@ -281,7 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */,
-				3E987E302A68C07C005FD9B0 /* homeScreenView.swift in Sources */,
+				3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */,
+				3E9880552A6B1C0F0096D59A /* SwiftUIView.swift in Sources */,
 				3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */,
 				3E987E5B2A68C1C6005FD9B0 /* dailyCheckinView.swift in Sources */,
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
