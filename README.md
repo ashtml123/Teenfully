@@ -4,8 +4,13 @@ Target launch date: July 23, 2023
 
 Progress checklist:
 - [ ] Finish UI/UX design in Figma
+  - [ ] Account settings 
 - [ ] Import designs to swift
-  - [ ] Navigation 
+  - [ ] Navigation
+    - [x] Homescreen
+    - [ ] Login
 - [ ] Implement backend
   - [ ] Account Login
-  - [ ] User feed etc. 
+    - [ ] Apple
+    - [ ] Google
+  - [ ] Database
