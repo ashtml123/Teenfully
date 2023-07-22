@@ -125,15 +125,7 @@ struct ContentView: View {
                           HStack(spacing: 0) {
                               ZStack() {
                                   ZStack() {
-                                      Rectangle()
-                                          .foregroundColor(.clear)
-                                          .frame(width: 64.40, height: 115.64)
-                                          .background(
-                                            AsyncImage(url: URL(string: "https://via.placeholder.com/64x116"))
-                                          )
-                                          .offset(x: 65.80, y: 0.55)
-                                          .rotationEffect(.degrees(-60))
-                                          .opacity(0.30)
+                                    
                                   }
                                   .frame(width: 36.19, height: 41.69)
                                   .offset(x: -19.42, y: 12.66)
@@ -165,24 +157,7 @@ struct ContentView: View {
                                   .cornerRadius(20)
                                   .offset(x: 0, y: 0)
                               ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 111.52, height: 200.25)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/112x200"))
-                                      )
-                                      .offset(x: 126.06, y: 11.96)
-                                      .rotationEffect(.degrees(-60))
-                                      .opacity(0.30)
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 111.52, height: 200.25)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/112x200"))
-                                      )
-                                      .offset(x: 126.06, y: 12.96)
-                                      .rotationEffect(.degrees(-60))
-                                      .opacity(0.30)
+                    
                               }
                               .frame(width: 356.50, height: 92.99)
                               .offset(x: 82.75, y: 86.99)
@@ -226,15 +201,10 @@ struct ContentView: View {
                           HStack(spacing: 0) {
                               ZStack() {
                                   ZStack() {
-                                      Rectangle()
-                                          .foregroundColor(.clear)
-                                          .frame(width: 64.40, height: 115.64)
-                                          .background(
-                                            AsyncImage(url: URL(string: "https://via.placeholder.com/64x116"))
-                                          )
-                                          .offset(x: 65.80, y: 0.55)
-                                          .rotationEffect(.degrees(-60))
-                                          .opacity(0.30)
+                                Image("DailyCheckin")
+                                          .resizable()
+                                          .frame(width:90,height:90)
+                                          .offset(x:40,y:-20)
                                   }
                                   .frame(width: 36.19, height: 41.69)
                                   .offset(x: -19.42, y: 12.66)
