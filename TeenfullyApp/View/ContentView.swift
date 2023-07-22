@@ -11,36 +11,6 @@ struct ContentView: View {
               .lineSpacing(32)
               .foregroundColor(Color(red: 0.22, green: 0.11, blue: 0.20))
               .offset(x: -45, y: -273)
-          ZStack() {
-              ZStack() {
-                  Ellipse()
-                      .foregroundColor(.clear)
-                      .frame(width: 18, height: 18)
-                      .background(Color(red: 1, green: 0.51, blue: 0.21))
-                      .offset(x: 0, y: 0)
-                  Text("3")
-                      .font(Font.custom("Epilogue", size: 12).weight(.medium))
-                      .foregroundColor(Color(red: 0.98, green: 0.98, blue: 0.98))
-                      .offset(x: 0.43, y: 1.29)
-              }
-              .frame(width: 18, height: 18)
-              .offset(x: 154.50, y: -13)
-                  .overlay(
-                    Ellipse()
-                        .inset(by: -2)
-                        .stroke(
-                            Color(red: 0.94, green: 0.62, blue: 0.33).opacity(0.47), lineWidth: 2
-                        )
-                  )
-                  .offset(x: -146, y: 4.50)
-          }
-          .frame(width: 327, height: 44)
-          .offset(x: 1, y: -347)
-          ZStack() {
-              
-          }
-          .frame(width: 51, height: 51)
-          .offset(x: 137, y: -343.50)
               ZStack() {
                   ZStack() {
                       ZStack() {
