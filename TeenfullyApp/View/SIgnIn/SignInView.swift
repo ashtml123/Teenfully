@@ -87,7 +87,7 @@ struct SignInView: View {
             .foregroundColor(.clear)
             .frame(width: 271, height: 42)
             .background(Color(red: 1, green: 0.51, blue: 0.21))
-            .cornerRdadius(5)
+            .cornerRadius(5)
             .offset(x: 0, y: 0)
           Text("LOG IN")
             .font(Font.custom("Inter", size: 13.60).weight(.semibold))
