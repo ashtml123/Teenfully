@@ -25,12 +25,6 @@ struct ContentView: View {
               }
               .frame(width: 18, height: 18)
               .offset(x: 154.50, y: -13)
-              Ellipse()
-                  .foregroundColor(.clear)
-                  .frame(width: 35, height: 35)
-                  .background(
-                    AsyncImage(url: URL(string: "https://via.placeholder.com/35x35"))
-                  )
                   .overlay(
                     Ellipse()
                         .inset(by: -2)
@@ -64,24 +58,7 @@ struct ContentView: View {
                                   .cornerRadius(20)
                                   .offset(x: 0, y: 0)
                               ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 111.52, height: 200.25)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/112x200"))
-                                      )
-                                      .offset(x: 126.06, y: 11.96)
-                                      .rotationEffect(.degrees(-60))
-                                      .opacity(0.30)
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 111.52, height: 200.25)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/112x200"))
-                                      )
-                                      .offset(x: 126.06, y: 12.96)
-                                      .rotationEffect(.degrees(-60))
-                                      .opacity(0.30)
+                        
                               }
                               .frame(width: 356.50, height: 92.99)
                               .offset(x: 82.75, y: 86.99)
