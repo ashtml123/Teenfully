@@ -23,12 +23,30 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>TeenfullyApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3E987E292A68C07C005FD9B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E987E392A68C07D005FD9B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E987E432A68C07D005FD9B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
