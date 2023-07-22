@@ -230,15 +230,10 @@ struct ContentView: View {
                               .offset(x: 0, y: 0)
                           ZStack() {
                               ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 111.52, height: 200.25)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/112x200"))
-                                      )
-                                      .offset(x: 126.06, y: 11.96)
-                                      .rotationEffect(.degrees(-60))
-                                      .opacity(0.30)
+                                  Image("MeditationIcon")
+                                      .resizable()
+                                      .frame(width:85,height:85)
+                                      .offset(x:20,y:-100)
                               }
                               .frame(width: 356.50, height: 92.99)
                               .offset(x: 82.75, y: 86.99)
@@ -299,15 +294,7 @@ struct ContentView: View {
                               .offset(x: 0, y: 0)
                           ZStack() {
                               ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 111.52, height: 200.25)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/112x200"))
-                                      )
-                                      .offset(x: 126.06, y: 11.96)
-                                      .rotationEffect(.degrees(-60))
-                                      .opacity(0.30)
+                                  Image("Library")
                               }
                               .frame(width: 356.50, height: 92.99)
                               .offset(x: 82.75, y: 86.99)
