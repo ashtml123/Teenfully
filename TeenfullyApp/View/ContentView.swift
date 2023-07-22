@@ -389,16 +389,12 @@ struct ContentView: View {
                               .cornerRadius(20)
                               .offset(x: 0, y: 0)
                           ZStack() {
-                              ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 111.52, height: 200.25)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/112x200"))
-                                      )
-                                      .offset(x: 126.06, y: 11.96)
-                                      .rotationEffect(.degrees(-60))
-                                      .opacity(0.30)
+                              ZStack() {//corresponds to habit builder
+                                  Image("HabitBuilder")
+                                      .resizable()
+                                      .scaledToFit()
+                                      .frame(width:50)
+                                      .offset(x:30,y:-90)
                               }
                               .frame(width: 356.50, height: 92.99)
                               .offset(x: 82.75, y: 86.99)
@@ -460,22 +456,6 @@ struct ContentView: View {
                                   .foregroundColor(.clear)
                                   .frame(width: 52, height: 52)
                                   .offset(x: 0, y: 0)
-                              ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 28, height: 28)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/28x28"))
-                                      )
-                                      .offset(x: 0, y: 0)
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 28, height: 28)
-                                      .background(
-                                        AsyncImage(url: URL(string: "https://via.placeholder.com/28x28"))
-                                      )
-                                      .offset(x: 0, y: 0)
-                              }
                               .frame(width: 28, height: 28)
                               .offset(x: 0, y: 0)
                           }
