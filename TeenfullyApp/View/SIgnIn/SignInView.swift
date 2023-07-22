@@ -1,4 +1,7 @@
 import SwiftUI
+import Firebase
+import FirebaseAuth
+import GoogleDataTransport
 
 struct SignInView: View {
   var body: some View {
@@ -143,3 +146,4 @@ struct SignInView_Previews: PreviewProvider {
     SignInView()
   }
 }
+
