@@ -18,12 +18,8 @@ struct habitBuilderView: View {
           }
           .frame(width: 18, height: 18)
           .offset(x: 154.50, y: -13)
-          Ellipse()
-            .foregroundColor(.clear)
-            .frame(width: 35, height: 35)
-            .background(
-              AsyncImage(url: URL(string: "https://via.placeholder.com/35x35"))
-            )
+          
+        
             .overlay(
               Ellipse()
                 .inset(by: -2)
@@ -325,20 +321,6 @@ struct habitBuilderView: View {
                 .frame(width: 52, height: 52)
                 .offset(x: 0, y: 0)
               ZStack() {
-                Rectangle()
-                  .foregroundColor(.clear)
-                  .frame(width: 28, height: 28)
-                  .background(
-                    AsyncImage(url: URL(string: "https://via.placeholder.com/28x28"))
-                  )
-                  .offset(x: 0, y: 0)
-                Rectangle()
-                  .foregroundColor(.clear)
-                  .frame(width: 28, height: 28)
-                  .background(
-                    AsyncImage(url: URL(string: "https://via.placeholder.com/28x28"))
-                  )
-                  .offset(x: 0, y: 0)
               }
               .frame(width: 28, height: 28)
               .offset(x: 0, y: 0)

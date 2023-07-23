@@ -152,26 +152,12 @@ struct dailyCheckinView: View {
                 .frame(width: 18, height: 18)
                 .background(Color(red: 1, green: 0.51, blue: 0.21))
                 .offset(x: 0, y: 0)
-              Text("3")
-                .font(Font.custom("Epilogue", size: 12).weight(.medium))
-                .foregroundColor(Color(red: 0.98, green: 0.98, blue: 0.98))
-                .offset(x: 0.43, y: 1.29)
+              
             }
             .frame(width: 18, height: 18)
             .offset(x: 154.50, y: -13)
-            Ellipse()
-              .foregroundColor(.clear)
-              .frame(width: 35, height: 35)
-              .background(
-                AsyncImage(url: URL(string: "https://via.placeholder.com/35x35"))
-              )
-              .overlay(
-                Ellipse()
-                  .inset(by: -2)
-                  .stroke(
-                    Color(red: 0.94, green: 0.62, blue: 0.33).opacity(0.47), lineWidth: 2
-                  )
-              )
+    
+              
               .offset(x: -146, y: 4.50)
           }
           .frame(width: 327, height: 44)
@@ -183,15 +169,6 @@ struct dailyCheckinView: View {
           .offset(x: 151, y: -21)
           ZStack() {
             ZStack() {
-              Rectangle()
-                .foregroundColor(.clear)
-                .frame(width: 64.40, height: 115.64)
-                .background(
-                  AsyncImage(url: URL(string: "https://via.placeholder.com/64x116"))
-                )
-                .offset(x: 65.80, y: 0.55)
-                .rotationEffect(.degrees(-60))
-                .opacity(0.30)
             }
             .frame(width: 36.19, height: 41.69)
             .offset(x: -19.42, y: 12.66)
