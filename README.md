@@ -1,14 +1,15 @@
 # Teenfully APP Development 
 
-Target launch date: July 23, 2023
+Target launch date: July 30, 2023
 
 Progress checklist:
 - [ ] Finish UI/UX design in Figma
   - [ ] Account settings 
 - [ ] Import designs to swift
-  - [ ] Navigation
+  - [x] Navigation
     - [x] Homescreen
-    - [ ] Login
+  - [ ] Login
+  - [ ] Profile View
 - [ ] Implement backend
   - [ ] Account Login
     - [ ] Apple
