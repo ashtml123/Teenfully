@@ -10,6 +10,10 @@
 		3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4912A6EA9B00077EB2D /* AccountTab.swift */; };
 		3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */; };
 		3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4962A6EB95A0077EB2D /* StreakView.swift */; };
+		3E46A49A2A6EBDB10077EB2D /* ProfileInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4992A6EBDB10077EB2D /* ProfileInterface.swift */; };
+		3E46A49D2A6F1D850077EB2D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A49C2A6F1D850077EB2D /* UserData.swift */; };
+		3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A49E2A6F22510077EB2D /* ModelData.swift */; };
+		3E46A4A12A6F251C0077EB2D /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E46A4A02A6F251B0077EB2D /* userData.json */; };
 		3E4860902A6C86250074AC7C /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48608F2A6C86250074AC7C /* EmailView.swift */; };
 		3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */; };
 		3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2F2A68C07C005FD9B0 /* ContentView.swift */; };
@@ -80,6 +84,10 @@
 		3E46A4912A6EA9B00077EB2D /* AccountTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTab.swift; sourceTree = "<group>"; };
 		3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		3E46A4962A6EB95A0077EB2D /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
+		3E46A4992A6EBDB10077EB2D /* ProfileInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInterface.swift; sourceTree = "<group>"; };
+		3E46A49C2A6F1D850077EB2D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3E46A49E2A6F22510077EB2D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		3E46A4A02A6F251B0077EB2D /* userData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userData.json; sourceTree = "<group>"; };
 		3E48608F2A6C86250074AC7C /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		3E987E2A2A68C07C005FD9B0 /* TeenfullyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenfullyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppApp.swift; sourceTree = "<group>"; };
@@ -163,6 +171,31 @@
 			path = HomeScreenTab;
 			sourceTree = "<group>";
 		};
+		3E46A4982A6EBD9A0077EB2D /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				3E46A4992A6EBDB10077EB2D /* ProfileInterface.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		3E46A49B2A6F1C720077EB2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E46A49C2A6F1D850077EB2D /* UserData.swift */,
+				3E46A49E2A6F22510077EB2D /* ModelData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3E46A4A22A6F252E0077EB2D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3E46A4A02A6F251B0077EB2D /* userData.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		3E987E212A68C07C005FD9B0 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
+				3E46A4A22A6F252E0077EB2D /* Data */,
+				3E46A49B2A6F1C720077EB2D /* Models */,
 				3E987E572A68C090005FD9B0 /* View */,
 				3E987E312A68C07D005FD9B0 /* Assets.xcassets */,
 				3EC1A7CE2A6C596D000C8690 /* Backend */,
@@ -229,9 +264,10 @@
 				3E987E5E2A68CB46005FD9B0 /* meditateView.swift */,
 				3E987E602A68CB8B005FD9B0 /* meditatingView.swift */,
 				3E987E622A68CBB3005FD9B0 /* libraryView.swift */,
+				3E46A4982A6EBD9A0077EB2D /* ProfileView */,
+				3EC1A7572A6C0D43000C8690 /* SIgnIn */,
 				3E46A4932A6EAB390077EB2D /* HomeScreenTab */,
 				AFE19C882A6C6DC800374F67 /* GoogleService-Info.plist */,
-				3EC1A7572A6C0D43000C8690 /* SIgnIn */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -391,6 +427,7 @@
 			files = (
 				3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */,
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
+				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
 				AFE19C892A6C6DC800374F67 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +458,9 @@
 				3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */,
 				3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */,
 				3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */,
+				3E46A49D2A6F1D850077EB2D /* UserData.swift in Sources */,
 				3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */,
+				3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */,
 				3E4860902A6C86250074AC7C /* EmailView.swift in Sources */,
 				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,
 				3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */,
@@ -429,6 +468,7 @@
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
 				3EC1A7D02A6C5992000C8690 /* FirebaseView.swift in Sources */,
 				3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */,
+				3E46A49A2A6EBDB10077EB2D /* ProfileInterface.swift in Sources */,
 				3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */,
 				3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */,
 			);
