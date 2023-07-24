@@ -28,6 +28,6 @@ struct StreakView: View {
 
 struct StreakView_Previews: PreviewProvider {
     static var previews: some View {
-        StreakView()
+        StreakView(streakNum: 10)
     }
 }

@@ -7,7 +7,7 @@ struct AccountTab: View {
         HStack(){
             ProfilePicture(profilePicture: ModelData().userData[0].image)
             Spacer()
-            StreakView()
+            StreakView(streakNum: ModelData().userData[0].streakNumber)
         }
     }
 }
