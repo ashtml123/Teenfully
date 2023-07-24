@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct StreakView: View {
-    var streakNum = 10
+    var streakNum : Int
     
     var body: some View {
         ZStack {

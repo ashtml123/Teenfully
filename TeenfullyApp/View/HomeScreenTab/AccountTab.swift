@@ -5,7 +5,7 @@ import SwiftUI
 struct AccountTab: View {
     var body: some View {
         HStack(){
-            ProfilePicture(profilePicture: Image("DavidProfile"))
+            ProfilePicture(profilePicture: ModelData().userData[0].image)
             Spacer()
             StreakView()
         }
