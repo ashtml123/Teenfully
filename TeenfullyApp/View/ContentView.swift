@@ -1,15 +1,20 @@
 import SwiftUI
-var name = "Ian"
+var name = "David"
 
 struct ContentView: View {
   var body: some View {
       NavigationView {
               ZStack() {
-                  Text("Welcome Back, \(name)!")
-                      .font(Font.custom("Epilogue", size: 26).weight(.medium))
-                      .lineSpacing(32)
-                      .foregroundColor(Color(red: 0.22, green: 0.11, blue: 0.20))
-                      .offset(x: -45, y: -300)
+                  VStack() {
+                      AccountTab()
+                          .frame(width:300)
+                          .offset(x:0,y:-300)
+                      Text("Welcome Back, \(name)!")
+                          .font(Font.custom("Epilogue", size: 26).weight(.medium))
+                          .lineSpacing(32)
+                          .foregroundColor(Color(red: 0.22, green: 0.11, blue: 0.20))
+                          .offset(x: -45, y: -275)
+                  }
                   ScrollView {
                   ZStack() {
                       ZStack() {

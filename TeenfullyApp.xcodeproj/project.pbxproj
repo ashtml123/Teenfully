@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4912A6EA9B00077EB2D /* AccountTab.swift */; };
+		3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */; };
+		3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4962A6EB95A0077EB2D /* StreakView.swift */; };
 		3E4860902A6C86250074AC7C /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48608F2A6C86250074AC7C /* EmailView.swift */; };
 		3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */; };
 		3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2F2A68C07C005FD9B0 /* ContentView.swift */; };
@@ -74,6 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E46A4912A6EA9B00077EB2D /* AccountTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTab.swift; sourceTree = "<group>"; };
+		3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		3E46A4962A6EB95A0077EB2D /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
 		3E48608F2A6C86250074AC7C /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		3E987E2A2A68C07C005FD9B0 /* TeenfullyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenfullyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppApp.swift; sourceTree = "<group>"; };
@@ -147,6 +153,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E46A4932A6EAB390077EB2D /* HomeScreenTab */ = {
+			isa = PBXGroup;
+			children = (
+				3E46A4912A6EA9B00077EB2D /* AccountTab.swift */,
+				3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */,
+				3E46A4962A6EB95A0077EB2D /* StreakView.swift */,
+			);
+			path = HomeScreenTab;
+			sourceTree = "<group>";
+		};
 		3E987E212A68C07C005FD9B0 = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +229,7 @@
 				3E987E5E2A68CB46005FD9B0 /* meditateView.swift */,
 				3E987E602A68CB8B005FD9B0 /* meditatingView.swift */,
 				3E987E622A68CBB3005FD9B0 /* libraryView.swift */,
+				3E46A4932A6EAB390077EB2D /* HomeScreenTab */,
 				AFE19C882A6C6DC800374F67 /* GoogleService-Info.plist */,
 				3EC1A7572A6C0D43000C8690 /* SIgnIn */,
 			);
@@ -402,14 +419,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */,
+				3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */,
 				3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */,
 				3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */,
 				3E4860902A6C86250074AC7C /* EmailView.swift in Sources */,
+				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,
 				3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */,
 				3E987E5B2A68C1C6005FD9B0 /* dailyCheckinView.swift in Sources */,
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
 				3EC1A7D02A6C5992000C8690 /* FirebaseView.swift in Sources */,
 				3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */,
+				3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */,
 				3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
