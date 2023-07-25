@@ -243,63 +243,14 @@ struct ContentView: View {
                       .frame(width: 326, height: 578)
                       .offset(x: 0, y: 0)
                   }
-                      ZStack() {//bottom bar
-//                          Rectangle()
-//                              .foregroundColor(.clear)
-//                              .frame(width: 375, height: 85)
-//                              .background(.white)
-//                              .offset(x: 0, y: 0)
-//                              .shadow(
-//                                color: Color(red: 0, green: 0, blue: 0, opacity: 0.11), radius: 12, y: 4
-//                              )
-                          ZStack() {
-                              ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 52, height: 52)
-                                      .offset(x: 0, y: 0)
-                                      .frame(width: 28, height: 28)
-                                      .offset(x: 0, y: 0)
-                              }
-                              .frame(width: 52, height: 52)
-                              .offset(x: -92, y: 0)
-                              ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 52, height: 52)
-                                      .offset(x: 0, y: 0)
-                                  ZStack() {
-                                      
-                                  }
-                                  .frame(width: 42, height: 42)
-                                  .offset(x: -0, y: -0)
-                              }
-                              .frame(width: 52, height: 52)
-                              .offset(x: 0, y: 0)
-                              ZStack() {
-                                  Rectangle()
-                                      .foregroundColor(.clear)
-                                      .frame(width: 52, height: 52)
-                                      .offset(x: 0, y: 0)
-                                  ZStack() {
-                                      ZStack() { }
-                                          .frame(width: 26.67, height: 24.63)
-                                          .offset(x: 0, y: 0.31)
-                                  }
-                                  .frame(width: 32, height: 32)
-                                  .offset(x: 0, y: -0)
-                              }
-                              .frame(width: 52, height: 52)
-                              .offset(x: 92, y: 0)
-                          }
-                          .frame(width: 236, height: 52)
-                          .offset(x: -45.50, y: -5.50)
-                      }
-                      .frame(width: 375, height: 85)
-                      .offset(x: -0.50, y: 248)
+
                   }
                   .frame(width: 326, height: 685)
                   .offset(x: 0.50, y: 118.50)
+                  ZStack {
+                      BottomBar()
+                          .offset(y:380)
+                  }
               }
               .frame(width: 375, height: 812)
               .background(Color(red: 0.98, green: 0.98, blue: 0.98))

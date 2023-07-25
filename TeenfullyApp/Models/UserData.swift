@@ -4,7 +4,6 @@ import Foundation
 import SwiftUI
 
 struct UserData: Hashable, Codable, Identifiable{ //I need to learn what each term means...
-        //get off at ogilve station, remember
     var id : Int
     var firstName : String
     var lastName : String
