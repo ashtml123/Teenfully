@@ -28,6 +28,10 @@
 		3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E622A68CBB3005FD9B0 /* libraryView.swift */; };
 		3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A502A6F579F0089C80B /* HomeScreenView.swift */; };
 		3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A522A6F57FD0089C80B /* ContentView.swift */; };
+		3EB97A562A6F5ED80089C80B /* TwoQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A552A6F5ED80089C80B /* TwoQuestionView.swift */; };
+		3EB97A582A6F67200089C80B /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A572A6F67200089C80B /* Questions.swift */; };
+		3EB97A5A2A6F691E0089C80B /* dailyQuestionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EB97A592A6F691E0089C80B /* dailyQuestionData.json */; };
+		3EB97A5C2A6F6C750089C80B /* ThreeQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A5B2A6F6C750089C80B /* ThreeQuestionView.swift */; };
 		3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1A7582A6C0D51000C8690 /* SignInView.swift */; };
 		3EC1A7992A6C58D4000C8690 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A7982A6C58D4000C8690 /* FirebaseAnalytics */; };
 		3EC1A79B2A6C58D4000C8690 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A79A2A6C58D4000C8690 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -106,6 +110,10 @@
 		3E987E622A68CBB3005FD9B0 /* libraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryView.swift; sourceTree = "<group>"; };
 		3EB97A502A6F579F0089C80B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		3EB97A522A6F57FD0089C80B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3EB97A552A6F5ED80089C80B /* TwoQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoQuestionView.swift; sourceTree = "<group>"; };
+		3EB97A572A6F67200089C80B /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		3EB97A592A6F691E0089C80B /* dailyQuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyQuestionData.json; sourceTree = "<group>"; };
+		3EB97A5B2A6F6C750089C80B /* ThreeQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionView.swift; sourceTree = "<group>"; };
 		3EC1A7582A6C0D51000C8690 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3EC1A7CF2A6C5992000C8690 /* FirebaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseView.swift; sourceTree = "<group>"; };
 		AFE19C882A6C6DC800374F67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3E46A49C2A6F1D850077EB2D /* UserData.swift */,
+				3EB97A572A6F67200089C80B /* Questions.swift */,
 				3E46A49E2A6F22510077EB2D /* ModelData.swift */,
 			);
 			path = Models;
@@ -194,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				3E46A4A02A6F251B0077EB2D /* userData.json */,
+				3EB97A592A6F691E0089C80B /* dailyQuestionData.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -267,12 +277,22 @@
 				3E987E5E2A68CB46005FD9B0 /* meditateView.swift */,
 				3E987E602A68CB8B005FD9B0 /* meditatingView.swift */,
 				3E987E622A68CBB3005FD9B0 /* libraryView.swift */,
+				3EB97A542A6F5EBF0089C80B /* DailyCheckin */,
 				3E46A4982A6EBD9A0077EB2D /* ProfileView */,
 				3EC1A7572A6C0D43000C8690 /* SIgnIn */,
 				3E46A4932A6EAB390077EB2D /* HomeScreenTab */,
 				AFE19C882A6C6DC800374F67 /* GoogleService-Info.plist */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3EB97A542A6F5EBF0089C80B /* DailyCheckin */ = {
+			isa = PBXGroup;
+			children = (
+				3EB97A552A6F5ED80089C80B /* TwoQuestionView.swift */,
+				3EB97A5B2A6F6C750089C80B /* ThreeQuestionView.swift */,
+			);
+			path = DailyCheckin;
 			sourceTree = "<group>";
 		};
 		3EC1A7572A6C0D43000C8690 /* SIgnIn */ = {
@@ -429,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */,
+				3EB97A5A2A6F691E0089C80B /* dailyQuestionData.json in Resources */,
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
 				AFE19C892A6C6DC800374F67 /* GoogleService-Info.plist in Resources */,
@@ -459,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */,
+				3EB97A5C2A6F6C750089C80B /* ThreeQuestionView.swift in Sources */,
 				3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */,
 				3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */,
 				3E46A49D2A6F1D850077EB2D /* UserData.swift in Sources */,
@@ -469,11 +491,13 @@
 				3E987E5B2A68C1C6005FD9B0 /* dailyCheckinView.swift in Sources */,
 				3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */,
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
+				3EB97A562A6F5ED80089C80B /* TwoQuestionView.swift in Sources */,
 				3EC1A7D02A6C5992000C8690 /* FirebaseView.swift in Sources */,
 				3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */,
 				3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */,
 				3E46A49A2A6EBDB10077EB2D /* ProfileInterface.swift in Sources */,
 				3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */,
+				3EB97A582A6F67200089C80B /* Questions.swift in Sources */,
 				3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

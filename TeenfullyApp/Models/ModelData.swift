@@ -8,7 +8,9 @@ import Combine
 
 final class ModelData: ObservableObject {//what does final keyword mean in swift?
     @Published var userData: [UserData] = load("userData.json")
+    @Published var questionData: [questions] = load("dailyQuestionData.json")
 }
+
 
 func load<T: Decodable>(_ filename: String) ->T{
     let data : Data
