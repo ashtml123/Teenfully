@@ -14,4 +14,7 @@ Progress checklist:
   - [ ] Account Login
     - [ ] Apple
     - [ ] Google
-  - [ ] Database (we are using Firebase, probably)
+  - [ ] Database 
+    - [x] Setup
+    - [ ] Read User data
+    - [ ] Write user data
