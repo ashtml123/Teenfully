@@ -16,7 +16,6 @@
 		3E46A4A12A6F251C0077EB2D /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E46A4A02A6F251B0077EB2D /* userData.json */; };
 		3E4860902A6C86250074AC7C /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48608F2A6C86250074AC7C /* EmailView.swift */; };
 		3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */; };
-		3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2F2A68C07C005FD9B0 /* ContentView.swift */; };
 		3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E312A68C07D005FD9B0 /* Assets.xcassets */; };
 		3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E342A68C07D005FD9B0 /* Preview Assets.xcassets */; };
 		3E987E3F2A68C07D005FD9B0 /* TeenfullyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E3E2A68C07D005FD9B0 /* TeenfullyAppTests.swift */; };
@@ -28,6 +27,8 @@
 		3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E602A68CB8B005FD9B0 /* meditatingView.swift */; };
 		3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E622A68CBB3005FD9B0 /* libraryView.swift */; };
 		3EB97A4D2A6F4B370089C80B /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A4C2A6F4B370089C80B /* BottomBar.swift */; };
+		3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A502A6F579F0089C80B /* HomeScreenView.swift */; };
+		3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A522A6F57FD0089C80B /* ContentView.swift */; };
 		3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1A7582A6C0D51000C8690 /* SignInView.swift */; };
 		3EC1A7992A6C58D4000C8690 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A7982A6C58D4000C8690 /* FirebaseAnalytics */; };
 		3EC1A79B2A6C58D4000C8690 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A79A2A6C58D4000C8690 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -92,7 +93,6 @@
 		3E48608F2A6C86250074AC7C /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		3E987E2A2A68C07C005FD9B0 /* TeenfullyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenfullyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppApp.swift; sourceTree = "<group>"; };
-		3E987E2F2A68C07C005FD9B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E987E312A68C07D005FD9B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E987E342A68C07D005FD9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E987E3A2A68C07D005FD9B0 /* TeenfullyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenfullyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +106,8 @@
 		3E987E602A68CB8B005FD9B0 /* meditatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditatingView.swift; sourceTree = "<group>"; };
 		3E987E622A68CBB3005FD9B0 /* libraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryView.swift; sourceTree = "<group>"; };
 		3EB97A4C2A6F4B370089C80B /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		3EB97A502A6F579F0089C80B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		3EB97A522A6F57FD0089C80B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3EC1A7582A6C0D51000C8690 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3EC1A7CF2A6C5992000C8690 /* FirebaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseView.swift; sourceTree = "<group>"; };
 		AFE19C882A6C6DC800374F67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -260,9 +262,10 @@
 		3E987E572A68C090005FD9B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3E987E2F2A68C07C005FD9B0 /* ContentView.swift */,
+				3EB97A502A6F579F0089C80B /* HomeScreenView.swift */,
 				3E987E5A2A68C1C6005FD9B0 /* dailyCheckinView.swift */,
 				3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */,
+				3EB97A522A6F57FD0089C80B /* ContentView.swift */,
 				3E987E5E2A68CB46005FD9B0 /* meditateView.swift */,
 				3E987E602A68CB8B005FD9B0 /* meditatingView.swift */,
 				3E987E622A68CBB3005FD9B0 /* libraryView.swift */,
@@ -470,16 +473,17 @@
 				3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */,
 				3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */,
 				3E46A49D2A6F1D850077EB2D /* UserData.swift in Sources */,
-				3E987E302A68C07C005FD9B0 /* ContentView.swift in Sources */,
 				3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */,
 				3E4860902A6C86250074AC7C /* EmailView.swift in Sources */,
 				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,
 				3EB97A4D2A6F4B370089C80B /* BottomBar.swift in Sources */,
 				3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */,
 				3E987E5B2A68C1C6005FD9B0 /* dailyCheckinView.swift in Sources */,
+				3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */,
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
 				3EC1A7D02A6C5992000C8690 /* FirebaseView.swift in Sources */,
 				3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */,
+				3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */,
 				3E46A49A2A6EBDB10077EB2D /* ProfileInterface.swift in Sources */,
 				3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */,
 				3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */,
