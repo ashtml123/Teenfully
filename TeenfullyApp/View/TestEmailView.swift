@@ -25,6 +25,8 @@ struct TestEmailView: View {
         let ref = Database.database().reference()
         ref.child("users").child(user.uid).setValue(["email": user.email, "username": user.username])
     }
+    
+    
 }
 
 struct TestEmailView_Previews: PreviewProvider {
