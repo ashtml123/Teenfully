@@ -5,13 +5,21 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-           HomeScreenView()
+            HomeScreenView()
                 .tabItem(){
                     Image("HomeIcon")
                 }
             Text("Some Stuff")
                 .tabItem(){
                     Image("GroupIcon")
+                }
+            Text("Some more stuff")
+                .tabItem(){
+                    Image("Medals")
+                }
+            Text("Some more more stuff")
+                .tabItem(){
+                    Image("FeedBacck")
                 }
         }
         .offset(y:20)
