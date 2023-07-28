@@ -4,7 +4,20 @@ import FirebaseAuth
 import GoogleDataTransport
 
 struct SignInView: View {
-  var body: some View {
+    @State private var email: String = ""
+    @State private var password: String = ""
+    
+    func signIn(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                print("Sign-in error: \(error.localizedDescription)")
+            } else {
+                print("Sign-in successful!")
+                // Perform any action you want after successful sign-in.
+            }
+        }
+    }
+    var body: some View {
     ZStack() {
       Group {
         Text("Welcome to Teenfully!")
@@ -54,14 +67,11 @@ struct SignInView: View {
               .stroke(Color(red: 0.85, green: 0.85, blue: 0.85), lineWidth: 0.50)
           )
           .offset(x: -0.50, y: 48)
-        Text("Email Address")
-          .font(Font.custom("Inter", size: 12.60).weight(.medium))
-          .foregroundColor(Color(red: 0.85, green: 0.85, blue: 0.85))
-          .offset(x: -77, y: -5.50)
-        Text("Password")
-          .font(Font.custom("Inter", size: 12.60).weight(.medium))
-          .foregroundColor(Color(red: 0.85, green: 0.85, blue: 0.85))
-          .offset(x: -90.50, y: 47.50)
+        TextField("Email", text: $email)
+              .offset(x:100,y:2)
+
+        SecureField("Password", text: $password)
+              .offset(x:100,y:50)
       };Group {
         Text("Don’t have an account? Sign Up")
           .font(Font.custom("Inter", size: 12.60))
@@ -92,10 +102,17 @@ struct SignInView: View {
             .background(Color(red: 1, green: 0.51, blue: 0.21))
             .cornerRadius(5)
             .offset(x: 0, y: 0)
-          Text("LOG IN")
-            .font(Font.custom("Inter", size: 13.60).weight(.semibold))
-            .foregroundColor(.white)
-            .offset(x: 0.50, y: 0)
+        Button(action: {
+                Auth.auth().signIn(withEmail: self.email, password: self.password) { authResult, error in
+                    if let error = error {
+                        print("Authentication failed with error: \(error.localizedDescription)")
+                    } else {
+                        print("Authentication succeeded.")
+                    }
+                }
+            }) {
+                Text("Log In")
+            }
         }
         .frame(width: 271, height: 42)
         .offset(x: -0.50, y: 122)
