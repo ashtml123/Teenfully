@@ -31,6 +31,7 @@ struct SignUpView: View {
         authenticationState = .authenticating
         do  {
             try await Auth.auth().createUser(withEmail: email, password: password)
+            authenticated=true
             return true
         }
         catch {
@@ -43,7 +44,8 @@ struct SignUpView: View {
     private func sWithEmailPassword() -> Void{
         Task {
             if await signUpWithEmailPassword() == true {
-                dismiss()
+                authenticated=true
+                print("Got here; authenticated is \(authenticated)")
             }
         }
     }
@@ -94,6 +96,7 @@ struct SignUpView: View {
     }
     var body: some View {
         if(authenticated){
+            
             ContentView()
         }
         else{
