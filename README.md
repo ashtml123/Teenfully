@@ -8,7 +8,7 @@ Progress checklist:
 - [ ] Import designs to swift
   - [x] Navigation
     - [x] Homescreen
-  - [ ] Login
+  - [x] Login
   - [ ] Profile View
 - [ ] Implement backend
   - [x] Account Login
