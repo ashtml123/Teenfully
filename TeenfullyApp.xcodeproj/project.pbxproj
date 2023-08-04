@@ -73,6 +73,7 @@
 		A61057FB2A7B05D900C90E36 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A61057FA2A7B05D900C90E36 /* GoogleSignIn */; };
 		A61057FD2A7B05D900C90E36 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A61057FC2A7B05D900C90E36 /* GoogleSignInSwift */; };
 		A61057FF2A7C1F3400C90E36 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61057FE2A7C1F3400C90E36 /* SignUpView.swift */; };
+		A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */; };
 		A66F0C4F2A73455900A5F49F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66F0C4E2A73455900A5F49F /* GoogleService-Info.plist */; };
 		A6DAAA5B2A7340A800846829 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		3EF9A5DF2A70B5190095C20A /* Habits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
 		A61057F82A7AFB3300C90E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A61057FE2A7C1F3400C90E36 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A66F0C4E2A73455900A5F49F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +264,7 @@
 				3E987E312A68C07D005FD9B0 /* Assets.xcassets */,
 				3EC1A7CE2A6C596D000C8690 /* Backend */,
 				3E987E332A68C07D005FD9B0 /* Preview Content */,
+				A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */,
 			);
 			path = TeenfullyApp;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				3E46A49D2A6F1D850077EB2D /* UserData.swift in Sources */,
 				3EF9A5DD2A70A98F0095C20A /* LinkLess.swift in Sources */,
 				3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */,
+				A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */,
 				3E4860902A6C86250074AC7C /* EmailView.swift in Sources */,
 				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,
 				3EB85BFE2A714CC500D20273 /* MeditateBox.swift in Sources */,

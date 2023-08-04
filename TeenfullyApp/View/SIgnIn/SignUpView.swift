@@ -16,6 +16,9 @@ enum AuthenticationState {
 enum AuthenticationError: Error {
     case tokenError(message: String)
 }
+
+
+
 struct SignUpView: View {
     @State var firstname: String = ""
     @State var lastname: String = ""
@@ -26,21 +29,31 @@ struct SignUpView: View {
     @State var authenticationState: AuthenticationState = .unauthenticated
     @State var failed = false
     @State var errorMessage: String = ""
+    let db = FirebaseManager.shared.db
+    
     @Environment(\.dismiss) var dismiss
+    
+    
     func signUpWithEmailPassword() async -> Bool {
         authenticationState = .authenticating
-        do  {
-            try await Auth.auth().createUser(withEmail: email, password: password)
-            authenticated=true
+        do {
+            let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
+            let user = authResult.user
+            let uid = user.uid
+            FirebaseManager.shared.saveUserProfile(uid: uid, username: firstname+" "+lastname, age: Int(age) ?? 0)
+            authenticated = true
+            FirebaseManager.shared.currentID=uid
             return true
-        }
-        catch {
+        } catch {
             print(error)
             errorMessage = error.localizedDescription
-            authenticationState = .unauthenticated
-            return false
         }
+        
+        authenticationState = .unauthenticated
+        return false
     }
+    
+    
     private func sWithEmailPassword() -> Void{
         Task {
             if await signUpWithEmailPassword() == true {
@@ -51,12 +64,12 @@ struct SignUpView: View {
     }
     private func sWithGoogle() ->Void{
         Task {
-            if await signInWithGoogle() == true {
-                dismiss()
+            if await signUpWithGoogle() == true {
+//                dismiss()
             }
         }
     }
-    func signInWithGoogle() async -> Bool {
+    func signUpWithGoogle() async -> Bool {
         guard let clientID = FirebaseApp.app()?.options.clientID else {
             fatalError("No client ID found in Firebase configuration")
         }
@@ -85,6 +98,8 @@ struct SignUpView: View {
             failed = false
             print("success")
             authenticated=true
+            FirebaseManager.shared.currentID=firebaseUser.uid
+            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: firebaseUser.displayName ?? "John Doe", age: -1)
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             return true
         }

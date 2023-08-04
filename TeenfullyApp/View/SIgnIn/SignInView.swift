@@ -16,6 +16,8 @@ struct SignInView: View {
     @State var failed = false
     @State var errorMessage: String = ""
     @Environment(\.dismiss) var dismiss
+    let db = FirebaseManager.shared.db
+
     func getHere(){
         print("Got here")
     }
@@ -27,9 +29,9 @@ struct SignInView: View {
             } else {
                 failed = false
                 print("success")
+                FirebaseManager.shared.currentID=result?.user.uid ?? ""
                 authenticated=true
                 print("User \( result?.user.uid) signed in")
-                
             }
         }
     }
@@ -70,6 +72,7 @@ struct SignInView: View {
             failed = false
             print("success")
             authenticated=true
+            FirebaseManager.shared.currentID=firebaseUser.uid 
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             return true
         }
