@@ -1,6 +1,6 @@
 # Teenfully APP Development 
 
-Target launch date: July 30, 2023
+Target launch date: Aug,20 2023
 
 Progress checklist:
 - [ ] Finish UI/UX design in Figma
@@ -11,9 +11,9 @@ Progress checklist:
   - [ ] Login
   - [ ] Profile View
 - [ ] Implement backend
-  - [ ] Account Login
+  - [x] Account Login
     - [ ] Apple
-    - [ ] Google
+    - [x] Google
   - [ ] Database 
     - [x] Setup
     - [ ] Read User data
