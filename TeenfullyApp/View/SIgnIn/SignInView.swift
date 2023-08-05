@@ -8,7 +8,9 @@ import FirebaseAuth
 import GoogleSignIn
 import GoogleSignInSwift
 
-
+//TODO support logging out as well
+//TODO support password changing
+//TODO support password resetting
 struct SignInView: View {
     @State var email: String = ""
     @State var password: String = ""
@@ -74,6 +76,7 @@ struct SignInView: View {
             authenticated=true
             FirebaseManager.shared.currentID=firebaseUser.uid 
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
+            //TODO fix google sign in so that display name is properly passed through.
             return true
         }
         catch {

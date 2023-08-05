@@ -76,6 +76,10 @@
 		A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */; };
 		A66F0C4F2A73455900A5F49F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66F0C4E2A73455900A5F49F /* GoogleService-Info.plist */; };
 		A6DAAA5B2A7340A800846829 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */; };
+		A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */; };
+		A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A6EAB8C82A7DA10700B5AEBC /* articles.json */; };
+		A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8CA2A7DA12500B5AEBC /* Article.swift */; };
+		A6EAB8CD2A7DABCA00B5AEBC /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8CC2A7DABCA00B5AEBC /* ArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +142,10 @@
 		A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A66F0C4E2A73455900A5F49F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		A6EAB8C82A7DA10700B5AEBC /* articles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
+		A6EAB8CA2A7DA12500B5AEBC /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		A6EAB8CC2A7DABCA00B5AEBC /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +228,8 @@
 				3EB97A572A6F67200089C80B /* Questions.swift */,
 				3E46A49E2A6F22510077EB2D /* ModelData.swift */,
 				3EF9A5D22A700F280095C20A /* UserModel.swift */,
+				A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */,
+				A6EAB8CA2A7DA12500B5AEBC /* Article.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				3E46A4A02A6F251B0077EB2D /* userData.json */,
+				A6EAB8C82A7DA10700B5AEBC /* articles.json */,
 				3EB97A592A6F691E0089C80B /* dailyQuestionData.json */,
 			);
 			path = Data;
@@ -311,6 +322,7 @@
 				3E46A4982A6EBD9A0077EB2D /* ProfileView */,
 				3EC1A7572A6C0D43000C8690 /* SIgnIn */,
 				3E46A4932A6EAB390077EB2D /* HomeScreenTab */,
+				A6EAB8CC2A7DABCA00B5AEBC /* ArticleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -505,6 +517,7 @@
 				3EB97A5A2A6F691E0089C80B /* dailyQuestionData.json in Resources */,
 				A66F0C4F2A73455900A5F49F /* GoogleService-Info.plist in Resources */,
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
+				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,8 +553,10 @@
 				3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */,
 				3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */,
 				3E46A49D2A6F1D850077EB2D /* UserData.swift in Sources */,
+				A6EAB8CD2A7DABCA00B5AEBC /* ArticleView.swift in Sources */,
 				3EF9A5DD2A70A98F0095C20A /* LinkLess.swift in Sources */,
 				3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */,
+				A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */,
 				A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */,
 				3E4860902A6C86250074AC7C /* EmailView.swift in Sources */,
 				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,
@@ -549,6 +564,7 @@
 				3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */,
 				3E987E5B2A68C1C6005FD9B0 /* dailyCheckinView.swift in Sources */,
 				3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */,
+				A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */,
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
 				3EB97A562A6F5ED80089C80B /* TwoQuestionView.swift in Sources */,
 				3EC1A7D02A6C5992000C8690 /* FirebaseView.swift in Sources */,
