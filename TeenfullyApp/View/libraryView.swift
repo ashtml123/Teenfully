@@ -2,10 +2,8 @@ import Foundation
 import SwiftUI
 
 struct LibraryView: View {
-    @EnvironmentObject var articles: Articles
-    var articleList: [Article] {
-        articles.articles
-    }
+    @State var articleList: [Article]
+
     
     var body: some View {
         VStack {
@@ -39,6 +37,7 @@ struct LibraryView: View {
 
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        LibraryView()
+        
+        LibraryView(articleList: [])
     }
 }

@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeScreenView: View {
     @State private var name = ""
     @State private var age = 0
+    @State private var articleHolder: [Article]=[]
     
     var body: some View {
         NavigationView {
@@ -183,8 +184,7 @@ struct HomeScreenView: View {
                                             )
                                             .offset(x: 0, y: 0)
                                         NavigationLink {
-                                            let articles = Articles()
-                                            LibraryView().environmentObject(articles)
+                                            LibraryView(articleList: articleHolder)
                                         } label: {
                                             Text("Explore")
                                                 .font(Font.custom("Epilogue", size: 16).weight(.bold))
@@ -192,6 +192,14 @@ struct HomeScreenView: View {
                                                 .foregroundColor(.white)
                                                 .offset(x: -38, y: 0.38)
                                         }
+                                        .onAppear{ FirebaseManager.shared.fetchArticlesFromFirebase{fetchedArticles,error in
+                                            if(error != nil){
+                                                print("Error! \(error)")
+                                            }
+                                            else{
+                                                articleHolder=fetchedArticles!
+                                            }
+                                        }}
                                     }
                                     .frame(width: 138, height: 39)
                                 }

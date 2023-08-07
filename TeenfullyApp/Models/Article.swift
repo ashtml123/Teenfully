@@ -10,7 +10,7 @@ import SwiftUI
 import CoreLocation
 
 struct Article:Hashable, Codable, Identifiable {
-    var id: Int
+    var id: String
     var title: String
     var author: String
     var text: String
