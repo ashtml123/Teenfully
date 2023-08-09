@@ -63,6 +63,7 @@ class FirebaseManager {
     }
     
     
+    //Pass data locally
     func addArticlesToFirebase(article:Article){
         let articles = db.collection("articles")
         var newArticle = article
@@ -82,6 +83,7 @@ class FirebaseManager {
             }
         }
     }
+    
     
     func saveUserProfile(uid: String, username: String, age: Int) {
         let userRef = db.collection("users").document(uid)
