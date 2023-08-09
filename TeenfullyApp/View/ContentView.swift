@@ -19,7 +19,7 @@ struct ContentView: View {
                 }
             Text("Some more more stuff")
                 .tabItem(){
-                    Image("FeedBacck")
+                    Image("FeedBack")
                 }
         }
         .offset(y:20)

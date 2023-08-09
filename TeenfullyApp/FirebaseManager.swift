@@ -10,6 +10,18 @@ import FirebaseAuth
 import GoogleSignIn
 import GoogleSignInSwift
 
+/* Cloud Firestore old rules:
+ rules_version = '2';
+ service cloud.firestore {
+   match /databases/{database}/documents {
+     match /{document=**} {
+       allow read, write: if request.auth != null;
+     }
+   }
+ }
+
+ */
+
 struct UserProfile{
     var username: String
     var age: Int
@@ -24,7 +36,6 @@ class FirebaseManager {
         db = Firestore.firestore()
     }
     
-    // Example function to fetch all articles from the database
     func fetchArticlesFromFirebase(completion: @escaping ([Article]?, Error?) -> Void) {
         let collectionRef = db.collection("articles")
         collectionRef.getDocuments { snapshot, error in
@@ -33,14 +44,17 @@ class FirebaseManager {
             } else {
                 var articles = [Article]()
                 for document in snapshot!.documents {
+                    print("ATTENTION: BELOW THERE LIES A THING")
+                    print(document.data().values)
                     if let title = document.data()["title"] as? String,
                        let author = document.data()["author"] as? String,
                        let text = document.data()["text"] as? String,
-                        let description = document.data()["description"] as? String,
-                        let datePublished = document.data()["datePublished"] as? Date{
-                        let article = Article(id: document.data()["id"] as! String, title: title, author:author,text:text,description: description,datePublished: datePublished)
-                        // Add other fields to the article if needed
+                       let description = document.data()["description"] as? String,
+                       let datePublished = document.data()["datePublished"] as? String,
+                       let id = document.documentID as? String{
+                        let article = Article(id: id, title: title, author:author,text:text,description: description,datePublished: datePublished)
                         articles.append(article)
+                        print(title)
                     }
                 }
                 completion(articles, nil)

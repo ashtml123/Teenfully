@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ArticleView: View {
-    @EnvironmentObject var articleData: Articles
     var article: Article
     
     var body: some View {
@@ -28,6 +27,5 @@ struct ArticleView_Previews: PreviewProvider {
     static let articles = Articles()
     static var previews: some View {
         ArticleView(article:articles.articles[0])
-            .environmentObject(articles)
     }
 }

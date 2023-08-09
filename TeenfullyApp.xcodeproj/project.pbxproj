@@ -74,7 +74,7 @@
 		A61057FD2A7B05D900C90E36 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A61057FC2A7B05D900C90E36 /* GoogleSignInSwift */; };
 		A61057FF2A7C1F3400C90E36 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61057FE2A7C1F3400C90E36 /* SignUpView.swift */; };
 		A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */; };
-		A66F0C4F2A73455900A5F49F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66F0C4E2A73455900A5F49F /* GoogleService-Info.plist */; };
+		A676B9DA2A8306410070E310 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A676B9D92A8306410070E310 /* GoogleService-Info.plist */; };
 		A6DAAA5B2A7340A800846829 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */; };
 		A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */; };
 		A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A6EAB8C82A7DA10700B5AEBC /* articles.json */; };
@@ -140,7 +140,8 @@
 		A61057F82A7AFB3300C90E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A61057FE2A7C1F3400C90E36 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		A66F0C4E2A73455900A5F49F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A676B9D92A8306410070E310 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeenfullyApp.entitlements; sourceTree = "<group>"; };
 		A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		A6EAB8C82A7DA10700B5AEBC /* articles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
@@ -206,8 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				3E46A4912A6EA9B00077EB2D /* AccountTab.swift */,
+				A676B9D92A8306410070E310 /* GoogleService-Info.plist */,
 				3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */,
-				A66F0C4E2A73455900A5F49F /* GoogleService-Info.plist */,
 				3E46A4962A6EB95A0077EB2D /* StreakView.swift */,
 			);
 			path = HomeScreenTab;
@@ -267,6 +268,7 @@
 		3E987E2C2A68C07C005FD9B0 /* TeenfullyApp */ = {
 			isa = PBXGroup;
 			children = (
+				A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */,
 				A61057F82A7AFB3300C90E36 /* Info.plist */,
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
 				3E46A4A22A6F252E0077EB2D /* Data */,
@@ -515,10 +517,10 @@
 			files = (
 				3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */,
 				3EB97A5A2A6F691E0089C80B /* dailyQuestionData.json in Resources */,
-				A66F0C4F2A73455900A5F49F /* GoogleService-Info.plist in Resources */,
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
 				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
+				A676B9DA2A8306410070E310 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +735,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TeenfullyApp/TeenfullyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeenfullyApp/Preview Content\"";
@@ -762,6 +765,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TeenfullyApp/TeenfullyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeenfullyApp/Preview Content\"";

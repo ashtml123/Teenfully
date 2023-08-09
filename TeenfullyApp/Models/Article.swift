@@ -15,5 +15,5 @@ struct Article:Hashable, Codable, Identifiable {
     var author: String
     var text: String
     var description: String
-    var datePublished: Date
+    var datePublished: String
 }

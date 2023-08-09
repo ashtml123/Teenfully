@@ -23,6 +23,7 @@ struct HomeScreenView: View {
                                 if let userProfile = userProfile {
                                     // Handle the fetched user profile here
                                     DispatchQueue.main.async {
+                                        print("I HAVE FETCHED USER")
                                         self.name = userProfile.username
                                         self.age = userProfile.age
                                     }
@@ -197,6 +198,7 @@ struct HomeScreenView: View {
                                                 print("Error! \(error)")
                                             }
                                             else{
+                                                print("I HAVE FETCHED ARTICLES")
                                                 articleHolder=fetchedArticles!
                                             }
                                         }}
@@ -277,7 +279,7 @@ struct HomeScreenView: View {
             }
             .frame(width: 375, height: 812)
             .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-            .cornerRadius(40);
+            .cornerRadius(40)
         }
     }
 }

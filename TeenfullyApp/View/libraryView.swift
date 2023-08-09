@@ -10,8 +10,6 @@ struct LibraryView: View {
             Text("Library ")
                 .font(Font.custom("Epilogue", size: 26).weight(.medium))
                 .lineSpacing(32)
-                .foregroundColor(Color(red: 0.22, green: 0.11, blue: 0.20))
-                .offset(x: -45, y: -289)
             NavigationView {
                 List {
                     ForEach(articleList) { article in // Use forEach directly on articleList
@@ -29,7 +27,6 @@ struct LibraryView: View {
                 }
             }
         }
-        .frame(width: 375, height: 812)
         .background(Color(red: 0.98, green: 0.98, blue: 0.98))
         .cornerRadius(40)
     }
@@ -37,7 +34,10 @@ struct LibraryView: View {
 
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        
-        LibraryView(articleList: [])
+        let articles = [
+            Article(id: "696969", title: "The effects of awesome", author: "Jondoe", text: "Many people are awesome.", description: "This is gonna win a Pultizer", datePublished: "1/1/1970")
+        ]
+
+        LibraryView(articleList: articles)
     }
 }

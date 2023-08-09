@@ -226,14 +226,15 @@ struct SignUpView: View {
                         .font(Font.custom("Inter", size: 13.60).weight(.medium))
                         .foregroundColor(Color(red: 0.84, green: 0.83, blue: 0.85))
                         .offset(x: 0, y: -100)
-                };Group {
+                }
+                Group {
                     ZStack() { }
                         .frame(width: 18, height: 18)
                         .offset(x: -106, y: -145)
                 }
             }
             .frame(width: 428, height: 926)
-            .background(Color(red: 1, green: 0.51, blue: 0.21));
+            .background(Color(red: 1, green: 0.51, blue: 0.21))
         }
         
     }
