@@ -14,7 +14,7 @@ Progress checklist:
   - [x] Account Login
     - [ ] Apple
     - [x] Google
-  - [ ] Database 
+  - [x] Database 
     - [x] Setup
-    - [ ] Read User data
-    - [ ] Write user data
+    - [x] Read User data
+    - [x] Write user data
