@@ -24,8 +24,7 @@ struct ArticleView: View {
 }
 
 struct ArticleView_Previews: PreviewProvider {
-    static let articles = Articles()
     static var previews: some View {
-        ArticleView(article:articles.articles[0])
+        ArticleView(article:Article(id: "AA", title: "P", author: "E", text: "AD", description: "AD", datePublished: "12/3/22"))
     }
 }

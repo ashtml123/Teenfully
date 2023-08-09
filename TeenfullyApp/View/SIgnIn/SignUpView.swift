@@ -18,6 +18,9 @@ enum AuthenticationError: Error {
 }
 
 
+class AuthStatePersist{
+    
+}
 
 struct SignUpView: View {
     @State var firstname: String = ""
@@ -96,12 +99,14 @@ struct SignUpView: View {
             let result = try await Auth.auth().signIn(with: credential)
             let firebaseUser = result.user
             failed = false
+            
             print("success")
+            print("ATTENTION!!")
+            print(firebaseUser.displayName)
             authenticated=true
             FirebaseManager.shared.currentID=firebaseUser.uid
             FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: firebaseUser.displayName ?? "John Doe", age: -1)
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
-            //TODO fix google sign in so that display name is properly passed through.
             //TODO make it so that sign up through google saves their age as well.
             return true
         }

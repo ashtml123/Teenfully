@@ -4,7 +4,9 @@ struct HomeScreenView: View {
     @State private var name = ""
     @State private var age = 0
     @State private var articleHolder: [Article]=[]
-    
+    //TODO Profile picture
+    //TODO make streak counter
+    //TODO profile editing
     var body: some View {
         NavigationView {
             ZStack() {

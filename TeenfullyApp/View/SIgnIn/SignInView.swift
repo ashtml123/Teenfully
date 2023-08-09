@@ -20,10 +20,11 @@ struct SignInView: View {
     @Environment(\.dismiss) var dismiss
     let db = FirebaseManager.shared.db
 
+    
     func getHere(){
         print("Got here")
     }
-    func login() {//TODO: Fix the failure to login; right now, when we log in with invalid credentials, it does nothing, but it should give an error.
+    func login() {//TODO: Fix athe failure to login; right now, when we log in with invalid credentials, it does nothing, but it should give an error.
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 failed = true
@@ -73,10 +74,12 @@ struct SignInView: View {
             let firebaseUser = result.user
             failed = false
             print("success")
+            print("ATTENTION!!")
+            print(firebaseUser.displayName)
             authenticated=true
-            FirebaseManager.shared.currentID=firebaseUser.uid 
+            FirebaseManager.shared.currentID=firebaseUser.uid
+            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: firebaseUser.displayName ?? "John Doe", age: -1)
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
-            //TODO fix google sign in so that display name is properly passed through.
             return true
         }
         catch {
