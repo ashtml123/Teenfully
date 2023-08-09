@@ -6,8 +6,10 @@ struct dailyCheckinView: View {
   var body:some View {
     ZStack() {
         Text("Daily Check In")
-            .font(.title)
-            .offset(x:-30,y:-250)
+          .font(Font.custom("Epilogue", size: 36).weight(.medium))
+          .lineSpacing(32)
+          .foregroundColor(Color(red: 0.22, green: 0.11, blue: 0.20))
+          .offset(x:-50,y:-300)
         
         TwoQuestion(question: ModelData().questionData[0])
             .offset(y:-120)

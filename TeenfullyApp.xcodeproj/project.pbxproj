@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3FBD182A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
+		3E3FBD192A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
+		3E3FBD1A2A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
 		3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4912A6EA9B00077EB2D /* AccountTab.swift */; };
 		3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */; };
 		3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4962A6EB95A0077EB2D /* StreakView.swift */; };
@@ -74,7 +77,6 @@
 		A61057FD2A7B05D900C90E36 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A61057FC2A7B05D900C90E36 /* GoogleSignInSwift */; };
 		A61057FF2A7C1F3400C90E36 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61057FE2A7C1F3400C90E36 /* SignUpView.swift */; };
 		A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */; };
-		A676B9DA2A8306410070E310 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A676B9D92A8306410070E310 /* GoogleService-Info.plist */; };
 		A6DAAA5B2A7340A800846829 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */; };
 		A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */; };
 		A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A6EAB8C82A7DA10700B5AEBC /* articles.json */; };
@@ -100,6 +102,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E46A4912A6EA9B00077EB2D /* AccountTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTab.swift; sourceTree = "<group>"; };
 		3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		3E46A4962A6EB95A0077EB2D /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 			children = (
 				A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */,
 				A61057F82A7AFB3300C90E36 /* Info.plist */,
+				3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */,
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
 				3E46A4A22A6F252E0077EB2D /* Data */,
 				3E46A49B2A6F1C720077EB2D /* Models */,
@@ -520,7 +524,7 @@
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
 				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
-				A676B9DA2A8306410070E310 /* GoogleService-Info.plist in Resources */,
+				3E3FBD182A840A280062D2FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3FBD192A840A280062D2FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3FBD1A2A840A280062D2FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
