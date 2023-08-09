@@ -101,6 +101,8 @@ struct SignUpView: View {
             FirebaseManager.shared.currentID=firebaseUser.uid
             FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: firebaseUser.displayName ?? "John Doe", age: -1)
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
+            //TODO fix google sign in so that display name is properly passed through.
+            //TODO make it so that sign up through google saves their age as well.
             return true
         }
         catch {
@@ -224,14 +226,15 @@ struct SignUpView: View {
                         .font(Font.custom("Inter", size: 13.60).weight(.medium))
                         .foregroundColor(Color(red: 0.84, green: 0.83, blue: 0.85))
                         .offset(x: 0, y: -100)
-                };Group {
+                }
+                Group {
                     ZStack() { }
                         .frame(width: 18, height: 18)
                         .offset(x: -106, y: -145)
                 }
             }
             .frame(width: 428, height: 926)
-            .background(Color(red: 1, green: 0.51, blue: 0.21));
+            .background(Color(red: 1, green: 0.51, blue: 0.21))
         }
         
     }

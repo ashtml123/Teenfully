@@ -3,7 +3,8 @@ import SwiftUI
 struct HomeScreenView: View {
     @State private var name = ""
     @State private var age = 0
-
+    @State private var articleHolder: [Article]=[]
+    
     var body: some View {
         NavigationView {
             ZStack() {
@@ -17,10 +18,12 @@ struct HomeScreenView: View {
                         .foregroundColor(Color(red: 0.22, green: 0.11, blue: 0.20))
                         .offset(x: -45, y: -275)
                         .onAppear{
+                            //TODO dynamically shrink font size to make sure username fits
                             FirebaseManager.shared.fetchUserProfile { userProfile in
                                 if let userProfile = userProfile {
                                     // Handle the fetched user profile here
                                     DispatchQueue.main.async {
+                                        print("I HAVE FETCHED USER")
                                         self.name = userProfile.username
                                         self.age = userProfile.age
                                     }
@@ -182,7 +185,7 @@ struct HomeScreenView: View {
                                             )
                                             .offset(x: 0, y: 0)
                                         NavigationLink {
-                                            libraryView()
+                                            LibraryView(articleList: articleHolder)
                                         } label: {
                                             Text("Explore")
                                                 .font(Font.custom("Epilogue", size: 16).weight(.bold))
@@ -190,6 +193,15 @@ struct HomeScreenView: View {
                                                 .foregroundColor(.white)
                                                 .offset(x: -38, y: 0.38)
                                         }
+                                        .onAppear{ FirebaseManager.shared.fetchArticlesFromFirebase{fetchedArticles,error in
+                                            if(error != nil){
+                                                print("Error! \(error)")
+                                            }
+                                            else{
+                                                print("I HAVE FETCHED ARTICLES")
+                                                articleHolder=fetchedArticles!
+                                            }
+                                        }}
                                     }
                                     .frame(width: 138, height: 39)
                                 }
@@ -197,7 +209,7 @@ struct HomeScreenView: View {
                                 .offset(x: -43, y: -17.38)
                             }
                             .frame(width: 325, height: 151)
-                            .offset(x: 0.50, y: 300.50)
+                            .offset(x: 0.50, y: -42.5)
                             ZStack() {
                                 Rectangle()
                                     .foregroundColor(.clear)
@@ -254,7 +266,7 @@ struct HomeScreenView: View {
                                 .offset(x: -43, y: 4.62)
                             }
                             .frame(width: 325, height: 151)
-                            .offset(x: -0.50, y: -42.50)
+                            .offset(x: -0.50, y: 300.50)
                         }
                         .frame(width: 326, height: 578)
                         .offset(x: 0, y: 0)
@@ -267,7 +279,7 @@ struct HomeScreenView: View {
             }
             .frame(width: 375, height: 812)
             .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-            .cornerRadius(40);
+            .cornerRadius(40)
         }
     }
 }

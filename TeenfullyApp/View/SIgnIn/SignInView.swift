@@ -8,7 +8,9 @@ import FirebaseAuth
 import GoogleSignIn
 import GoogleSignInSwift
 
-
+//TODO support logging out as well
+//TODO support password changing
+//TODO support password resetting
 struct SignInView: View {
     @State var email: String = ""
     @State var password: String = ""
@@ -74,6 +76,7 @@ struct SignInView: View {
             authenticated=true
             FirebaseManager.shared.currentID=firebaseUser.uid 
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
+            //TODO fix google sign in so that display name is properly passed through.
             return true
         }
         catch {
@@ -113,35 +116,20 @@ struct SignInView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 5)
                                 .inset(by: 0.50)
-                                .stroke(Color(red: 0.61, green: 0.61, blue: 0.61), lineWidth: 0.50)
-                        )
-                        .offset(x: -0.50, y: -5)
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 271, height: 42)
-                        .cornerRadius(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 5)
-                                .inset(by: 0.50)
                                 .stroke(Color(red: 0.85, green: 0.85, blue: 0.85), lineWidth: 0.50)
                         )
                         .offset(x: -0.50, y: -145)
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 271, height: 42)
-                        .cornerRadius(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 5)
-                                .inset(by: 0.50)
-                                .stroke(Color(red: 0.85, green: 0.85, blue: 0.85), lineWidth: 0.50)
-                        )
-                        .offset(x: -0.50, y: 48)
+
                     TextField("Email", text: $email)
                         .offset(x:100,y:2)
+                        .textFieldStyle(.roundedBorder)
                     
                     SecureField("Password", text: $password)
                         .offset(x:100,y:50)
-                };Group {
+                        .textFieldStyle(.roundedBorder)
+
+                }
+                Group {
                     NavigationLink {
                         SignUpView()
                     } label: {
@@ -209,14 +197,15 @@ struct SignInView: View {
                         .font(Font.custom("Inter", size: 13.60).weight(.medium))
                         .foregroundColor(Color(red: 0.84, green: 0.83, blue: 0.85))
                         .offset(x: 0, y: -75)
-                };Group {
+                }
+                Group {
                     ZStack() { }
                         .frame(width: 18, height: 18)
                         .offset(x: -106, y: -145)
                 }
             }
             .frame(width: 428, height: 926)
-            .background(Color(red: 1, green: 0.51, blue: 0.21));
+            .background(Color(red: 1, green: 0.51, blue: 0.21))
         }
         
     }

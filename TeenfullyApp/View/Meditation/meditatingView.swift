@@ -139,7 +139,7 @@ struct meditatingView: View {
     }
     .frame(width: 375, height: 812)
     .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-    .cornerRadius(40);
+    .cornerRadius(40)
   }
 }
 
