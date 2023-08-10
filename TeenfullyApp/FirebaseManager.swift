@@ -84,8 +84,31 @@ class FirebaseManager {
         }
     }
     
-    func sendDailyCheckin(){
-        
+    //send daily checkin data
+    
+    func sendDailyCheckin(resp: Measure){
+        let responses = db.collection("dailyresp")
+        var newResp = resp
+        newResp.id=UUID().uuidString
+        responses.document(newResp.id).setData([
+            "user":newResp.user,
+            "anxiety":newResp.anxiety,
+            "behavior":newResp.behavior,
+            "cognitive":newResp.cognitive,
+            "date":newResp.date,
+            "decision":newResp.decision,
+            "mood":newResp.mood,
+            "physical":newResp.physical,
+            "social":newResp.social,
+            "substance":newResp.substance
+        ]){error in
+            if let error=error{
+                print("Error adding response: \(error)")
+            }
+            else{
+                print("Successful response addition")
+            }
+        }
     }
     
     

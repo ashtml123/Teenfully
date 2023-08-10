@@ -8,10 +8,8 @@ struct TwoQuestion: View {
         ZStack{
             Group {
                 Text(question.QuestionInfo)
-                
- 
                 Button{
-                    print("Subscribe to David Zhang")
+                    print("sjdifjskdfh")
                 } label: {
                     Rectangle() //Blue
                         .foregroundColor(.clear)

@@ -273,11 +273,11 @@ struct HomeScreenView: View {
                     }
                     
                 }
-                .frame(width: 326, height: 685)
+                .frame(width: 326, height: 812)
                 .offset(x: 0.50, y: 118.50)
                 
             }
-            .frame(width: 375, height: 812)
+            .frame(width: 375, height: 1000)
             .background(Color(red: 0.98, green: 0.98, blue: 0.98))
             .cornerRadius(40)
         }

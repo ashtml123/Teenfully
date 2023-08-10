@@ -5,7 +5,8 @@ import Foundation
 import Combine
 
 struct Measure:Hashable, Codable, Identifiable{
-    var id: String //consistent with user id
+    var id: String //unique id for data
+    var user: String //consistent with user id
     var date: Int //date of measurement
     // The following is a list of measurements
     var mood: Int
