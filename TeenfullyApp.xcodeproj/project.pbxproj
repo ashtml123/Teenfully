@@ -18,6 +18,7 @@
 		3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A49E2A6F22510077EB2D /* ModelData.swift */; };
 		3E46A4A12A6F251C0077EB2D /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E46A4A02A6F251B0077EB2D /* userData.json */; };
 		3E4860902A6C86250074AC7C /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48608F2A6C86250074AC7C /* EmailView.swift */; };
+		3E6EF4122A843C1A00333226 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6EF4112A843C1A00333226 /* Measure.swift */; };
 		3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */; };
 		3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E312A68C07D005FD9B0 /* Assets.xcassets */; };
 		3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E342A68C07D005FD9B0 /* Preview Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		3E46A49E2A6F22510077EB2D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		3E46A4A02A6F251B0077EB2D /* userData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userData.json; sourceTree = "<group>"; };
 		3E48608F2A6C86250074AC7C /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		3E6EF4112A843C1A00333226 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		3E987E2A2A68C07C005FD9B0 /* TeenfullyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenfullyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppApp.swift; sourceTree = "<group>"; };
 		3E987E312A68C07D005FD9B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				3EF9A5D22A700F280095C20A /* UserModel.swift */,
 				A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */,
 				A6EAB8CA2A7DA12500B5AEBC /* Article.swift */,
+				3E6EF4112A843C1A00333226 /* Measure.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				3EF9A5DD2A70A98F0095C20A /* LinkLess.swift in Sources */,
 				3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */,
 				A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */,
+				3E6EF4122A843C1A00333226 /* Measure.swift in Sources */,
 				A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */,
 				3E4860902A6C86250074AC7C /* EmailView.swift in Sources */,
 				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,

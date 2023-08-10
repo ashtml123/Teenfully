@@ -84,6 +84,10 @@ class FirebaseManager {
         }
     }
     
+    func sendDailyCheckin(){
+        
+    }
+    
     
     func saveUserProfile(uid: String, username: String, age: Int) {
         let userRef = db.collection("users").document(uid)
