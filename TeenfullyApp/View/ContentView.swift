@@ -3,6 +3,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         TabView {
             HomeScreenView()
@@ -22,7 +23,6 @@ struct ContentView: View {
                     Image("FeedBack")
                 }
         }
-        .offset(y:20)
     }
 }
 
