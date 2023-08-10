@@ -10,9 +10,9 @@ struct ProfilePicture: View {
             .scaledToFit()
             .frame(width: 70)
             .clipShape(Circle())
-            .overlay {
+            .overlay (
                 Circle().stroke(.orange, lineWidth: 3)
-            }
+            )
 
         
     }

@@ -67,8 +67,7 @@ struct SignUpView: View {
     }
     private func sWithGoogle() ->Void{
         Task {
-            if await signUpWithGoogle() == true {
-                //                dismiss()
+            if await signUpWithGoogle() {
             }
         }
     }
@@ -130,7 +129,9 @@ struct SignUpView: View {
                     .frame(width: 368, height: 625)
                     .background(.white)
                     .cornerRadius(23)
-                    .overlay{
+                    .frame(width: 428, height: 926)
+                    .background(Color(red: 1, green: 0.51, blue: 0.21))
+                    .overlay(
                         VStack(spacing:20) {
                             Text("Make an Account")
                                 .font(Font.custom("Inter", size:21).weight(.bold))
@@ -158,33 +159,34 @@ struct SignUpView: View {
                             TextField("First Name", text: $firstname)
                                 .textFieldStyle(.roundedBorder)
                                 .padding(.horizontal, 10)
-
+                            
                             TextField("Last Name", text: $lastname)
                                 .textFieldStyle(.roundedBorder)
                                 .padding(.horizontal, 10)
-
+                            
                             TextField("Email", text: $email)
                                 .textFieldStyle(.roundedBorder)
                                 .padding(.horizontal, 10)
-
                             TextField("Age", text: $age)
                                 .textFieldStyle(.roundedBorder)
                                 .padding(.horizontal, 10)
-
                             SecureField("Password", text: $password)
                                 .textFieldStyle(.roundedBorder)
                                 .padding(.horizontal, 10)
-
                             Rectangle()
                                 .foregroundColor(.clear)
                                 .frame(width: 271, height: 42)
                                 .background(Color(red: 1, green: 0.51, blue: 0.21))
                                 .cornerRadius(5)
-                                .overlay{
+                                .overlay(
                                     Button(action: {sWithEmailPassword()}) {
                                         Text("Sign Up")
                                     }
-                                }
+                                )
+//                            if(failed){
+//                                Text(errorMessage)
+//                                    .foregroundColor(.red)
+//                            }
                             NavigationLink {
                                 SignInView()
                             } label: {
@@ -194,9 +196,7 @@ struct SignUpView: View {
                             }
                             
                         }
-                    }
-                    .frame(width: 428, height: 926)
-                    .background(Color(red: 1, green: 0.51, blue: 0.21))
+                    )
             }
         }
     }
@@ -207,5 +207,3 @@ struct SignUpView_Previews: PreviewProvider {
         SignUpView()
     }
 }
-
-

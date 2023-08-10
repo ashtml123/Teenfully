@@ -11,8 +11,7 @@ struct MeditateBox: View {
                 .frame(width: 311, height: 142.17143)
                 .cornerRadius(16)
                 .padding(.bottom, 20)
-                .overlay{
-                    
+                .overlay(
                     VStack{
                         Text("\(timeDuration) Minutes")
                             .font(
@@ -35,7 +34,7 @@ struct MeditateBox: View {
                                 .background(Color(red: 0.33, green: 0.62, blue: 0.43))
                                 .cornerRadius(10)
                         }
-                    }}
+                    })
         }
         .background(Color.white)
         .ignoresSafeArea()

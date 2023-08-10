@@ -11,7 +11,7 @@ struct Habits: View {
                     .frame(width: 300, height: 146)
                     .cornerRadius(16)
                     .padding(.bottom, 30)
-                    .overlay{
+                    .overlay(
                         VStack{
                             Text(habit)
                                 .font(Font.custom("Rubik", size: 40).weight(.medium))
@@ -25,26 +25,26 @@ struct Habits: View {
                                     .fill(Color(red: 0.33, green: 0.62, blue: 0.43))
                                     .frame(width: 130, height: 46)
                                     .cornerRadius(20)
-                                    .overlay{
+                                    .overlay(
                                         Text("Completed")
                                             .font(Font.custom("Epilogue", size: 20).weight(.bold))
                                             .foregroundColor(Color.white)
-                                    }
+                                    )
                                 Rectangle()
                                     .fill(Color(red: 1, green: 0.51, blue: 0.21))
                                     .frame(width: 130, height: 46)
                                     .cornerRadius(20)
-                                    .overlay{
+                                    .overlay(
                                         Text("Delete")
                                             .font(Font.custom("Epilogue", size: 20).weight(.bold))
                                             .foregroundColor(Color.white)
-                                    }
+                                    )
                             }
                             .padding(.bottom, 30)
                             
                         }
                         
-                    }
+                    )
             }
         }
         .background(Color.white)

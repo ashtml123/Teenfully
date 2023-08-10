@@ -28,7 +28,7 @@ struct SignInView: View {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 failed = true
-                print(error?.localizedDescription ?? "")
+                errorMessage=error?.localizedDescription ?? ""
             } else {
                 failed = false
                 print("success")
@@ -102,7 +102,9 @@ struct SignInView: View {
                     .frame(width: 368, height: 625)
                     .background(.white)
                     .cornerRadius(23)
-                    .overlay{
+                    .frame(width: 428, height: 926)
+                    .background(Color(red: 1, green: 0.51, blue: 0.21))
+                    .overlay(
                         VStack(spacing: 20){
                             Text("Login to your Account")
                                 .font(Font.custom("Inter", size:26).weight(.bold))
@@ -139,12 +141,15 @@ struct SignInView: View {
                                 .frame(width: 271, height: 42)
                                 .background(Color(red: 1, green: 0.51, blue: 0.21))
                                 .cornerRadius(5)
-                                .overlay{
+                                .overlay(
                                     Button(action: {login()}) {
                                         Text("Log In")
                                     }
-                                    
-                                }
+                                )
+                            if(failed){
+                                Text(errorMessage)
+                                    .foregroundColor(.red)
+                            }
                             NavigationLink {
                                 SignUpView()
                             } label: {
@@ -153,9 +158,7 @@ struct SignInView: View {
                                     .foregroundColor(Color(red: 0.04, green: 0.04, blue: 0.04))
                             }
                         }
-                    }
-                    .frame(width: 428, height: 926)
-                    .background(Color(red: 1, green: 0.51, blue: 0.21))
+                    )
             }
         }
     }
