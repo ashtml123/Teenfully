@@ -160,7 +160,7 @@ struct SignInView: View {
                                     } label: {
                                         Text("Don’t have an account? Sign Up")
                                             .font(Font.custom("Inter", size: 12.60))
-                                            .foregroundColor(Color(red: 0.04, green: 0.04, blue: 0.04))
+                                            .foregroundColor(.blue)
                                     }
                                 }
                             )

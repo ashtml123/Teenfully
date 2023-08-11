@@ -3,10 +3,21 @@ import SwiftUI
 
 struct LibraryView: View {
     @State var articleList: [Article]
+    @State private var currentPage = 1
+    let perPage = 10
 
-//TODO Add pagination and tags
-    
-    
+    var totalPages: Int {
+        (articleList.count + perPage - 1) / perPage
+    }
+
+    var startIndex: Int {
+        (currentPage - 1) * perPage
+    }
+
+    var endIndex: Int {
+        min(currentPage * perPage, articleList.count)
+    }
+
     var body: some View {
         VStack {
             Text("Library ")
@@ -14,16 +25,35 @@ struct LibraryView: View {
                 .lineSpacing(32)
             NavigationView {
                 List {
-                    ForEach(articleList) { article in // Use forEach directly on articleList
-                        NavigationLink(destination: ArticleView(article: article)) {
-                            VStack{
-                                Text(article.title)
+                    ForEach(startIndex..<endIndex, id: \.self) { index in
+                        NavigationLink(destination: ArticleView(article: articleList[index])) {
+                            VStack {
+                                Text(articleList[index].title)
                                     .bold()
                                     .font(.title3)
-                                Text(article.description)
+                                Text(articleList[index].description)
                                     .font(.subheadline)
                             }
-                            
+                        }
+                    }
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        HStack {
+                            Button(action: {
+                                if currentPage > 1 {
+                                    currentPage -= 1
+                                }
+                            }) {
+                                Image(systemName: "chevron.left")
+                            }
+                            Button(action: {
+                                if currentPage < totalPages {
+                                    currentPage += 1
+                                }
+                            }) {
+                                Image(systemName: "chevron.right")
+                            }
                         }
                     }
                 }
@@ -33,6 +63,7 @@ struct LibraryView: View {
         .cornerRadius(40)
     }
 }
+
 
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
