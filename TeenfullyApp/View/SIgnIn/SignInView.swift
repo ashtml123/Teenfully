@@ -93,73 +93,79 @@ struct SignInView: View {
             ContentView()
         }
         else{
-            VStack() {
-                Text("Welcome to Teenfully!")
-                    .font(Font.custom("Inter", size: 25.60).weight(.bold))
-                    .foregroundColor(.white)
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 368, height: 625)
-                    .background(.white)
-                    .cornerRadius(23)
-                    .frame(width: 428, height: 926)
-                    .background(Color(red: 1, green: 0.51, blue: 0.21))
-                    .overlay(
-                        VStack(spacing: 20){
-                            Text("Login to your Account")
-                                .font(Font.custom("Inter", size:26).weight(.bold))
-                                .foregroundColor(Color(red: 0.10, green: 0.10, blue: 0.10))
-                            Button(action: {sWithGoogle()}) {
-                                Image("GoogleLogo")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height:34, alignment: .center)
-                            }
-                            Ellipse()
-                                .foregroundColor(.clear)
-                                .frame(width: 34, height: 34)
-                                .background(.white)
-                                .overlay(
-                                    ZStack{
-                                        Ellipse()
-                                            .inset(by: 0.92)
-                                            .stroke(Color(red: 0.85, green: 0.85, blue: 0.85), lineWidth: 0.92)
-                                        Text("Or")
-                                            .font(Font.custom("Inter", size: 13.60).weight(.medium))
-                                            .foregroundColor(Color(red: 0.84, green: 0.83, blue: 0.85))
+            Rectangle()
+                .background(Color(red: 1, green: 0.51, blue: 0.21))
+                .foregroundColor(.clear)
+                .overlay(
+                    VStack() {
+                        Text("Welcome to Teenfully!")
+                            .font(Font.custom("Inter", size: 25.60).weight(.bold))
+                            .foregroundColor(.white)
+                        Rectangle()
+                            .frame(width: 368, height: 625)
+                            .background(.white)
+                            .foregroundColor(.clear)
+                            .cornerRadius(23)
+                            .overlay(
+                                VStack(spacing: 20){
+                                    Text("Login to your Account")
+                                        .font(Font.custom("Inter", size:26).weight(.bold))
+                                        .foregroundColor(Color(red: 0.10, green: 0.10, blue: 0.10))
+                                    Button(action: {sWithGoogle()}) {
+                                        Image("GoogleLogo")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height:34, alignment: .center)
                                     }
-                                )
-                            TextField("Email", text: $email)
-                                .textFieldStyle(.roundedBorder)
-                                .padding(.horizontal, 10)
-                            
-                            SecureField("Password", text: $password)
-                                .textFieldStyle(.roundedBorder)
-                                .padding(.horizontal, 10)
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .frame(width: 271, height: 42)
-                                .background(Color(red: 1, green: 0.51, blue: 0.21))
-                                .cornerRadius(5)
-                                .overlay(
-                                    Button(action: {login()}) {
-                                        Text("Log In")
+                                    Ellipse()
+                                        .foregroundColor(.clear)
+                                        .frame(width: 34, height: 34)
+                                        .background(.white)
+                                        .overlay(
+                                            ZStack{
+                                                Ellipse()
+                                                    .inset(by: 0.92)
+                                                    .stroke(Color(red: 0.85, green: 0.85, blue: 0.85), lineWidth: 0.92)
+                                                Text("Or")
+                                                    .font(Font.custom("Inter", size: 13.60).weight(.medium))
+                                                    .foregroundColor(Color(red: 0.84, green: 0.83, blue: 0.85))
+                                            }
+                                        )
+                                    TextField("Email", text: $email)
+                                        .textFieldStyle(.roundedBorder)
+                                        .padding(.horizontal, 10)
+//                                        .frame(width: 368)
+                                    
+                                    SecureField("Password", text: $password)
+                                        .textFieldStyle(.roundedBorder)
+                                        .padding(.horizontal, 10)
+//                                        .frame(width: 368)
+                                    
+                                    Rectangle()
+                                        .foregroundColor(.clear)
+                                        .frame(width: 271, height: 42)
+                                        .background(Color(red: 1, green: 0.51, blue: 0.21))
+                                        .cornerRadius(5)
+                                        .overlay(
+                                            Button(action: {login()}) {
+                                                Text("Log In")
+                                            }
+                                        )
+                                    if(failed){
+                                        Text(errorMessage)
+                                            .foregroundColor(.red)
                                     }
-                                )
-                            if(failed){
-                                Text(errorMessage)
-                                    .foregroundColor(.red)
-                            }
-                            NavigationLink {
-                                SignUpView()
-                            } label: {
-                                Text("Don’t have an account? Sign Up")
-                                    .font(Font.custom("Inter", size: 12.60))
-                                    .foregroundColor(Color(red: 0.04, green: 0.04, blue: 0.04))
-                            }
-                        }
-                    )
-            }
+                                    NavigationLink {
+                                        SignUpView()
+                                    } label: {
+                                        Text("Don’t have an account? Sign Up")
+                                            .font(Font.custom("Inter", size: 12.60))
+                                            .foregroundColor(Color(red: 0.04, green: 0.04, blue: 0.04))
+                                    }
+                                }
+                            )
+                    }
+                )
         }
     }
 }

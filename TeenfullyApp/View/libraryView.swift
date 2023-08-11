@@ -5,6 +5,8 @@ struct LibraryView: View {
     @State var articleList: [Article]
 
 //TODO Add pagination and tags
+    
+    
     var body: some View {
         VStack {
             Text("Library ")

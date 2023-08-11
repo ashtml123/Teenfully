@@ -120,6 +120,10 @@ struct SignUpView: View {
             ContentView()
         }
         else{
+            Rectangle()
+                .background(Color(red: 1, green: 0.51, blue: 0.21))
+                .foregroundColor(.clear)
+                .overlay(
             VStack() {
                 Text("Welcome to Teenfully!")
                     .font(Font.custom("Inter", size: 25.60).weight(.bold))
@@ -129,8 +133,6 @@ struct SignUpView: View {
                     .frame(width: 368, height: 625)
                     .background(.white)
                     .cornerRadius(23)
-                    .frame(width: 428, height: 926)
-                    .background(Color(red: 1, green: 0.51, blue: 0.21))
                     .overlay(
                         VStack(spacing:20) {
                             Text("Make an Account")
@@ -142,6 +144,7 @@ struct SignUpView: View {
                                     .scaledToFit()
                                     .frame(height:34, alignment: .center)
                             }
+                            
                             Ellipse()
                                 .foregroundColor(.clear)
                                 .frame(width: 34, height: 34)
@@ -183,21 +186,15 @@ struct SignUpView: View {
                                         Text("Sign Up")
                                     }
                                 )
-//                            if(failed){
-//                                Text(errorMessage)
-//                                    .foregroundColor(.red)
-//                            }
-                            NavigationLink {
-                                SignInView()
-                            } label: {
-                                Text("Already have an account? Sign In")
-                                    .font(Font.custom("Inter", size: 12.60))
-                                    .foregroundColor(Color(red: 0.04, green: 0.04, blue: 0.04))
+                            if(failed){
+                                Text(errorMessage)
+                                    .foregroundColor(.red)
                             }
+//
                             
                         }
                     )
-            }
+            })
         }
     }
 }
