@@ -6,8 +6,6 @@ struct ThreeQuestion: View {
         ZStack{
             Group {
                 Text(question.QuestionInfo)
-                
-                
                 Button{
                     print("Subscribe to David Zhang")
                 } label: {
@@ -49,8 +47,7 @@ struct ThreeQuestion: View {
                         .offset(x:-100)
                 }
                      .offset(x: 40, y: 65)
-                           }
-            
+             }
         }
     }
 }
@@ -58,6 +55,5 @@ struct ThreeQuestion: View {
 struct ThreeQuestion_Previews: PreviewProvider {
     static var previews: some View {
         ThreeQuestion(question: ModelData().questionData[2])
-        
     }
 }
