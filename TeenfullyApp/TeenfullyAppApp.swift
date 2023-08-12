@@ -17,8 +17,8 @@ import FirebaseAppCheck
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//        let providerFactory = AppCheckDebugProviderFactory()
-//        AppCheck.setAppCheckProviderFactory(providerFactory)
+        //        let providerFactory = AppCheckDebugProviderFactory()
+        //        AppCheck.setAppCheckProviderFactory(providerFactory)
         
         FirebaseApp.configure()
         return true
@@ -34,7 +34,11 @@ struct YourApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                SignInView()
+//                if Auth.auth().currentUser != nil {
+//                    ContentView()
+//                } else {
+                    SignInView()
+//                }
             }
         }
     }

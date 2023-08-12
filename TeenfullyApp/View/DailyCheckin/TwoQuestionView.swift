@@ -5,46 +5,50 @@ import SwiftUI
 struct TwoQuestion: View {
     var question: questions
     var body: some View {
-        ZStack{
-            Group {
-                Text(question.QuestionInfo)
-                Button{
-                    print("sjdifjskdfh")
-                } label: {
-                    Rectangle() //Blue
-                        .foregroundColor(.clear)
+        VStack {            
+            Text(question.QuestionInfo)
+                .font(.system(size: 16, weight: .bold))
+                .padding(10)
+                .cornerRadius(10)
+                .multilineTextAlignment(.leading)
+            HStack(spacing: 20) {
+                Button(action: {
+                    print("No")
+                }) {
+                    Text("No")
                         .frame(width: 91, height: 50)
                         .background(Color(red: 0.29, green: 0.29, blue: 0.79))
-                        .cornerRadius(50)
-                    Text("No")
-                        .font(.title2)
-                        .offset(x:-65)
+                        .foregroundColor(.white)
+                        .cornerRadius(25)
+                        .font(.system(size: 14, weight: .bold))
+                        .padding(10)
+                        .cornerRadius(10)
                 }
-                .offset(x: -60, y: 65)
-                
-                Button{
-                    print("Subscribe to David Zhang")
-                } label: {
-                    Rectangle() //Green
-                        .foregroundColor(.clear)
+                Button(action: {
+                    print("Yes")
+                }) {
+                    Text("Yes")
                         .frame(width: 91, height: 50)
                         .background(Color(red: 0.33, green: 0.62, blue: 0.43))
-                        .cornerRadius(50)
-                    Text("Yes")
-                        .font(.title2)
-                        .offset(x:-68)
+                        .foregroundColor(.white)
+                        .cornerRadius(25)
+                        .font(.system(size: 14, weight: .bold))
+                        .padding(10)
+                        .cornerRadius(10)
                 }
-                .offset(x: 120, y: 66)
-
-                
-                
             }
         }
+        .padding(30)
+        .background(Color.white)
+        .cornerRadius(40)
+
     }
 }
 
 struct TwoQuestion_Previews: PreviewProvider {
     static var previews: some View {
         TwoQuestion(question: ModelData().questionData[0])
+        TwoQuestion(question: ModelData().questionData[1])
+
     }
 }

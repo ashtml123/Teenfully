@@ -3,52 +3,56 @@ import SwiftUI
 struct ThreeQuestion: View {
     var question: questions
     var body: some View {
-        ZStack{
-            Group {
-                Text(question.QuestionInfo)
-                Button{
-                    print("Subscribe to David Zhang")
-                } label: {
-                    Rectangle() //Blue
-                        .foregroundColor(.clear)
+        VStack {            
+            Text(question.QuestionInfo)
+                .font(.system(size: 16, weight: .bold))
+                .padding(10)
+                .cornerRadius(10)
+                .multilineTextAlignment(.leading)
+            
+            HStack(spacing: 20) {
+                Button(action: {
+                    print("No")
+                }) {
+                    Text("No")
                         .frame(width: 91, height: 50)
                         .background(Color(red: 0.29, green: 0.29, blue: 0.79))
-                        .cornerRadius(50)
-                    Text("No")
-                        .font(.title2)
-                        .offset(x:-65)
+                        .foregroundColor(.white)
+                        .cornerRadius(25)
+                        .font(.system(size: 14, weight: .bold))
+                        .padding(10)
+                        .cornerRadius(10)
                 }
-                .offset(x: -110, y: 65)
                 
-                Button{
-                    print("Subscribe to David Zhang")
-                } label: {
-                    Rectangle() //Green
-                        .foregroundColor(.clear)
+                Button(action: {
+                    print("Yes")
+                }) {
+                    Text("Yes")
                         .frame(width: 91, height: 50)
                         .background(Color(red: 0.33, green: 0.62, blue: 0.43))
-                        .cornerRadius(50)
-                    Text("Yes")
-                        .font(.title2)
-                        .offset(x:-68)
+                        .foregroundColor(.white)
+                        .cornerRadius(25)
+                        .font(.system(size: 14, weight: .bold))
+                        .padding(10)
+                        .cornerRadius(10)
                 }
-                .offset(x: 150, y: 66)
-                 
-                Button{
-                    print("Subscribe to David Zhang")
-                } label: {
-                Rectangle() //Yellow
-                    .foregroundColor(.clear)
-                    .frame(width: 126, height: 50)
-                    .background(Color(red: 0.99, green: 0.76, blue: 0.44))
-                    .cornerRadius(50)
+                
+                Button(action: {
+                    print("Maybe")
+                }) {
                     Text("Maybe")
                         .font(.title2)
-                        .offset(x:-100)
+                        .frame(width: 126, height: 50)
+                        .background(Color(red: 0.99, green: 0.76, blue: 0.44))
+                        .foregroundColor(.white)
+                        .cornerRadius(25)
                 }
-                     .offset(x: 40, y: 65)
-             }
+            }
         }
+        .padding(30)
+        .background(Color.white)
+        .cornerRadius(40)
+
     }
 }
 
