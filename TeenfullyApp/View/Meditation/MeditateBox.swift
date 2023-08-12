@@ -7,7 +7,8 @@ struct MeditateBox: View {
     @State private var isTimerActive = false
     @State private var remainingTime = 0
     @State private var player: AVAudioPlayer?
-    
+    @State private var countdownTimer: Timer?
+
     var body: some View {
         if isTimerActive {
             CountdownView(remainingTime: $remainingTime)
@@ -35,7 +36,7 @@ struct MeditateBox: View {
     }
     
     private func startTimer() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        countdownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [self] timer in
             if remainingTime > 0 {
                 remainingTime -= 1
             } else {
@@ -46,6 +47,8 @@ struct MeditateBox: View {
     }
     
     private func stopTimer() {
+        countdownTimer?.invalidate()
+        countdownTimer = nil
         isTimerActive = false
     }
     
@@ -74,19 +77,6 @@ struct CountdownView: View {
     var body: some View {
         Text("\(remainingTime / 60):\(remainingTime % 60, specifier: "%02d")")
             .font(.largeTitle)
-            .onAppear {
-                startTimer()
-            }
-    }
-    
-    private func startTimer() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            if remainingTime > 0 {
-                remainingTime -= 1
-            } else {
-                timer.invalidate()
-            }
-        }
     }
 }
 
