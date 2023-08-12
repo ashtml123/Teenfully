@@ -89,7 +89,7 @@ struct HomeScreenView: View {
                 description: "Experience peace always inherent to consciousness.",
                 imageName: "MeditationIcon",
                 linkText: "Explore",
-                destination: meditateView()
+                destination: MeditateView()
             )
             .frame(maxWidth: .infinity, alignment: .leading)
             

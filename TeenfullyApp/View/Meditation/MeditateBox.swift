@@ -1,49 +1,97 @@
-//
-
 import SwiftUI
+import AVFoundation
 
 struct MeditateBox: View {
-    var timeDuration: Int
+    let timeDuration: Int
+    let audioFileName: String
+    @State private var isTimerActive = false
+    @State private var remainingTime = 0
+    @State private var player: AVAudioPlayer?
+    
     var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(Color(red: 1, green: 0.95, blue: 0.91))
-                .frame(width: 311, height: 142.17143)
-                .cornerRadius(16)
-                .padding(.bottom, 20)
-                .overlay(
-                    VStack{
-                        Text("\(timeDuration) Minutes")
-                            .font(
-                                Font.custom("Rubik", size: 40)
-                                    .weight(.medium)
-                            )
-                            .foregroundColor(Color(red: 0.34, green: 0.22, blue: 0.15))
-                            .frame(width: 255.13953, height: 53.31429, alignment: .topLeading)
-                        
-                        Button(action: {
-                            // Action for Start button
-                        }) {
-                            Text("Start")
-                                .font(
-                                    Font.custom("Epilogue", size: 20)
-                                        .weight(.bold)
-                                )
-                                .foregroundColor(Color.white)
-                                .frame(width: 99, height: 45)
-                                .background(Color(red: 0.33, green: 0.62, blue: 0.43))
-                                .cornerRadius(10)
-                        }
-                    })
+        if isTimerActive {
+            CountdownView(remainingTime: $remainingTime)
+                .onAppear {
+                    startTimer()
+                    playAudio()
+                }
+                .onDisappear {
+                    stopTimer()
+                    stopAudio()
+                }
+        } else {
+            Button(action: {
+                isTimerActive = true
+                remainingTime = timeDuration * 60
+            }) {
+                Text("Start \(timeDuration) Min Meditation")
+                    .font(.title)
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
         }
-        .background(Color.white)
-        .ignoresSafeArea()
-        
+    }
+    
+    private func startTimer() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            if remainingTime > 0 {
+                remainingTime -= 1
+            } else {
+                timer.invalidate()
+                isTimerActive = false
+            }
+        }
+    }
+    
+    private func stopTimer() {
+        isTimerActive = false
+    }
+    
+    private func playAudio() {
+        guard let audioURL = Bundle.main.url(forResource: audioFileName, withExtension: "mp3") else {
+            return
+        }
+        do {
+            player = try AVAudioPlayer(contentsOf: audioURL)
+            player?.prepareToPlay()
+            player?.play()
+        } catch {
+            print("Error playing audio: \(error.localizedDescription)")
+        }
+    }
+    
+    private func stopAudio() {
+        player?.stop()
+        player = nil
+    }
+}
+
+struct CountdownView: View {
+    @Binding var remainingTime: Int
+    
+    var body: some View {
+        Text("\(remainingTime / 60):\(remainingTime % 60, specifier: "%02d")")
+            .font(.largeTitle)
+            .onAppear {
+                startTimer()
+            }
+    }
+    
+    private func startTimer() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            if remainingTime > 0 {
+                remainingTime -= 1
+            } else {
+                timer.invalidate()
+            }
+        }
     }
 }
 
 struct MeditateBox_Previews: PreviewProvider {
     static var previews: some View {
-        MeditateBox(timeDuration: 10)
+        MeditateBox(timeDuration: 10, audioFileName: "meditation_audio")
     }
 }
