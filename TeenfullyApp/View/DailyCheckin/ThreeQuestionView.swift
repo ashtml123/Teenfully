@@ -59,6 +59,5 @@ struct ThreeQuestion: View {
 struct ThreeQuestion_Previews: PreviewProvider {
     static var previews: some View {
         ThreeQuestion(question: ModelData().questionData[2])
-        
     }
 }

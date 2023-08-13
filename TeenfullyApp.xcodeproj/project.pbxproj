@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3FBD182A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
+		3E3FBD192A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
+		3E3FBD1A2A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
 		3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4912A6EA9B00077EB2D /* AccountTab.swift */; };
 		3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */; };
 		3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4962A6EB95A0077EB2D /* StreakView.swift */; };
@@ -15,6 +18,7 @@
 		3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A49E2A6F22510077EB2D /* ModelData.swift */; };
 		3E46A4A12A6F251C0077EB2D /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E46A4A02A6F251B0077EB2D /* userData.json */; };
 		3E4860902A6C86250074AC7C /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48608F2A6C86250074AC7C /* EmailView.swift */; };
+		3E6EF4122A843C1A00333226 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6EF4112A843C1A00333226 /* Measure.swift */; };
 		3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */; };
 		3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E312A68C07D005FD9B0 /* Assets.xcassets */; };
 		3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E987E342A68C07D005FD9B0 /* Preview Assets.xcassets */; };
@@ -61,11 +65,7 @@
 		3EC1A7C92A6C58D4000C8690 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A7C82A6C58D4000C8690 /* FirebaseRemoteConfigSwift */; };
 		3EC1A7CB2A6C58D4000C8690 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A7CA2A6C58D4000C8690 /* FirebaseStorage */; };
 		3EC1A7CD2A6C58D4000C8690 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A7CC2A6C58D4000C8690 /* FirebaseStorageCombine-Community */; };
-		3EC1A7D02A6C5992000C8690 /* FirebaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1A7CF2A6C5992000C8690 /* FirebaseView.swift */; };
-		3EC1A7D12A6C5992000C8690 /* FirebaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1A7CF2A6C5992000C8690 /* FirebaseView.swift */; };
-		3EC1A7D22A6C5992000C8690 /* FirebaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1A7CF2A6C5992000C8690 /* FirebaseView.swift */; };
 		3EF9A5D32A700F280095C20A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5D22A700F280095C20A /* UserModel.swift */; };
-		3EF9A5D52A700F5D0095C20A /* TestBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5D42A700F5D0095C20A /* TestBackend.swift */; };
 		3EF9A5D92A7012AC0095C20A /* TestEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5D82A7012AC0095C20A /* TestEmailView.swift */; };
 		3EF9A5DB2A7062100095C20A /* EmailPwdSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5DA2A7062100095C20A /* EmailPwdSignIn.swift */; };
 		3EF9A5DD2A70A98F0095C20A /* LinkLess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5DC2A70A98F0095C20A /* LinkLess.swift */; };
@@ -74,10 +74,6 @@
 		A61057FD2A7B05D900C90E36 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A61057FC2A7B05D900C90E36 /* GoogleSignInSwift */; };
 		A61057FF2A7C1F3400C90E36 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61057FE2A7C1F3400C90E36 /* SignUpView.swift */; };
 		A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */; };
-		A651BFDF2A83FD570005913D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A651BFDE2A83FD570005913D /* GoogleService-Info.plist */; };
-		A651C0542A86FF190005913D /* Rick Roll Sound Effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A651C0532A86FF190005913D /* Rick Roll Sound Effect.mp3 */; };
-		A651C0572A88497B0005913D /* Ian Breath Mediation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */; };
-		A6DAAA5B2A7340A800846829 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */; };
 		A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */; };
 		A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A6EAB8C82A7DA10700B5AEBC /* articles.json */; };
 		A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8CA2A7DA12500B5AEBC /* Article.swift */; };
@@ -102,6 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E46A4912A6EA9B00077EB2D /* AccountTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTab.swift; sourceTree = "<group>"; };
 		3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		3E46A4962A6EB95A0077EB2D /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
@@ -110,6 +107,7 @@
 		3E46A49E2A6F22510077EB2D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		3E46A4A02A6F251B0077EB2D /* userData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userData.json; sourceTree = "<group>"; };
 		3E48608F2A6C86250074AC7C /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		3E6EF4112A843C1A00333226 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		3E987E2A2A68C07C005FD9B0 /* TeenfullyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenfullyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppApp.swift; sourceTree = "<group>"; };
 		3E987E312A68C07D005FD9B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,9 +130,7 @@
 		3EB97A592A6F691E0089C80B /* dailyQuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyQuestionData.json; sourceTree = "<group>"; };
 		3EB97A5B2A6F6C750089C80B /* ThreeQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionView.swift; sourceTree = "<group>"; };
 		3EC1A7582A6C0D51000C8690 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		3EC1A7CF2A6C5992000C8690 /* FirebaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseView.swift; sourceTree = "<group>"; };
 		3EF9A5D22A700F280095C20A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		3EF9A5D42A700F5D0095C20A /* TestBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBackend.swift; sourceTree = "<group>"; };
 		3EF9A5D82A7012AC0095C20A /* TestEmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEmailView.swift; sourceTree = "<group>"; };
 		3EF9A5DA2A7062100095C20A /* EmailPwdSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPwdSignIn.swift; sourceTree = "<group>"; };
 		3EF9A5DC2A70A98F0095C20A /* LinkLess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkLess.swift; sourceTree = "<group>"; };
@@ -146,7 +142,6 @@
 		A651C0532A86FF190005913D /* Rick Roll Sound Effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rick Roll Sound Effect.mp3"; sourceTree = "<group>"; };
 		A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ian Breath Mediation.mp3"; sourceTree = "<group>"; };
 		A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeenfullyApp.entitlements; sourceTree = "<group>"; };
-		A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		A6EAB8C82A7DA10700B5AEBC /* articles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
 		A6EAB8CA2A7DA12500B5AEBC /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -235,6 +230,7 @@
 				3EF9A5D22A700F280095C20A /* UserModel.swift */,
 				A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */,
 				A6EAB8CA2A7DA12500B5AEBC /* Article.swift */,
+				3E6EF4112A843C1A00333226 /* Measure.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,6 +270,7 @@
 			children = (
 				A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */,
 				A61057F82A7AFB3300C90E36 /* Info.plist */,
+				3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */,
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
 				A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */,
 				A651C0532A86FF190005913D /* Rick Roll Sound Effect.mp3 */,
@@ -281,7 +278,6 @@
 				3E46A49B2A6F1C720077EB2D /* Models */,
 				3E987E572A68C090005FD9B0 /* View */,
 				3E987E312A68C07D005FD9B0 /* Assets.xcassets */,
-				3EC1A7CE2A6C596D000C8690 /* Backend */,
 				3E987E332A68C07D005FD9B0 /* Preview Content */,
 				A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */,
 			);
@@ -317,11 +313,9 @@
 			isa = PBXGroup;
 			children = (
 				3EB97A522A6F57FD0089C80B /* ContentView.swift */,
-				A6DAAA5A2A7340A800846829 /* SwiftUIView.swift */,
 				3EB97A502A6F579F0089C80B /* HomeScreenView.swift */,
 				3E987E5A2A68C1C6005FD9B0 /* dailyCheckinView.swift */,
 				3E987E622A68CBB3005FD9B0 /* libraryView.swift */,
-				3EF9A5D42A700F5D0095C20A /* TestBackend.swift */,
 				3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */,
 				3EB85BFC2A714C3800D20273 /* Meditation */,
 				3EF9A5DE2A70B4E50095C20A /* HabitBuilder */,
@@ -364,14 +358,6 @@
 				A61057FE2A7C1F3400C90E36 /* SignUpView.swift */,
 			);
 			path = SIgnIn;
-			sourceTree = "<group>";
-		};
-		3EC1A7CE2A6C596D000C8690 /* Backend */ = {
-			isa = PBXGroup;
-			children = (
-				3EC1A7CF2A6C5992000C8690 /* FirebaseView.swift */,
-			);
-			path = Backend;
 			sourceTree = "<group>";
 		};
 		3EF9A5DE2A70B4E50095C20A /* HabitBuilder */ = {
@@ -526,9 +512,6 @@
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
 				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
-				A651BFDF2A83FD570005913D /* GoogleService-Info.plist in Resources */,
-				A651C0572A88497B0005913D /* Ian Breath Mediation.mp3 in Resources */,
-				A651C0542A86FF190005913D /* Rick Roll Sound Effect.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +519,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3FBD192A840A280062D2FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +527,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3FBD1A2A840A280062D2FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +538,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EF9A5D52A700F5D0095C20A /* TestBackend.swift in Sources */,
 				3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */,
 				3EF9A5E02A70B5190095C20A /* Habits.swift in Sources */,
 				3EF9A5DB2A7062100095C20A /* EmailPwdSignIn.swift in Sources */,
@@ -567,6 +551,7 @@
 				3EF9A5DD2A70A98F0095C20A /* LinkLess.swift in Sources */,
 				3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */,
 				A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */,
+				3E6EF4122A843C1A00333226 /* Measure.swift in Sources */,
 				A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */,
 				3E4860902A6C86250074AC7C /* EmailView.swift in Sources */,
 				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,
@@ -577,9 +562,7 @@
 				A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */,
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
 				3EB97A562A6F5ED80089C80B /* TwoQuestionView.swift in Sources */,
-				3EC1A7D02A6C5992000C8690 /* FirebaseView.swift in Sources */,
 				3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */,
-				A6DAAA5B2A7340A800846829 /* SwiftUIView.swift in Sources */,
 				3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */,
 				3E46A49A2A6EBDB10077EB2D /* ProfileInterface.swift in Sources */,
 				3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */,
@@ -594,7 +577,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E987E3F2A68C07D005FD9B0 /* TeenfullyAppTests.swift in Sources */,
-				3EC1A7D12A6C5992000C8690 /* FirebaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +586,6 @@
 			files = (
 				3E987E492A68C07D005FD9B0 /* TeenfullyAppUITests.swift in Sources */,
 				3E987E4B2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift in Sources */,
-				3EC1A7D22A6C5992000C8690 /* FirebaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
