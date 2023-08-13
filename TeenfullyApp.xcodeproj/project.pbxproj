@@ -140,6 +140,7 @@
 		A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A651BFDE2A83FD570005913D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A651C0532A86FF190005913D /* Rick Roll Sound Effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rick Roll Sound Effect.mp3"; sourceTree = "<group>"; };
+		A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ian Breath Mediation.mp3"; sourceTree = "<group>"; };
 		A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeenfullyApp.entitlements; sourceTree = "<group>"; };
 		A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		A6EAB8C82A7DA10700B5AEBC /* articles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
@@ -271,6 +272,7 @@
 				A61057F82A7AFB3300C90E36 /* Info.plist */,
 				3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */,
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
+				A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */,
 				A651C0532A86FF190005913D /* Rick Roll Sound Effect.mp3 */,
 				3E46A4A22A6F252E0077EB2D /* Data */,
 				3E46A49B2A6F1C720077EB2D /* Models */,
@@ -510,7 +512,6 @@
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
 				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
-				3E3FBD182A840A280062D2FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
