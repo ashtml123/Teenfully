@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E3FBD182A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
-		3E3FBD192A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
-		3E3FBD1A2A840A280062D2FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */; };
 		3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4912A6EA9B00077EB2D /* AccountTab.swift */; };
 		3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */; };
 		3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46A4962A6EB95A0077EB2D /* StreakView.swift */; };
@@ -65,6 +62,9 @@
 		3EC1A7C92A6C58D4000C8690 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A7C82A6C58D4000C8690 /* FirebaseRemoteConfigSwift */; };
 		3EC1A7CB2A6C58D4000C8690 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A7CA2A6C58D4000C8690 /* FirebaseStorage */; };
 		3EC1A7CD2A6C58D4000C8690 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC1A7CC2A6C58D4000C8690 /* FirebaseStorageCombine-Community */; };
+		3EF5BF6B2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
+		3EF5BF6C2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
+		3EF5BF6D2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
 		3EF9A5D32A700F280095C20A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5D22A700F280095C20A /* UserModel.swift */; };
 		3EF9A5D92A7012AC0095C20A /* TestEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5D82A7012AC0095C20A /* TestEmailView.swift */; };
 		3EF9A5DB2A7062100095C20A /* EmailPwdSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5DA2A7062100095C20A /* EmailPwdSignIn.swift */; };
@@ -98,7 +98,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E46A4912A6EA9B00077EB2D /* AccountTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTab.swift; sourceTree = "<group>"; };
 		3E46A4942A6EAB5A0077EB2D /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		3E46A4962A6EB95A0077EB2D /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
@@ -130,6 +129,7 @@
 		3EB97A592A6F691E0089C80B /* dailyQuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyQuestionData.json; sourceTree = "<group>"; };
 		3EB97A5B2A6F6C750089C80B /* ThreeQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionView.swift; sourceTree = "<group>"; };
 		3EC1A7582A6C0D51000C8690 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EF9A5D22A700F280095C20A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3EF9A5D82A7012AC0095C20A /* TestEmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEmailView.swift; sourceTree = "<group>"; };
 		3EF9A5DA2A7062100095C20A /* EmailPwdSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPwdSignIn.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 			children = (
 				A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */,
 				A61057F82A7AFB3300C90E36 /* Info.plist */,
-				3E3FBD172A840A280062D2FB /* GoogleService-Info.plist */,
+				3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */,
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
 				A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */,
 				A651C0532A86FF190005913D /* Rick Roll Sound Effect.mp3 */,
@@ -512,6 +512,7 @@
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
 				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
+				3EF5BF6B2A8A6F010030C026 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E3FBD192A840A280062D2FB /* GoogleService-Info.plist in Resources */,
+				3EF5BF6C2A8A6F010030C026 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E3FBD1A2A840A280062D2FB /* GoogleService-Info.plist in Resources */,
+				3EF5BF6D2A8A6F010030C026 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

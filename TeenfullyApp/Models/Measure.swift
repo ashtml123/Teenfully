@@ -9,14 +9,9 @@ struct Measure:Hashable, Codable, Identifiable{
     var user: String //consistent with user id
     var date: Int //date of measurement
     // The following is a list of measurements
-    var mood: Int
-    var anxiety: Int
-    var decision: Int
-    var behavior: Int
-    var physical: Int
-    var substance: Int
-    var social: Int
-    var cognitive: Int
+    var mood: Int //1 in qtype
+    var anxiety: Int //2 in qtype
+    var general: Int //3 in qtype
 }
 
 
