@@ -195,7 +195,7 @@ struct dailyCheckinView: View {
                             .font(.title)
                             .padding(.top, 100)
                         TwoQuestion(question: ModelData().questionData[0])
-                        ThreeQuestion(question:ModelData().questionData[2])
+                        ThreeQuestionHigher(question:ModelData().questionData[2])
                         TwoQuestion(question: ModelData().questionData[1])
                     }
                     .padding(.vertical, 40)

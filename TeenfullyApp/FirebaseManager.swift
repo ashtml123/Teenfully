@@ -93,14 +93,9 @@ class FirebaseManager {
         responses.document(newResp.id).setData([
             "user":newResp.user,
             "anxiety":newResp.anxiety,
-            "behavior":newResp.behavior,
-            "cognitive":newResp.cognitive,
             "date":newResp.date,
-            "decision":newResp.decision,
             "mood":newResp.mood,
-            "physical":newResp.physical,
-            "social":newResp.social,
-            "substance":newResp.substance
+            "general":newResp.general
         ]){error in
             if let error=error{
                 print("Error adding response: \(error)")

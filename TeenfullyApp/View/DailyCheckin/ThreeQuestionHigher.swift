@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ThreeQuestion: View {
+struct ThreeQuestionHigher: View {
     var question: questions
     var body: some View {
         VStack {            
@@ -14,7 +14,7 @@ struct ThreeQuestion: View {
                 Button(action: {
                     print("No")
                 }) {
-                    Text("No")
+                    Text("Lower")
                         .frame(width: 91, height: 50)
                         .background(Color(red: 0.29, green: 0.29, blue: 0.79))
                         .foregroundColor(.white)
@@ -27,7 +27,7 @@ struct ThreeQuestion: View {
                 Button(action: {
                     print("Yes")
                 }) {
-                    Text("Yes")
+                    Text("Higher")
                         .frame(width: 91, height: 50)
                         .background(Color(red: 0.33, green: 0.62, blue: 0.43))
                         .foregroundColor(.white)
@@ -40,7 +40,7 @@ struct ThreeQuestion: View {
                 Button(action: {
                     print("Maybe")
                 }) {
-                    Text("Maybe")
+                    Text("Same")
                         .font(.title2)
                         .frame(width: 126, height: 50)
                         .background(Color(red: 0.99, green: 0.76, blue: 0.44))
@@ -56,8 +56,8 @@ struct ThreeQuestion: View {
     }
 }
 
-struct ThreeQuestion_Previews: PreviewProvider {
+struct ThreeQuestionHigher_Previews: PreviewProvider {
     static var previews: some View {
-        ThreeQuestion(question: ModelData().questionData[2])
+        ThreeQuestionHigher(question: ModelData().questionData[3])
     }
 }

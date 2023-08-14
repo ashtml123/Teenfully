@@ -1,78 +1,93 @@
 [
     {
         "QuestionInfo":" How is your mood right now? (Rate on a scale from 1 to 10)",
-        "QuestionType":1,
+        "Category":1,
+        "Qtype":"Rate",
         "id": 100
      
     },
     {
         "QuestionInfo":"How would you say your energy level is? (Rate on a scale from 1 to 10)",
-        "QuestionType":1,
+        "Category":1,
+        "Qtype":"Rate",
         "id":101
     },
     {
         "QuestionInfo": "I feel upset because of small things easily. (Rate on a scale of don’t agree – sometimes - agree)",
-        "QuestionType": 2,
+        "Category": 2,
+        "Qtype":"ThreeAgree",
         "id":200
     },
     {
         "QuestionInfo": "My energy level is____ compared to my usual energy level. (lower/same/higher)",
-        "QuestionType":1,
+        "Category":1,
+        "Qtype":"ThreeHigher",
         "id":102
     },
     {
         "QuestionInfo": "I’m not enjoying things that I used to enjoy. (Rate on a scale of don’t agree – sometimes – agree)",
-        "QuestionType":1,
+        "Category":1,
+        "Qtype":"ThreeAgree",
         "id":103
     },
     {
         "QuestionInfo": "I’m constantly feeling down, depressed, or hopeless. (Rate on a scale of don’t agree – sometimes – agree)",
-        "QuestionType":1,
+        "Category":1,
+        "Qtype":"ThreeAgree",
         "id":104
     },
     {
         "QuestionInfo": "I often think about things that I that can harm me or people around me often. (Rate on a scale of don’t agree – sometimes - agree)",
-        "QuestionType":2,
+        "Category":2,
+        "Qtype":"ThreeAgree",
         "id":201
     },
     {
         "QuestionInfo": "How many hours of sleep did you get last night? (Rate on a scale from less than 3 to 12+ hours)",
-        "QuestionType": 3,
+        "Category": 3,
+        "Qtype":"RateSleep",
         "id": 300
     },
     {
         "QuestionInfo": "I can’t control the responses of my body to unwanted situations. (Rate on a scale of don’t agree – sometimes - agree)",
-        "QuestionType": 2,
+        "Category": 2,
+        "Qtype":"ThreeAgree",
         "id":202
     },
     {
         "QuestionInfo": "I can tell myself to focus when I want to. (Rate on a scale of don’t agree – sometimes - agree)",
-        "QuestionType": 2,
+        "Category": 2,
+        "Qtype":"ThreeAgree",
         "id":203
     },
     {
         "QuestionInfo": "I have thought about ending my own life in the past week. (Rate on a scale of don’t agree – sometimes - agree)",
-        "QuestionType": 3,
+        "Category": 3,
+        "Qtype":"ThreeAgree",
         "id":301
     },
     {
         "QuestionInfo": " I have thought about ways to harm myself in the past week. (Rate on a scale of don’t agree – sometimes - agree)",
-        "QuestionType": 3,
-        "Id":302
+        "Category": 3,
+        "Qtype":"ThreeAgree",
+        "id":302
     },
     {
         "QuestionInfo": "I have harmed myself in the last month. (Yes or no)",
-        "QuestionType": 3,
-        "Id": 303
+        "Category": 3,
+        "Qtype":"TwoYes",
+        "id": 303
     },
     {
         "QuestionInfo": "I experience a variety of pain and aches. (Rate on a scale of don’t agree – sometimes – agree)",
-        "QuestionType":3,
-        "Id":304
+        "Category":3,
+        "Qtype":"ThreeAgree",
+        "id":304
     },
     {
         "QuestionInfo": "I feel anxious over things and that’s affecting my normal life. (Rate on a scale of don’t agree – sometimes – agree)",
-        "QuestionType":2,
-        "Id":204
+        "Category":2,
+        "Qtype":"ThreeAgree",
+        "id":204
     }
 ]
