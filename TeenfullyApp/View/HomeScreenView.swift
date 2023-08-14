@@ -80,7 +80,7 @@ struct HomeScreenView: View {
                 description: "Let’s see how you are feeling today!",
                 imageName: "DailyCheckin",
                 linkText: "Start Now",
-                destination: dailyCheckinView()
+                destination: DailyCheckinView()
             )
             .frame(maxWidth: .infinity, alignment: .leading)
             

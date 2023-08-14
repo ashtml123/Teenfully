@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct TwoQuestion: View {
+struct TwoQuestionYes: View {
     var question: questions
     var body: some View {
         VStack {            
@@ -45,10 +45,8 @@ struct TwoQuestion: View {
     }
 }
 
-struct TwoQuestion_Previews: PreviewProvider {
+struct TwoQuestionYes_Previews: PreviewProvider {
     static var previews: some View {
-        TwoQuestion(question: ModelData().questionData[0])
-        TwoQuestion(question: ModelData().questionData[1])
-
+        TwoQuestionYes(question: ModelData().questionData[12])
     }
 }

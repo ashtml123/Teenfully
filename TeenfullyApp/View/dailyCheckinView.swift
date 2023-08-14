@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct dailyCheckinView: View {
+struct DailyCheckinView: View {
     @State var question = ModelData().questionData[0]
     
     var body:some View {
@@ -190,18 +190,7 @@ struct dailyCheckinView: View {
                     Color(red: 0.98, green: 0.98, blue: 0.98)
                         .ignoresSafeArea()
                     
-                    VStack(spacing: 0) {
-                        Text("Daily Check In")
-                            .font(.title)
-                            .padding(.top, 100)
-                        TwoQuestion(question: ModelData().questionData[0])
-                        ThreeQuestionHigher(question:ModelData().questionData[2])
-                        TwoQuestion(question: ModelData().questionData[1])
-                    }
-                    .padding(.vertical, 40)
-                    .padding(.horizontal, 30)
-                    .background(Color.white)
-                    .cornerRadius(40)
+
                 }
             }
         }
@@ -211,8 +200,8 @@ struct dailyCheckinView: View {
   }
 }
 
-struct dailyCheckinView_Previews: PreviewProvider {
+struct DailyCheckinView_Previews: PreviewProvider {
     static var previews: some View {
-        dailyCheckinView()
+        DailyCheckinView()
     }
 }

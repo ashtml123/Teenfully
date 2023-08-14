@@ -22,7 +22,7 @@
 		3E987E3F2A68C07D005FD9B0 /* TeenfullyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E3E2A68C07D005FD9B0 /* TeenfullyAppTests.swift */; };
 		3E987E492A68C07D005FD9B0 /* TeenfullyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E482A68C07D005FD9B0 /* TeenfullyAppUITests.swift */; };
 		3E987E4B2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E4A2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift */; };
-		3E987E5B2A68C1C6005FD9B0 /* dailyCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5A2A68C1C6005FD9B0 /* dailyCheckinView.swift */; };
+		3E987E5B2A68C1C6005FD9B0 /* DailyCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */; };
 		3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */; };
 		3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5E2A68CB46005FD9B0 /* meditateView.swift */; };
 		3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E602A68CB8B005FD9B0 /* meditatingView.swift */; };
@@ -30,7 +30,7 @@
 		3EB85BFE2A714CC500D20273 /* MeditateBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB85BFD2A714CC500D20273 /* MeditateBox.swift */; };
 		3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A502A6F579F0089C80B /* HomeScreenView.swift */; };
 		3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A522A6F57FD0089C80B /* ContentView.swift */; };
-		3EB97A562A6F5ED80089C80B /* TwoQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A552A6F5ED80089C80B /* TwoQuestionView.swift */; };
+		3EB97A562A6F5ED80089C80B /* TwoQuestionYes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A552A6F5ED80089C80B /* TwoQuestionYes.swift */; };
 		3EB97A582A6F67200089C80B /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A572A6F67200089C80B /* Questions.swift */; };
 		3EB97A5A2A6F691E0089C80B /* dailyQuestionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EB97A592A6F691E0089C80B /* dailyQuestionData.json */; };
 		3EB97A5C2A6F6C750089C80B /* ThreeQuestionHigher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A5B2A6F6C750089C80B /* ThreeQuestionHigher.swift */; };
@@ -122,7 +122,7 @@
 		3E987E442A68C07D005FD9B0 /* TeenfullyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenfullyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E987E482A68C07D005FD9B0 /* TeenfullyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppUITests.swift; sourceTree = "<group>"; };
 		3E987E4A2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3E987E5A2A68C1C6005FD9B0 /* dailyCheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dailyCheckinView.swift; sourceTree = "<group>"; };
+		3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCheckinView.swift; sourceTree = "<group>"; };
 		3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitBuilderView.swift; sourceTree = "<group>"; };
 		3E987E5E2A68CB46005FD9B0 /* meditateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditateView.swift; sourceTree = "<group>"; };
 		3E987E602A68CB8B005FD9B0 /* meditatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditatingView.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		3EB85BFD2A714CC500D20273 /* MeditateBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditateBox.swift; sourceTree = "<group>"; };
 		3EB97A502A6F579F0089C80B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		3EB97A522A6F57FD0089C80B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3EB97A552A6F5ED80089C80B /* TwoQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoQuestionView.swift; sourceTree = "<group>"; };
+		3EB97A552A6F5ED80089C80B /* TwoQuestionYes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoQuestionYes.swift; sourceTree = "<group>"; };
 		3EB97A572A6F67200089C80B /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		3EB97A592A6F691E0089C80B /* dailyQuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyQuestionData.json; sourceTree = "<group>"; };
 		3EB97A5B2A6F6C750089C80B /* ThreeQuestionHigher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionHigher.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 			children = (
 				3EB97A522A6F57FD0089C80B /* ContentView.swift */,
 				3EB97A502A6F579F0089C80B /* HomeScreenView.swift */,
-				3E987E5A2A68C1C6005FD9B0 /* dailyCheckinView.swift */,
+				3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */,
 				3E987E622A68CBB3005FD9B0 /* libraryView.swift */,
 				3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */,
 				3EB85BFC2A714C3800D20273 /* Meditation */,
@@ -350,7 +350,7 @@
 		3EB97A542A6F5EBF0089C80B /* DailyCheckin */ = {
 			isa = PBXGroup;
 			children = (
-				3EB97A552A6F5ED80089C80B /* TwoQuestionView.swift */,
+				3EB97A552A6F5ED80089C80B /* TwoQuestionYes.swift */,
 				3EB97A5B2A6F6C750089C80B /* ThreeQuestionHigher.swift */,
 				3EF5BF722A8A8EF90030C026 /* ThreeQuestionAgree.swift */,
 				3EF5BF6E2A8A76D90030C026 /* RatingView.swift */,
@@ -569,11 +569,11 @@
 				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,
 				3EB85BFE2A714CC500D20273 /* MeditateBox.swift in Sources */,
 				3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */,
-				3E987E5B2A68C1C6005FD9B0 /* dailyCheckinView.swift in Sources */,
+				3E987E5B2A68C1C6005FD9B0 /* DailyCheckinView.swift in Sources */,
 				3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */,
 				A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */,
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
-				3EB97A562A6F5ED80089C80B /* TwoQuestionView.swift in Sources */,
+				3EB97A562A6F5ED80089C80B /* TwoQuestionYes.swift in Sources */,
 				3EF5BF732A8A8EF90030C026 /* ThreeQuestionAgree.swift in Sources */,
 				3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */,
 				3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */,
