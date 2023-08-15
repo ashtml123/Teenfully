@@ -1,39 +1,51 @@
-//
-
 import SwiftUI
 
 struct ProfileInterface: View {
     var profilePicture: Image
-    var name: String
+    @State private var name = ""
+    
     var body: some View {
         VStack {
-            profilePicture
-                .resizable()
-                .scaledToFit()
-                .clipShape(Circle())
-                .frame(width:150)
-                .offset(y:-200)
-            
-            Button {
+            ZStack {
+                Circle()
+                    .fill(Color.white)
+                    .frame(width: 150, height: 150)
                 
-            } label:{
-                Text("Change profile picture")
+                profilePicture
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(Circle())
+                    .frame(width: 140, height: 140)
             }
-            .offset(y:-190)
+            .padding(.top, 30)
             
-            Text("Name: \(name)")
+            Text("Name:")
                 .font(.title3)
-                .offset(x:-100,y:-100)
-            Text("Birthdate:")
-                .font(.title3)
-                .offset(x:-100,y:-80)
+                .foregroundColor(.gray)
+                .padding(.top, 20)
             
+            Text(name)
+                .font(.title2)
+                .fontWeight(.bold)
+                .padding(.bottom, 10)
+                .onAppear {
+                    FirebaseManager.shared.fetchUserProfile { userProfile in
+                        if let userProfile = userProfile {
+                            DispatchQueue.main.async {
+                                self.name = userProfile.username
+                            }
+                        } else {
+                            print("User profile not found or error occurred.")
+                        }
+                    }
+                }
         }
+        .padding(.horizontal, 40)
     }
 }
 
 struct ProfileInterface_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileInterface(profilePicture: Image("DavidProfile"),name: "David Zhang")
+        ProfileInterface(profilePicture: Image("DavidProfile"))
     }
 }

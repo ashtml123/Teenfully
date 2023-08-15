@@ -61,7 +61,6 @@ struct LibraryView: View {
             NavigationView {
                 VStack {
                     SearchBar(text: $searchText)
-                    
                     List {
                         ForEach(startIndex..<endIndex, id: \.self) { index in
                             NavigationLink(destination: ArticleView(article: filteredArticles[index])) {

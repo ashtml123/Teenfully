@@ -1,14 +1,5 @@
 import SwiftUI
 
-struct UserProfileView: View {
-    var body: some View {
-        // Customize this view to display user profile information
-        Text("User Profile")
-            .font(.system(size: 18, weight: .bold))
-            .padding()
-    }
-}
-
 struct FeatureCardView<Content: View>: View {
     let title: String
     let description: String
@@ -53,10 +44,7 @@ struct HomeScreenView: View {
     //TODO make streak counter
     //TODO profile editing
     var body: some View {
-        ScrollView() {
-            UserProfileView()
-                .frame(width: 300)
-            
+        ScrollView() {            
             Text("Welcome Back, \(name)!")
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
@@ -76,7 +64,7 @@ struct HomeScreenView: View {
                 }
             
             FeatureCardView(
-                title: "Take your daily check-in",
+                title: "Your Daily Check-In",
                 description: "Let’s see how you are feeling today!",
                 imageName: "DailyCheckin",
                 linkText: "Start Now",
@@ -84,19 +72,11 @@ struct HomeScreenView: View {
             )
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            FeatureCardView(
-                title: "Meditate",
-                description: "Experience peace always inherent to consciousness.",
-                imageName: "MeditationIcon",
-                linkText: "Explore",
-                destination: MeditateView()
-            )
-            .frame(maxWidth: .infinity, alignment: .leading)
             
             FeatureCardView(
                 title: "Habit Builder",
                 description: "Relearn your relationship with your phone.",
-                imageName: "HabitBuilder",
+                imageName: "HabitBuilderInside",
                 linkText: "Continue",
                 destination: habitBuilderView()
             )

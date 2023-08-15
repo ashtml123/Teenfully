@@ -3,24 +3,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     var body: some View {
         TabView {
             HomeScreenView()
             .tabItem(){
-                    Image("HomeIcon")
+                    Label("Home", image: "HomeIcon")
                 }
-            Text("Some Stuff")
+//            Text("Some Stuff")
+//                .tabItem(){
+//                    Image("GroupIcon")
+//                }
+//            Text("Some more stuff")
+//                .tabItem(){
+//                    Image("Medals")
+//                }
+//            Text("Some more more stuff")
+//                .tabItem(){
+//                    Image("FeedBack")
+//                }
+            MeditateView()
                 .tabItem(){
-                    Image("GroupIcon")
+                    Label("Meditate",image:"MeditationIcon")
                 }
-            Text("Some more stuff")
+            ProfileInterface(profilePicture:Image(systemName: "person.crop.circle") )
                 .tabItem(){
-                    Image("Medals")
-                }
-            Text("Some more more stuff")
-                .tabItem(){
-                    Image("FeedBack")
+                    Label("Profile",systemImage: "person.crop.circle")
                 }
         }
     }

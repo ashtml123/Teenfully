@@ -25,7 +25,6 @@
 		3E987E5B2A68C1C6005FD9B0 /* DailyCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */; };
 		3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */; };
 		3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5E2A68CB46005FD9B0 /* meditateView.swift */; };
-		3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E602A68CB8B005FD9B0 /* meditatingView.swift */; };
 		3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E622A68CBB3005FD9B0 /* libraryView.swift */; };
 		3EB85BFE2A714CC500D20273 /* MeditateBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB85BFD2A714CC500D20273 /* MeditateBox.swift */; };
 		3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A502A6F579F0089C80B /* HomeScreenView.swift */; };
@@ -80,6 +79,7 @@
 		A623AE782A8AEF6600D61901 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A623AE772A8AEF6600D61901 /* FirebaseRemoteConfigSwift */; };
 		A623AE7A2A8AEF6600D61901 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A623AE792A8AEF6600D61901 /* FirebaseStorage */; };
 		A623AE7C2A8AEF6600D61901 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A623AE7B2A8AEF6600D61901 /* FirebaseStorageCombine-Community */; };
+		A623AE7E2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A623AE7D2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 */; };
 		A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */; };
 		A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A6EAB8C82A7DA10700B5AEBC /* articles.json */; };
 		A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8CA2A7DA12500B5AEBC /* Article.swift */; };
@@ -125,7 +125,6 @@
 		3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCheckinView.swift; sourceTree = "<group>"; };
 		3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitBuilderView.swift; sourceTree = "<group>"; };
 		3E987E5E2A68CB46005FD9B0 /* meditateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditateView.swift; sourceTree = "<group>"; };
-		3E987E602A68CB8B005FD9B0 /* meditatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditatingView.swift; sourceTree = "<group>"; };
 		3E987E622A68CBB3005FD9B0 /* libraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryView.swift; sourceTree = "<group>"; };
 		3EB85BFD2A714CC500D20273 /* MeditateBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditateBox.swift; sourceTree = "<group>"; };
 		3EB97A502A6F579F0089C80B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -146,7 +145,7 @@
 		A61057F82A7AFB3300C90E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A61057FE2A7C1F3400C90E36 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		A651C0532A86FF190005913D /* Rick Roll Sound Effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rick Roll Sound Effect.mp3"; sourceTree = "<group>"; };
+		A623AE7D2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ian Breath Mediation (5min).mp3"; sourceTree = "<group>"; };
 		A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ian Breath Mediation.mp3"; sourceTree = "<group>"; };
 		A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeenfullyApp.entitlements; sourceTree = "<group>"; };
 		A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
@@ -279,7 +278,7 @@
 				3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */,
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
 				A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */,
-				A651C0532A86FF190005913D /* Rick Roll Sound Effect.mp3 */,
+				A623AE7D2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 */,
 				3E46A4A22A6F252E0077EB2D /* Data */,
 				3E46A49B2A6F1C720077EB2D /* Models */,
 				3E987E572A68C090005FD9B0 /* View */,
@@ -340,7 +339,6 @@
 			children = (
 				3E987E5E2A68CB46005FD9B0 /* meditateView.swift */,
 				3EB85BFD2A714CC500D20273 /* MeditateBox.swift */,
-				3E987E602A68CB8B005FD9B0 /* meditatingView.swift */,
 			);
 			path = Meditation;
 			sourceTree = "<group>";
@@ -518,6 +516,7 @@
 				3E987E352A68C07D005FD9B0 /* Preview Assets.xcassets in Resources */,
 				3EB97A5A2A6F691E0089C80B /* dailyQuestionData.json in Resources */,
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
+				A623AE7E2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 in Resources */,
 				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
 				3EF5BF6B2A8A6F010030C026 /* GoogleService-Info.plist in Resources */,
@@ -573,7 +572,6 @@
 				3E987E2E2A68C07C005FD9B0 /* TeenfullyAppApp.swift in Sources */,
 				3EB97A562A6F5ED80089C80B /* TwoQuestionYes.swift in Sources */,
 				3EF5BF732A8A8EF90030C026 /* ThreeQuestionAgree.swift in Sources */,
-				3E987E612A68CB8B005FD9B0 /* meditatingView.swift in Sources */,
 				3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */,
 				3E46A49A2A6EBDB10077EB2D /* ProfileInterface.swift in Sources */,
 				3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */,
@@ -653,7 +651,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
