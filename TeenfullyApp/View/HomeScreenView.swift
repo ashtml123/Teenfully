@@ -37,31 +37,18 @@ struct FeatureCardView<Content: View>: View {
     }
 }
 struct HomeScreenView: View {
-    @State private var name = ""
-    @State private var age = 0
-    @State private var articleHolder: [Article]=[]
+    @State var name: String
+    @State var age:Int
+    @State var articleHolder: [Article]
     //TODO Profile picture
     //TODO make streak counter
     //TODO profile editing
     var body: some View {
-        ScrollView() {            
+        ScrollView() {
             Text("Welcome Back, \(name)!")
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding()
-                .onAppear {
-                    FirebaseManager.shared.fetchUserProfile { userProfile in
-                        if let userProfile = userProfile {
-                            DispatchQueue.main.async {
-                                print("I HAVE FETCHED USER")
-                                self.name = userProfile.username
-                                self.age = userProfile.age
-                            }
-                        } else {
-                            print("User profile not found or error occurred.")
-                        }
-                    }
-                }
             
             FeatureCardView(
                 title: "Your Daily Check-In",
@@ -90,7 +77,6 @@ struct HomeScreenView: View {
                 destination: LibraryView(articleList: articleHolder)
             )
             .frame(maxWidth: .infinity, alignment: .leading)
-            
             .onAppear{ FirebaseManager.shared.fetchArticlesFromFirebase{fetchedArticles,error in
                 if(error != nil){
                     print("Error! \(String(describing: error))")
@@ -100,7 +86,6 @@ struct HomeScreenView: View {
                     articleHolder=fetchedArticles!
                 }
             }}
-            // Repeat the same structure for other feature cards...
         }
         .cornerRadius(20)
     }
@@ -108,6 +93,6 @@ struct HomeScreenView: View {
 
 struct HomeScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreenView()
+        HomeScreenView(name: "John", age: 1, articleHolder: [])
     }
 }

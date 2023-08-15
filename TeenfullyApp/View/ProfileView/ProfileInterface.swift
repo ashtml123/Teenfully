@@ -1,8 +1,9 @@
 import SwiftUI
 
 struct ProfileInterface: View {
-    var profilePicture: Image
-    @State private var name = ""
+    var profileImageURL: String
+    @State var name:String
+    @State var age:Int
     
     var body: some View {
         VStack {
@@ -11,11 +12,20 @@ struct ProfileInterface: View {
                     .fill(Color.white)
                     .frame(width: 150, height: 150)
                 
-                profilePicture
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(Circle())
-                    .frame(width: 140, height: 140)
+                AsyncImage(url: URL(string: profileImageURL)) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                } placeholder: {
+                    // Placeholder image while loading
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                }
             }
             .padding(.top, 30)
             
@@ -33,6 +43,7 @@ struct ProfileInterface: View {
                         if let userProfile = userProfile {
                             DispatchQueue.main.async {
                                 self.name = userProfile.username
+                                self.age = userProfile.age
                             }
                         } else {
                             print("User profile not found or error occurred.")
@@ -46,6 +57,6 @@ struct ProfileInterface: View {
 
 struct ProfileInterface_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileInterface(profilePicture: Image("DavidProfile"))
+        ProfileInterface(profileImageURL: "", name: "asdf", age:10)
     }
 }

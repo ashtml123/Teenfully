@@ -25,6 +25,7 @@ import GoogleSignInSwift
 struct UserProfile{
     var username: String
     var age: Int
+    var profileImageURL: String
 }
 
 class FirebaseManager {
@@ -107,11 +108,12 @@ class FirebaseManager {
     }
     
     
-    func saveUserProfile(uid: String, username: String, age: Int) {
+    func saveUserProfile(uid: String, username: String, age: Int,profileImageURL: String) {
         let userRef = db.collection("users").document(uid)
         userRef.setData([
             "username": username,
-            "age": age
+            "age": age,
+            "profileImageURL":profileImageURL
         ]) { error in
             if let error = error {
                 print("Error saving user profile: \(error.localizedDescription)")
@@ -131,8 +133,9 @@ class FirebaseManager {
             
             if let data = snapshot?.data(),
                let username = data["username"] as? String,
-               let age = data["age"] as? Int {
-                let userProfile = UserProfile(username: username, age: age)
+               let age = data["age"] as? Int,
+            let profileImageURL=data["profileImageURL"] as? String{
+                let userProfile = UserProfile(username: username, age: age,profileImageURL:profileImageURL)
                 return completion(userProfile)
             } else {
                 // Document doesn't exist or data is missing

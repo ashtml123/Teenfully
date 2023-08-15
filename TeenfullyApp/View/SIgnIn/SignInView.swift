@@ -24,7 +24,7 @@ struct SignInView: View {
     func getHere(){
         print("Got here")
     }
-    func login() {//TODO: Fix athe failure to login; right now, when we log in with invalid credentials, it does nothing, but it should give an error.
+    func login() {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 failed = true
@@ -78,7 +78,9 @@ struct SignInView: View {
             print(firebaseUser.displayName)
             authenticated=true
             FirebaseManager.shared.currentID=firebaseUser.uid
-            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: firebaseUser.displayName ?? "John Doe", age: -1)
+            let displayName = firebaseUser.displayName ?? "John Doe"
+            let profileImageURL = firebaseUser.photoURL?.absoluteString ?? ""
+            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             return true
         }

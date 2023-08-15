@@ -43,7 +43,7 @@ struct SignUpView: View {
             let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
             let user = authResult.user
             let uid = user.uid
-            FirebaseManager.shared.saveUserProfile(uid: uid, username: firstname+" "+lastname, age: Int(age) ?? 0)
+            FirebaseManager.shared.saveUserProfile(uid: uid, username: firstname+" "+lastname, age: Int(age) ?? 0, profileImageURL: "")
             authenticated = true
             FirebaseManager.shared.currentID=uid
             return true
@@ -98,13 +98,12 @@ struct SignUpView: View {
             let result = try await Auth.auth().signIn(with: credential)
             let firebaseUser = result.user
             failed = false
-            
-            print("success")
-            print("ATTENTION!!")
-            print(firebaseUser.displayName)
             authenticated=true
             FirebaseManager.shared.currentID=firebaseUser.uid
-            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: firebaseUser.displayName ?? "John Doe", age: -1)
+            let displayName = firebaseUser.displayName ?? "John Doe"
+            let profileImageURL = firebaseUser.photoURL?.absoluteString ?? ""
+            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
+                    
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             //TODO make it so that sign up through google saves their age as well.
             return true
