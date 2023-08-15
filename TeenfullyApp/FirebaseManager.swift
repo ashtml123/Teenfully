@@ -106,7 +106,32 @@ class FirebaseManager {
             }
         }
     }
-    
+    func updateUserProfile(newUsername: String? = nil, newAge: Int? = nil, newProfileImageURL: String? = nil) {
+        let userRef = db.collection("users").document(currentID)
+        
+        var updatedData: [String: Any] = [:]
+        
+        if let newUsername = newUsername {
+            updatedData["username"] = newUsername
+        }
+        
+        if let newAge = newAge {
+            updatedData["age"] = newAge
+        }
+        
+        if let newProfileImageURL = newProfileImageURL {
+            updatedData["profileImageURL"] = newProfileImageURL
+        }
+        
+        userRef.updateData(updatedData) { error in
+            if let error = error {
+                print("Error updating user profile: \(error.localizedDescription)")
+            } else {
+                print("User profile updated successfully.")
+            }
+        }
+    }
+
     
     func saveUserProfile(uid: String, username: String, age: Int,profileImageURL: String) {
         let userRef = db.collection("users").document(uid)

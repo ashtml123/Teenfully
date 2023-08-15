@@ -1,9 +1,11 @@
 import SwiftUI
 
 struct ProfileInterface: View {
-    var profileImageURL: String
-    @State var name:String
-    @State var age:Int
+    @State var profileImageURL: String
+    @State var name: String
+    @State var age: Int
+    @State var isEditingName = false
+    @State var isEditingAge = false
     
     var body: some View {
         VStack {
@@ -34,24 +36,65 @@ struct ProfileInterface: View {
                 .foregroundColor(.gray)
                 .padding(.top, 20)
             
-            Text(name)
-                .font(.title2)
-                .fontWeight(.bold)
-                .padding(.bottom, 10)
-                .onAppear {
-                    FirebaseManager.shared.fetchUserProfile { userProfile in
-                        if let userProfile = userProfile {
-                            DispatchQueue.main.async {
-                                self.name = userProfile.username
-                                self.age = userProfile.age
-                            }
-                        } else {
-                            print("User profile not found or error occurred.")
-                        }
-                    }
-                }
+            if isEditingName {
+                TextField("Enter name", text: $name)
+                    .font(.title2)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.bottom, 10)
+            } else {
+                Text(name)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .padding(.bottom, 10)
+            }
+            
+            Button(action: {
+                isEditingName.toggle()
+            }, label: {
+                Text(isEditingName ? "Done" : "Edit Name")
+                    .font(.headline)
+                    .padding(.bottom, 10)
+            })
+            
+            Text("Age:")
+                .font(.title3)
+                .foregroundColor(.gray)
+                .padding(.top, 20)
+            
+            if isEditingAge {
+                TextField("Enter age", value: $age, formatter: NumberFormatter())
+                    .font(.title2)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.bottom, 10)
+            } else {
+                Text(String(age))
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .padding(.bottom, 10)
+            }
+            
+            Button(action: {
+                isEditingAge.toggle()
+                FirebaseManager.shared.updateUserProfile(newUsername: name,newAge: age,newProfileImageURL: profileImageURL)
+            }, label: {
+                Text(isEditingAge ? "Done" : "Edit Age")
+                    .font(.headline)
+                    .padding(.bottom, 10)
+            })
         }
         .padding(.horizontal, 40)
+        .onAppear {
+            FirebaseManager.shared.fetchUserProfile { userProfile in
+                if let userProfile = userProfile {
+                    DispatchQueue.main.async {
+                        self.name = userProfile.username
+                        self.age = userProfile.age
+                    }
+                } else {
+                    print("User profile not found or error occurred.")
+                }
+            }
+        }
     }
 }
 

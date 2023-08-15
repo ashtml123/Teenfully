@@ -80,7 +80,7 @@ struct SignInView: View {
             FirebaseManager.shared.currentID=firebaseUser.uid
             let displayName = firebaseUser.displayName ?? "John Doe"
             let profileImageURL = firebaseUser.photoURL?.absoluteString ?? ""
-            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
+//            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             return true
         }
