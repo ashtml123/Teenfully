@@ -9,39 +9,31 @@ struct ContentView: View {
     @State private var profileImageURL: String = ""
     var body: some View {
         TabView {
-            HomeScreenView(name: name, age: age, articleHolder: articleHolder)
-            .tabItem(){
+            HomeScreenView(name: self.name, age: self.age, articleHolder: self.articleHolder)
+                .tabItem(){
                     Label("Home", image: "HomeIcon")
                 }
-//            Text("Some Stuff")
-//                .tabItem(){
-//                    Image("GroupIcon")
-//                }
-//            Text("Some more stuff")
-//                .tabItem(){
-//                    Image("Medals")
-//                }
-//            Text("Some more more stuff")
-//                .tabItem(){
-//                    Image("FeedBack")
-//                }
+
             MeditateView()
                 .tabItem(){
                     Label("Meditate",image:"MeditationIcon")
                 }
-            ProfileInterface(profileImageURL: self.profileImageURL,name: self.name,age:self.age)
+            ProfileInterface(profileImageURL:self.profileImageURL, name:self.name,age:self.age)
                 .tabItem(){
                     Label("Profile",systemImage: "person.crop.circle")
                 }
+
+           
+            
         }
         .onAppear {
             FirebaseManager.shared.fetchUserProfile { userProfile in
                 if let userProfile = userProfile {
                     DispatchQueue.main.async {
-                        print("I HAVE FETCHED USER")
                         self.name = userProfile.username
                         self.age = userProfile.age
                         self.profileImageURL=userProfile.profileImageURL
+                        print("I HAVE FETCHED USER. name is \(self.name) and age is \(age)")
                     }
                 } else {
                     print("User profile not found or error occurred.")

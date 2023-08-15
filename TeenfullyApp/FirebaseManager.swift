@@ -13,13 +13,13 @@ import GoogleSignInSwift
 /* Cloud Firestore old rules:
  rules_version = '2';
  service cloud.firestore {
-   match /databases/{database}/documents {
-     match /{document=**} {
-       allow read, write: if request.auth != null;
-     }
-   }
+ match /databases/{database}/documents {
+ match /{document=**} {
+ allow read, write: if request.auth != null;
  }
-
+ }
+ }
+ 
  */
 
 struct UserProfile{
@@ -131,7 +131,7 @@ class FirebaseManager {
             }
         }
     }
-
+    
     
     func saveUserProfile(uid: String, username: String, age: Int,profileImageURL: String) {
         let userRef = db.collection("users").document(uid)
@@ -155,12 +155,15 @@ class FirebaseManager {
                 print("Error fetching user profile: \(error.localizedDescription)")
                 return completion(nil)
             }
-            
-            if let data = snapshot?.data(),
-               let username = data["username"] as? String,
-               let age = data["age"] as? Int,
-            let profileImageURL=data["profileImageURL"] as? String{
-                let userProfile = UserProfile(username: username, age: age,profileImageURL:profileImageURL)
+            let data = snapshot?.data()
+            if let username = data?["username"] as? String,
+               let age = data?["age"] as? Int{
+                var profileImageURL=data?["profileImageURL"]
+                print("PROFILE IMAGE URL\(profileImageURL)")
+                if(profileImageURL==nil){
+                    profileImageURL=""
+                }
+                let userProfile = UserProfile(username: username, age: age,profileImageURL:profileImageURL as! String)
                 return completion(userProfile)
             } else {
                 // Document doesn't exist or data is missing

@@ -73,15 +73,15 @@ struct SignInView: View {
             let result = try await Auth.auth().signIn(with: credential)
             let firebaseUser = result.user
             failed = false
-            print("success")
-            print("ATTENTION!!")
-            print(firebaseUser.displayName)
             authenticated=true
             FirebaseManager.shared.currentID=firebaseUser.uid
             let displayName = firebaseUser.displayName ?? "John Doe"
             let profileImageURL = firebaseUser.photoURL?.absoluteString ?? ""
-//            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
+            print("display name is \(displayName).")
+            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
+                    
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
+            //TODO make it so that sign up through google saves their age as well.
             return true
         }
         catch {

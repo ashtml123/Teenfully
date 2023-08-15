@@ -37,9 +37,11 @@ struct FeatureCardView<Content: View>: View {
     }
 }
 struct HomeScreenView: View {
+//    @State var dummy: String
     @State var name: String
     @State var age:Int
     @State var articleHolder: [Article]
+    
     //TODO Profile picture
     //TODO make streak counter
     //TODO profile editing
@@ -49,6 +51,19 @@ struct HomeScreenView: View {
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding()
+                .onAppear{
+                    FirebaseManager.shared.fetchUserProfile { userProfile in
+                        if let userProfile = userProfile {
+                            DispatchQueue.main.async {
+                                self.name = userProfile.username
+                                self.age = userProfile.age
+                                print("I HAVE FETCHED USER. name is \(self.name) and age is \(age)")
+                            }
+                        } else {
+                            print("User profile not found or error occurred.")
+                        }
+                    }
+                }
             
             FeatureCardView(
                 title: "Your Daily Check-In",

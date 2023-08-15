@@ -100,6 +100,6 @@ struct ProfileInterface: View {
 
 struct ProfileInterface_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileInterface(profileImageURL: "", name: "asdf", age:10)
+        ProfileInterface(profileImageURL: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg", name: "asdf", age:10)
     }
 }
