@@ -6,30 +6,51 @@ struct ProfileInterface: View {
     @State var age: Int
     @State var isEditingName = false
     @State var isEditingAge = false
+    @State var isEditingImage = false
     
     var body: some View {
         VStack {
-            ZStack {
-                Circle()
-                    .fill(Color.white)
-                    .frame(width: 150, height: 150)
-                
-                AsyncImage(url: URL(string: profileImageURL)) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100)
-                        .clipShape(Circle())
-                } placeholder: {
-                    // Placeholder image while loading
-                    Image(systemName: "person.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100)
-                        .clipShape(Circle())
+            if isEditingImage{
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
+                    .clipShape(Circle())
+                TextField("Enter new image URL", text: $profileImageURL)
+                    .font(.title2)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.bottom, 10)
+            }else{
+                ZStack {
+                    Circle()
+                        .fill(Color.white)
+                        .frame(width: 150, height: 150)
+                    
+                    AsyncImage(url: URL(string: profileImageURL)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    } placeholder: {
+                        // Placeholder image while loading
+                        Image(systemName: "person.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    }
                 }
+                .padding(.top, 30)
             }
-            .padding(.top, 30)
+            
+            Button(action: {
+                isEditingImage.toggle()
+            }, label: {
+                Text(isEditingImage ? "Done" : "Edit Profile Photo")
+                    .font(.headline)
+                    .padding(.bottom, 10)
+            })
             
             Text("Name:")
                 .font(.title3)

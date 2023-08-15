@@ -78,7 +78,7 @@ struct SignInView: View {
             let displayName = firebaseUser.displayName ?? "John Doe"
             let profileImageURL = firebaseUser.photoURL?.absoluteString ?? ""
             print("display name is \(displayName).")
-            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
+//            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
                     
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             //TODO make it so that sign up through google saves their age as well.
