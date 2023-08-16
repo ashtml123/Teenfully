@@ -80,6 +80,7 @@
 		A623AE7A2A8AEF6600D61901 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A623AE792A8AEF6600D61901 /* FirebaseStorage */; };
 		A623AE7C2A8AEF6600D61901 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A623AE7B2A8AEF6600D61901 /* FirebaseStorageCombine-Community */; };
 		A623AE7E2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A623AE7D2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 */; };
+		A63C76CA2A8C433F002A6228 /* TeenfullyAnimation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A63C76C92A8C433F002A6228 /* TeenfullyAnimation.mp4 */; };
 		A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */; };
 		A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A6EAB8C82A7DA10700B5AEBC /* articles.json */; };
 		A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8CA2A7DA12500B5AEBC /* Article.swift */; };
@@ -146,6 +147,7 @@
 		A61057FE2A7C1F3400C90E36 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A623AE7D2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ian Breath Mediation (5min).mp3"; sourceTree = "<group>"; };
+		A63C76C92A8C433F002A6228 /* TeenfullyAnimation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TeenfullyAnimation.mp4; sourceTree = "<group>"; };
 		A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ian Breath Mediation.mp3"; sourceTree = "<group>"; };
 		A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeenfullyApp.entitlements; sourceTree = "<group>"; };
 		A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				A61057F82A7AFB3300C90E36 /* Info.plist */,
 				3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */,
 				3E987E2D2A68C07C005FD9B0 /* TeenfullyAppApp.swift */,
+				A63C76C92A8C433F002A6228 /* TeenfullyAnimation.mp4 */,
 				A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */,
 				A623AE7D2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 */,
 				3E46A4A22A6F252E0077EB2D /* Data */,
@@ -518,6 +521,7 @@
 				3E987E322A68C07D005FD9B0 /* Assets.xcassets in Resources */,
 				A623AE7E2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 in Resources */,
 				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
+				A63C76CA2A8C433F002A6228 /* TeenfullyAnimation.mp4 in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
 				3EF5BF6B2A8A6F010030C026 /* GoogleService-Info.plist in Resources */,
 			);

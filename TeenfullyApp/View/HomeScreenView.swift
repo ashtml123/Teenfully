@@ -37,7 +37,7 @@ struct FeatureCardView<Content: View>: View {
     }
 }
 struct HomeScreenView: View {
-//    @State var dummy: String
+    //    @State var dummy: String
     @State var name: String
     @State var age:Int
     @State var articleHolder: [Article]
@@ -46,11 +46,11 @@ struct HomeScreenView: View {
     //TODO make streak counter
     //TODO profile editing
     var body: some View {
-        ScrollView() {
+        VStack() {
             Text("Welcome Back, \(name)!")
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
-                .padding()
+                .padding(.top,10)
                 .onAppear{
                     FirebaseManager.shared.fetchUserProfile { userProfile in
                         if let userProfile = userProfile {
