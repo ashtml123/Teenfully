@@ -90,7 +90,7 @@ struct SignInView: View {
             let displayName = firebaseUser.displayName ?? "John Doe"
             let profileImageURL = firebaseUser.photoURL?.absoluteString ?? ""
             print("display name is \(displayName).")
-            
+            FirebaseManager.shared.signedWithGoogle=true
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             return true
         }
@@ -167,6 +167,12 @@ struct SignInView: View {
                                         if(failed){
                                             Text(errorMessage)
                                                 .foregroundColor(.red)
+                                            NavigationLink{
+                                                ResetPassword()
+                                            } label:{
+                                                Text("Forgot Password?")
+                                                    .font(Font.custom("Inter", size: 12.60))
+                                            }
                                         }
                                         NavigationLink {
                                             SignUpView()
@@ -175,6 +181,7 @@ struct SignInView: View {
                                                 .font(Font.custom("Inter", size: 12.60))
                                                 .foregroundColor(.blue)
                                         }
+                                        
                                     }
                                 )
                         }

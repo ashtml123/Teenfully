@@ -47,7 +47,7 @@ struct HomeScreenView: View {
     //TODO profile editing
     var body: some View {
         VStack() {
-            Text("Welcome Back, \(name)!")
+            Text("Welcome, \(name)!")
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding(.top,10)
@@ -64,7 +64,11 @@ struct HomeScreenView: View {
                         }
                     }
                 }
-            
+            if(FirebaseManager.shared.signedWithGoogle){
+                Text("If you haven't already, make sure to input your age in your profile!")
+            }else{
+                Text("If you haven't already, feel free to change your profile picture in your profile!")
+            }
             FeatureCardView(
                 title: "Your Daily Check-In",
                 description: "Let’s see how you are feeling today!",

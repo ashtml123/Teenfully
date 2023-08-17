@@ -81,6 +81,7 @@
 		A623AE7C2A8AEF6600D61901 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A623AE7B2A8AEF6600D61901 /* FirebaseStorageCombine-Community */; };
 		A623AE7E2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A623AE7D2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 */; };
 		A63C76CA2A8C433F002A6228 /* TeenfullyAnimation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A63C76C92A8C433F002A6228 /* TeenfullyAnimation.mp4 */; };
+		A63C76CC2A8EDF9A002A6228 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C76CB2A8EDF9A002A6228 /* ResetPassword.swift */; };
 		A6EAB8C72A7DA05E00B5AEBC /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */; };
 		A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A6EAB8C82A7DA10700B5AEBC /* articles.json */; };
 		A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAB8CA2A7DA12500B5AEBC /* Article.swift */; };
@@ -148,6 +149,7 @@
 		A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A623AE7D2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ian Breath Mediation (5min).mp3"; sourceTree = "<group>"; };
 		A63C76C92A8C433F002A6228 /* TeenfullyAnimation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TeenfullyAnimation.mp4; sourceTree = "<group>"; };
+		A63C76CB2A8EDF9A002A6228 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		A651C0562A88497B0005913D /* Ian Breath Mediation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ian Breath Mediation.mp3"; sourceTree = "<group>"; };
 		A676B9DB2A830C640070E310 /* TeenfullyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeenfullyApp.entitlements; sourceTree = "<group>"; };
 		A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				3EF9A5DA2A7062100095C20A /* EmailPwdSignIn.swift */,
 				3EF9A5DC2A70A98F0095C20A /* LinkLess.swift */,
 				A61057FE2A7C1F3400C90E36 /* SignUpView.swift */,
+				A63C76CB2A8EDF9A002A6228 /* ResetPassword.swift */,
 			);
 			path = SIgnIn;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				3EB97A562A6F5ED80089C80B /* TwoQuestionYes.swift in Sources */,
 				3EF5BF732A8A8EF90030C026 /* ThreeQuestionAgree.swift in Sources */,
 				3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */,
+				A63C76CC2A8EDF9A002A6228 /* ResetPassword.swift in Sources */,
 				3E46A49A2A6EBDB10077EB2D /* ProfileInterface.swift in Sources */,
 				3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */,
 				A61057FF2A7C1F3400C90E36 /* SignUpView.swift in Sources */,

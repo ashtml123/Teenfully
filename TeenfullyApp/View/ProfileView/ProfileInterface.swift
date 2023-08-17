@@ -1,5 +1,52 @@
 import SwiftUI
+import FirebaseAuth
+struct ChangePassword: View {
+    @State private var showChangePasswordInput: Bool = false
+    @State private var newPassword: String = ""
+    @State private var alertMessage: String = ""
+    @State private var showAlert: Bool = false
 
+    var body: some View {
+        VStack {
+            if showChangePasswordInput {
+                VStack {
+                    SecureField("New Password", text: $newPassword)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    Button("Done", action: changePassword)
+                        .font(.headline)
+                        .padding(.bottom, 10)
+                        
+                }
+            } else {
+                Button("Change Password", action: {
+                    showChangePasswordInput = true
+                })
+                .font(.headline)
+                .padding(.bottom, 10)
+            }
+        }
+        .padding()
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Password Change"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        }
+    }
+
+    func changePassword() {
+        let user = Auth.auth().currentUser
+        showChangePasswordInput=false
+        user?.updatePassword(to: newPassword) { error in
+            if let error = error {
+                alertMessage = "Error changing password: \(error.localizedDescription)"
+            } else {
+                alertMessage = "Password changed successfully."
+            }
+            showAlert = true
+            newPassword = "" // Clear the new password field
+        }
+    }
+}
 struct ProfileInterface: View {
     @State var profileImageURL: String
     @State var name: String
@@ -102,6 +149,10 @@ struct ProfileInterface: View {
                     .font(.headline)
                     .padding(.bottom, 10)
             })
+            
+            if(!FirebaseManager.shared.signedWithGoogle){
+                ChangePassword()
+            }
         }
         .padding(.horizontal, 40)
         .onAppear {

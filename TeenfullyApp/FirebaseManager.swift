@@ -32,6 +32,7 @@ class FirebaseManager {
     static let shared = FirebaseManager()
     var currentID = ""
     let db: Firestore
+    var signedWithGoogle = false
     
     private init() {
         db = Firestore.firestore()
@@ -171,5 +172,5 @@ class FirebaseManager {
             }
         }
     }
-    
+     
 }
