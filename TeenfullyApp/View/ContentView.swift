@@ -44,6 +44,10 @@ struct ContentView: View {
                 .tabItem() {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
+            AboutUsPage()
+                .tabItem(){
+                    Label("About Us",systemImage: "info")
+                }
         }
         .onAppear {
             // Fetch user profile and articles
