@@ -1,18 +1,15 @@
 import SwiftUI
 
 struct ThreeQuestionHigher: View {
-    var question: questions
+    @Binding var result: Int
+    @Binding var clicked: Bool
     var body: some View {
         VStack {            
-            Text(question.QuestionInfo)
-                .font(.system(size: 16, weight: .bold))
-                .padding(10)
-                .cornerRadius(10)
-                .multilineTextAlignment(.leading)
-            
+                        
             HStack(spacing: 20) {
                 Button(action: {
-                    print("No")
+                    result = 0
+                    clicked = true
                 }) {
                     Text("Lower")
                         .frame(width: 91, height: 50)
@@ -25,7 +22,8 @@ struct ThreeQuestionHigher: View {
                 }
                 
                 Button(action: {
-                    print("Yes")
+                    result = 2
+                    clicked = true
                 }) {
                     Text("Higher")
                         .frame(width: 91, height: 50)
@@ -38,10 +36,10 @@ struct ThreeQuestionHigher: View {
                 }
                 
                 Button(action: {
-                    print("Maybe")
+                    result = 1
+                    clicked = true
                 }) {
                     Text("Same")
-                        .font(.title2)
                         .frame(width: 126, height: 50)
                         .background(Color(red: 0.99, green: 0.76, blue: 0.44))
                         .foregroundColor(.white)
@@ -53,11 +51,5 @@ struct ThreeQuestionHigher: View {
         .background(Color.white)
         .cornerRadius(40)
 
-    }
-}
-
-struct ThreeQuestionHigher_Previews: PreviewProvider {
-    static var previews: some View {
-        ThreeQuestionHigher(question: ModelData().questionData[3])
     }
 }

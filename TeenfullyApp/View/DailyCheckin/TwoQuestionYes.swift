@@ -3,17 +3,14 @@
 import SwiftUI
 
 struct TwoQuestionYes: View {
-    var question: questions
+    @Binding var result: Int
+    @Binding var clicked: Bool
     var body: some View {
         VStack {            
-            Text(question.QuestionInfo)
-                .font(.system(size: 16, weight: .bold))
-                .padding(10)
-                .cornerRadius(10)
-                .multilineTextAlignment(.leading)
             HStack(spacing: 20) {
                 Button(action: {
-                    print("No")
+                    result = 0
+                    clicked = true
                 }) {
                     Text("No")
                         .frame(width: 91, height: 50)
@@ -25,7 +22,8 @@ struct TwoQuestionYes: View {
                         .cornerRadius(10)
                 }
                 Button(action: {
-                    print("Yes")
+                    result = 1
+                    clicked = true
                 }) {
                     Text("Yes")
                         .frame(width: 91, height: 50)
@@ -42,11 +40,5 @@ struct TwoQuestionYes: View {
         .background(Color.white)
         .cornerRadius(40)
 
-    }
-}
-
-struct TwoQuestionYes_Previews: PreviewProvider {
-    static var previews: some View {
-        TwoQuestionYes(question: ModelData().questionData[12])
     }
 }

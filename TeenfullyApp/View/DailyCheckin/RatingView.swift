@@ -3,7 +3,9 @@
 import SwiftUI
 
 struct RatingView: View {
-    @State private var rating: Int = 1
+    @State private var rating: Int = 5
+    @Binding var result: Int
+    @Binding var clicked: Bool
     var lower: Int
     var upper: Int
     
@@ -21,13 +23,18 @@ struct RatingView: View {
             .labelsHidden()
             
             Text("Your rating: \(rating)")
+            
+            Button(action: {
+               clicked = true
+                result = rating
+            }) {
+                Text("Submit")
+                    .frame(width: 126, height: 50)
+                    .background(Color(red: 0.99, green: 0.76, blue: 0.44))
+                    .foregroundColor(.white)
+                    .cornerRadius(25)
+            }
         }
         .padding()
-    }
-}
-
-struct RatingView_Previews: PreviewProvider {
-    static var previews: some View {
-        RatingView(lower:1,upper:10)
     }
 }
