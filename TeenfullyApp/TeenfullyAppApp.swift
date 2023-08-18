@@ -34,11 +34,7 @@ struct YourApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-//                if Auth.auth().currentUser != nil {
-//                    ContentView()
-//                } else {
-                    SignInView()
-//                }
+                SignInView()
             }
         }
     }

@@ -12,7 +12,7 @@ struct TestEmailView: View {
             
             Button(action: {
                 let userId = UUID().uuidString // Usually, you would get the UID from Firebase Authentication after a user signs up
-                let newUser = User(uid: userId, email: self.email, username: self.username)
+                let newUser = User(uid: userId, email: self.email, username: self.username, profileImageURL: "")
                 self.writeUserData(user: newUser)
             }) {
                 Text("Submit")

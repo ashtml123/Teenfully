@@ -1,14 +1,5 @@
 import SwiftUI
 
-struct UserProfileView: View {
-    var body: some View {
-        // Customize this view to display user profile information
-        Text("User Profile")
-            .font(.system(size: 18, weight: .bold))
-            .padding()
-    }
-}
-
 struct FeatureCardView<Content: View>: View {
     let title: String
     let description: String
@@ -46,37 +37,40 @@ struct FeatureCardView<Content: View>: View {
     }
 }
 struct HomeScreenView: View {
-    @State private var name = ""
-    @State private var age = 0
-    @State private var articleHolder: [Article]=[]
+    //    @State var dummy: String
+    @State var name: String
+    @State var age:Int
+    @State var articleHolder: [Article]
+    
     //TODO Profile picture
     //TODO make streak counter
     //TODO profile editing
     var body: some View {
-        ScrollView() {
-            UserProfileView()
-                .frame(width: 300)
-            
-            Text("Welcome Back, \(name)!")
+        VStack() {
+            Text("Welcome, \(name)!")
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
-                .padding()
-                .onAppear {
+                .padding(.top,10)
+                .onAppear{
                     FirebaseManager.shared.fetchUserProfile { userProfile in
                         if let userProfile = userProfile {
                             DispatchQueue.main.async {
-                                print("I HAVE FETCHED USER")
                                 self.name = userProfile.username
                                 self.age = userProfile.age
+                                print("I HAVE FETCHED USER. name is \(self.name) and age is \(age)")
                             }
                         } else {
                             print("User profile not found or error occurred.")
                         }
                     }
                 }
-            
+            if(FirebaseManager.shared.signedWithGoogle){
+                Text("If you haven't already, make sure to input your age in your profile!")
+            }else{
+                Text("If you haven't already, feel free to change your profile picture in your profile!")
+            }
             FeatureCardView(
-                title: "Take your daily check-in",
+                title: "Your Daily Check-In",
                 description: "Let’s see how you are feeling today!",
                 imageName: "DailyCheckin",
                 linkText: "Start Now",
@@ -84,19 +78,11 @@ struct HomeScreenView: View {
             )
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            FeatureCardView(
-                title: "Meditate",
-                description: "Experience peace always inherent to consciousness.",
-                imageName: "MeditationIcon",
-                linkText: "Explore",
-                destination: MeditateView()
-            )
-            .frame(maxWidth: .infinity, alignment: .leading)
             
             FeatureCardView(
                 title: "Habit Builder",
                 description: "Relearn your relationship with your phone.",
-                imageName: "HabitBuilder",
+                imageName: "HabitBuilderInside",
                 linkText: "Continue",
                 destination: habitBuilderView()
             )
@@ -110,7 +96,6 @@ struct HomeScreenView: View {
                 destination: LibraryView(articleList: articleHolder)
             )
             .frame(maxWidth: .infinity, alignment: .leading)
-            
             .onAppear{ FirebaseManager.shared.fetchArticlesFromFirebase{fetchedArticles,error in
                 if(error != nil){
                     print("Error! \(String(describing: error))")
@@ -120,7 +105,6 @@ struct HomeScreenView: View {
                     articleHolder=fetchedArticles!
                 }
             }}
-            // Repeat the same structure for other feature cards...
         }
         .cornerRadius(20)
     }
@@ -128,6 +112,6 @@ struct HomeScreenView: View {
 
 struct HomeScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreenView()
+        HomeScreenView(name: "John", age: 1, articleHolder: [])
     }
 }

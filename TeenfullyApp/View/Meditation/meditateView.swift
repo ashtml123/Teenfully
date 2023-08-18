@@ -12,7 +12,7 @@ struct MeditateView: View {
                     .foregroundColor(Color(red: 0.22, green: 0.11, blue: 0.2))
                     .padding(.top, 20)
                 NavigationLink{
-                    MeditateBox(timeDuration: 5, audioFileName: "Rick Roll Sound Effect")
+                    MeditateBox(timeDuration: 5, audioFileName: "Ian Breath Mediation (5min)")
                         .padding(.top, 20)
                 }label:{
                     Text("5 minute meditation")

@@ -13,24 +13,26 @@ import GoogleSignInSwift
 /* Cloud Firestore old rules:
  rules_version = '2';
  service cloud.firestore {
-   match /databases/{database}/documents {
-     match /{document=**} {
-       allow read, write: if request.auth != null;
-     }
-   }
+ match /databases/{database}/documents {
+ match /{document=**} {
+ allow read, write: if request.auth != null;
  }
-
+ }
+ }
+ 
  */
 
 struct UserProfile{
     var username: String
     var age: Int
+    var profileImageURL: String
 }
 
 class FirebaseManager {
     static let shared = FirebaseManager()
     var currentID = ""
     let db: Firestore
+    var signedWithGoogle = false
     
     private init() {
         db = Firestore.firestore()
@@ -105,13 +107,39 @@ class FirebaseManager {
             }
         }
     }
+    func updateUserProfile(newUsername: String? = nil, newAge: Int? = nil, newProfileImageURL: String? = nil) {
+        let userRef = db.collection("users").document(currentID)
+        
+        var updatedData: [String: Any] = [:]
+        
+        if let newUsername = newUsername {
+            updatedData["username"] = newUsername
+        }
+        
+        if let newAge = newAge {
+            updatedData["age"] = newAge
+        }
+        
+        if let newProfileImageURL = newProfileImageURL {
+            updatedData["profileImageURL"] = newProfileImageURL
+        }
+        
+        userRef.updateData(updatedData) { error in
+            if let error = error {
+                print("Error updating user profile: \(error.localizedDescription)")
+            } else {
+                print("User profile updated successfully.")
+            }
+        }
+    }
     
     
-    func saveUserProfile(uid: String, username: String, age: Int) {
+    func saveUserProfile(uid: String, username: String, age: Int,profileImageURL: String) {
         let userRef = db.collection("users").document(uid)
         userRef.setData([
             "username": username,
-            "age": age
+            "age": age,
+            "profileImageURL":profileImageURL
         ]) { error in
             if let error = error {
                 print("Error saving user profile: \(error.localizedDescription)")
@@ -128,11 +156,15 @@ class FirebaseManager {
                 print("Error fetching user profile: \(error.localizedDescription)")
                 return completion(nil)
             }
-            
-            if let data = snapshot?.data(),
-               let username = data["username"] as? String,
-               let age = data["age"] as? Int {
-                let userProfile = UserProfile(username: username, age: age)
+            let data = snapshot?.data()
+            if let username = data?["username"] as? String,
+               let age = data?["age"] as? Int{
+                var profileImageURL=data?["profileImageURL"]
+                print("PROFILE IMAGE URL\(profileImageURL)")
+                if(profileImageURL==nil){
+                    profileImageURL=""
+                }
+                let userProfile = UserProfile(username: username, age: age,profileImageURL:profileImageURL as! String)
                 return completion(userProfile)
             } else {
                 // Document doesn't exist or data is missing
@@ -140,5 +172,5 @@ class FirebaseManager {
             }
         }
     }
-    
+     
 }

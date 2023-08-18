@@ -43,9 +43,10 @@ struct SignUpView: View {
             let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
             let user = authResult.user
             let uid = user.uid
-            FirebaseManager.shared.saveUserProfile(uid: uid, username: firstname+" "+lastname, age: Int(age) ?? 0)
+            FirebaseManager.shared.saveUserProfile(uid: uid, username: firstname+" "+lastname, age: Int(age) ?? 0, profileImageURL: "")
             authenticated = true
             FirebaseManager.shared.currentID=uid
+            
             return true
         } catch {
             print(error)
@@ -98,13 +99,12 @@ struct SignUpView: View {
             let result = try await Auth.auth().signIn(with: credential)
             let firebaseUser = result.user
             failed = false
-            
-            print("success")
-            print("ATTENTION!!")
-            print(firebaseUser.displayName)
             authenticated=true
             FirebaseManager.shared.currentID=firebaseUser.uid
-            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: firebaseUser.displayName ?? "John Doe", age: -1)
+            let displayName = firebaseUser.displayName ?? "John Doe"
+            let profileImageURL = firebaseUser.photoURL?.absoluteString ?? ""
+            FirebaseManager.shared.saveUserProfile(uid: firebaseUser.uid, username: displayName, age: -1, profileImageURL: profileImageURL)
+            FirebaseManager.shared.signedWithGoogle=true
             print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             //TODO make it so that sign up through google saves their age as well.
             return true
@@ -124,77 +124,77 @@ struct SignUpView: View {
                 .background(Color(red: 1, green: 0.51, blue: 0.21))
                 .foregroundColor(.clear)
                 .overlay(
-            VStack() {
-                Text("Welcome to Teenfully!")
-                    .font(Font.custom("Inter", size: 25.60).weight(.bold))
-                    .foregroundColor(.white)
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 368, height: 625)
-                    .background(.white)
-                    .cornerRadius(23)
-                    .overlay(
-                        VStack(spacing:20) {
-                            Text("Make an Account")
-                                .font(Font.custom("Inter", size:21).weight(.bold))
-                                .foregroundColor(Color(red: 0.10, green: 0.10, blue: 0.10))
-                            Button(action: {sWithGoogle()}) {
-                                Image("GoogleLogo")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height:34, alignment: .center)
-                            }
-                            
-                            Ellipse()
-                                .foregroundColor(.clear)
-                                .frame(width: 34, height: 34)
-                                .background(.white)
-                                .overlay(
-                                    ZStack{
-                                        Ellipse()
-                                            .inset(by: 0.92)
-                                            .stroke(Color(red: 0.85, green: 0.85, blue: 0.85), lineWidth: 0.92)
-                                        Text("Or")
-                                            .font(Font.custom("Inter", size: 13.60).weight(.medium))
-                                            .foregroundColor(Color(red: 0.84, green: 0.83, blue: 0.85))
+                    VStack() {
+                        Text("Welcome to Teenfully!")
+                            .font(Font.custom("Inter", size: 25.60).weight(.bold))
+                            .foregroundColor(.white)
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 368, height: 625)
+                            .background(.white)
+                            .cornerRadius(23)
+                            .overlay(
+                                VStack(spacing:20) {
+                                    Text("Make an Account")
+                                        .font(Font.custom("Inter", size:21).weight(.bold))
+                                        .foregroundColor(Color(red: 0.10, green: 0.10, blue: 0.10))
+                                    Button(action: {sWithGoogle()}) {
+                                        Image("GoogleLogo")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height:34, alignment: .center)
                                     }
-                                )
-                            TextField("First Name", text: $firstname)
-                                .textFieldStyle(.roundedBorder)
-                                .padding(.horizontal, 10)
-                            
-                            TextField("Last Name", text: $lastname)
-                                .textFieldStyle(.roundedBorder)
-                                .padding(.horizontal, 10)
-                            
-                            TextField("Email", text: $email)
-                                .textFieldStyle(.roundedBorder)
-                                .padding(.horizontal, 10)
-                            TextField("Age", text: $age)
-                                .textFieldStyle(.roundedBorder)
-                                .padding(.horizontal, 10)
-                            SecureField("Password", text: $password)
-                                .textFieldStyle(.roundedBorder)
-                                .padding(.horizontal, 10)
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .frame(width: 271, height: 42)
-                                .background(Color(red: 1, green: 0.51, blue: 0.21))
-                                .cornerRadius(5)
-                                .overlay(
-                                    Button(action: {sWithEmailPassword()}) {
-                                        Text("Sign Up")
+                                    
+                                    Ellipse()
+                                        .foregroundColor(.clear)
+                                        .frame(width: 34, height: 34)
+                                        .background(.white)
+                                        .overlay(
+                                            ZStack{
+                                                Ellipse()
+                                                    .inset(by: 0.92)
+                                                    .stroke(Color(red: 0.85, green: 0.85, blue: 0.85), lineWidth: 0.92)
+                                                Text("Or")
+                                                    .font(Font.custom("Inter", size: 13.60).weight(.medium))
+                                                    .foregroundColor(Color(red: 0.84, green: 0.83, blue: 0.85))
+                                            }
+                                        )
+                                    TextField("First Name", text: $firstname)
+                                        .textFieldStyle(.roundedBorder)
+                                        .padding(.horizontal, 10)
+                                    
+                                    TextField("Last Name", text: $lastname)
+                                        .textFieldStyle(.roundedBorder)
+                                        .padding(.horizontal, 10)
+                                    
+                                    TextField("Email", text: $email)
+                                        .textFieldStyle(.roundedBorder)
+                                        .padding(.horizontal, 10)
+                                    TextField("Age", text: $age)
+                                        .textFieldStyle(.roundedBorder)
+                                        .padding(.horizontal, 10)
+                                    SecureField("Password", text: $password)
+                                        .textFieldStyle(.roundedBorder)
+                                        .padding(.horizontal, 10)
+                                    Rectangle()
+                                        .foregroundColor(.clear)
+                                        .frame(width: 271, height: 42)
+                                        .background(Color(red: 1, green: 0.51, blue: 0.21))
+                                        .cornerRadius(5)
+                                        .overlay(
+                                            Button(action: {sWithEmailPassword()}) {
+                                                Text("Sign Up")
+                                            }
+                                        )
+                                    if(failed){
+                                        Text(errorMessage)
+                                            .foregroundColor(.red)
                                     }
-                                )
-                            if(failed){
-                                Text(errorMessage)
-                                    .foregroundColor(.red)
-                            }
-//
-                            
-                        }
-                    )
-            })
+                                    //
+                                    
+                                }
+                            )
+                    })
         }
     }
 }
