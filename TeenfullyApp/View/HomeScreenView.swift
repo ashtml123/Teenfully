@@ -41,7 +41,7 @@ struct HomeScreenView: View {
     @State var name: String
     @State var age:Int
     @State var articleHolder: [Article]
-    
+    @ObservedObject var data = SharedData.shared
     //TODO Profile picture
     //TODO make streak counter
     //TODO profile editing
@@ -69,15 +69,16 @@ struct HomeScreenView: View {
             }else{
                 Text("If you haven't already, feel free to change your profile picture in your profile!")
             }
-            FeatureCardView(
-                title: "Your Daily Check-In",
-                description: "Let’s see how you are feeling today!",
-                imageName: "DailyCheckin",
-                linkText: "Start Now",
-                destination: DailyCheckinView()
-            )
-            .frame(maxWidth: .infinity, alignment: .leading)
-            
+            if(!data.finishDaily){
+                FeatureCardView(
+                    title: "Your Daily Check-In",
+                    description: "Let’s see how you are feeling today!",
+                    imageName: "DailyCheckin",
+                    linkText: "Start Now",
+                    destination: SurveyView(questions: ModelData().surveyQuestions)
+                )
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
             
             FeatureCardView(
                 title: "Habit Builder",

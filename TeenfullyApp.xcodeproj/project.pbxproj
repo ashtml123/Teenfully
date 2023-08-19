@@ -34,6 +34,9 @@
 		3EB97A5A2A6F691E0089C80B /* dailyQuestionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EB97A592A6F691E0089C80B /* dailyQuestionData.json */; };
 		3EB97A5C2A6F6C750089C80B /* ThreeQuestionHigher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A5B2A6F6C750089C80B /* ThreeQuestionHigher.swift */; };
 		3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1A7582A6C0D51000C8690 /* SignInView.swift */; };
+		3ED0F2B72A904D0E008D0350 /* SuerveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F2B62A904D0E008D0350 /* SuerveyView.swift */; };
+		3ED0F2BD2A90527F008D0350 /* survey.json in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0F2BC2A90527F008D0350 /* survey.json */; };
+		3ED0F2BF2A905EF4008D0350 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F2BE2A905EF4008D0350 /* SharedData.swift */; };
 		3EF5BF6B2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
 		3EF5BF6C2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
 		3EF5BF6D2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
@@ -137,6 +140,9 @@
 		3EB97A592A6F691E0089C80B /* dailyQuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyQuestionData.json; sourceTree = "<group>"; };
 		3EB97A5B2A6F6C750089C80B /* ThreeQuestionHigher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionHigher.swift; sourceTree = "<group>"; };
 		3EC1A7582A6C0D51000C8690 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		3ED0F2B62A904D0E008D0350 /* SuerveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuerveyView.swift; sourceTree = "<group>"; };
+		3ED0F2BC2A90527F008D0350 /* survey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = survey.json; sourceTree = "<group>"; };
+		3ED0F2BE2A905EF4008D0350 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EF5BF6E2A8A76D90030C026 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		3EF5BF722A8A8EF90030C026 /* ThreeQuestionAgree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionAgree.swift; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 				A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */,
 				A6EAB8CA2A7DA12500B5AEBC /* Article.swift */,
 				3E6EF4112A843C1A00333226 /* Measure.swift */,
+				3ED0F2BE2A905EF4008D0350 /* SharedData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +258,7 @@
 			children = (
 				3E46A4A02A6F251B0077EB2D /* userData.json */,
 				A6EAB8C82A7DA10700B5AEBC /* articles.json */,
+				3ED0F2BC2A90527F008D0350 /* survey.json */,
 				3EB97A592A6F691E0089C80B /* dailyQuestionData.json */,
 			);
 			path = Data;
@@ -328,6 +336,7 @@
 				3EB97A502A6F579F0089C80B /* HomeScreenView.swift */,
 				3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */,
 				3E987E622A68CBB3005FD9B0 /* libraryView.swift */,
+				3ED0F2B62A904D0E008D0350 /* SuerveyView.swift */,
 				3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */,
 				3EB85BFC2A714C3800D20273 /* Meditation */,
 				3EF9A5DE2A70B4E50095C20A /* HabitBuilder */,
@@ -528,6 +537,7 @@
 				A623AE7E2A8AF7A700D61901 /* Ian Breath Mediation (5min).mp3 in Resources */,
 				A6EAB8C92A7DA10700B5AEBC /* articles.json in Resources */,
 				A63C76CA2A8C433F002A6228 /* TeenfullyAnimation.mp4 in Resources */,
+				3ED0F2BD2A90527F008D0350 /* survey.json in Resources */,
 				3E46A4A12A6F251C0077EB2D /* userData.json in Resources */,
 				3EF5BF6B2A8A6F010030C026 /* GoogleService-Info.plist in Resources */,
 			);
@@ -556,10 +566,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED0F2BF2A905EF4008D0350 /* SharedData.swift in Sources */,
 				3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */,
 				3EF9A5E02A70B5190095C20A /* Habits.swift in Sources */,
 				3EF9A5DB2A7062100095C20A /* EmailPwdSignIn.swift in Sources */,
 				3EF9A5D92A7012AC0095C20A /* TestEmailView.swift in Sources */,
+				3ED0F2B72A904D0E008D0350 /* SuerveyView.swift in Sources */,
 				3EF9A5D32A700F280095C20A /* UserModel.swift in Sources */,
 				3EB97A5C2A6F6C750089C80B /* ThreeQuestionHigher.swift in Sources */,
 				3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */,

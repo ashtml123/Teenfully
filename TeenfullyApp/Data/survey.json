@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "text": "I feel upset because of small things easily. (Rate on a scale of don’t agree – sometimes - agree)",
+        "options": ["Don’t agree", "Sometimes", "Agree"]
+    },
+    {
+        "id":2,
+        "text": "My energy level is____ compared to my usual energy level. (lower/same/higher)",
+        "options":["lower","same","higher"]
+    },
+    {
+        "id":3,
+        "text":"I’m not enjoying things that I used to enjoy. (Rate on a scale of don’t agree – sometimes – agree",
+        "options":["Don’t agree", "Sometimes", "Agree"]
+    }
+]
