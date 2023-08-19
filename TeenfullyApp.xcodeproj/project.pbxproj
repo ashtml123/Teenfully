@@ -23,7 +23,7 @@
 		3E987E492A68C07D005FD9B0 /* TeenfullyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E482A68C07D005FD9B0 /* TeenfullyAppUITests.swift */; };
 		3E987E4B2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E4A2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift */; };
 		3E987E5B2A68C1C6005FD9B0 /* DailyCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */; };
-		3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */; };
+		3E987E5D2A68CA8F005FD9B0 /* HabitBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5C2A68CA8F005FD9B0 /* HabitBuilderView.swift */; };
 		3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E5E2A68CB46005FD9B0 /* meditateView.swift */; };
 		3E987E632A68CBB3005FD9B0 /* libraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E987E622A68CBB3005FD9B0 /* libraryView.swift */; };
 		3EB85BFE2A714CC500D20273 /* MeditateBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB85BFD2A714CC500D20273 /* MeditateBox.swift */; };
@@ -38,6 +38,7 @@
 		3ED0F2BD2A90527F008D0350 /* survey.json in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0F2BC2A90527F008D0350 /* survey.json */; };
 		3ED0F2BF2A905EF4008D0350 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F2BE2A905EF4008D0350 /* SharedData.swift */; };
 		3ED0F2C12A9062B1008D0350 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F2C02A9062B1008D0350 /* Questions.swift */; };
+		3ED0F2DF2A910E4E008D0350 /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F2DE2A910E4E008D0350 /* HabitViewModel.swift */; };
 		3EF5BF6B2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
 		3EF5BF6C2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
 		3EF5BF6D2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
@@ -48,10 +49,8 @@
 		3EF5BF742A8A8EFA0030C026 /* ThreeQuestionAgree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5BF722A8A8EF90030C026 /* ThreeQuestionAgree.swift */; };
 		3EF5BF752A8A8EFA0030C026 /* ThreeQuestionAgree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5BF722A8A8EF90030C026 /* ThreeQuestionAgree.swift */; };
 		3EF9A5D32A700F280095C20A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5D22A700F280095C20A /* UserModel.swift */; };
-		3EF9A5D92A7012AC0095C20A /* TestEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5D82A7012AC0095C20A /* TestEmailView.swift */; };
 		3EF9A5DB2A7062100095C20A /* EmailPwdSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5DA2A7062100095C20A /* EmailPwdSignIn.swift */; };
 		3EF9A5DD2A70A98F0095C20A /* LinkLess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5DC2A70A98F0095C20A /* LinkLess.swift */; };
-		3EF9A5E02A70B5190095C20A /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A5DF2A70B5190095C20A /* Habits.swift */; };
 		A61057FB2A7B05D900C90E36 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A61057FA2A7B05D900C90E36 /* GoogleSignIn */; };
 		A61057FD2A7B05D900C90E36 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A61057FC2A7B05D900C90E36 /* GoogleSignInSwift */; };
 		A61057FF2A7C1F3400C90E36 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61057FE2A7C1F3400C90E36 /* SignUpView.swift */; };
@@ -130,7 +129,7 @@
 		3E987E482A68C07D005FD9B0 /* TeenfullyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppUITests.swift; sourceTree = "<group>"; };
 		3E987E4A2A68C07D005FD9B0 /* TeenfullyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeenfullyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCheckinView.swift; sourceTree = "<group>"; };
-		3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitBuilderView.swift; sourceTree = "<group>"; };
+		3E987E5C2A68CA8F005FD9B0 /* HabitBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitBuilderView.swift; sourceTree = "<group>"; };
 		3E987E5E2A68CB46005FD9B0 /* meditateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditateView.swift; sourceTree = "<group>"; };
 		3E987E622A68CBB3005FD9B0 /* libraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryView.swift; sourceTree = "<group>"; };
 		3EB85BFD2A714CC500D20273 /* MeditateBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditateBox.swift; sourceTree = "<group>"; };
@@ -145,14 +144,13 @@
 		3ED0F2BC2A90527F008D0350 /* survey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = survey.json; sourceTree = "<group>"; };
 		3ED0F2BE2A905EF4008D0350 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		3ED0F2C02A9062B1008D0350 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		3ED0F2DE2A910E4E008D0350 /* HabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
 		3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EF5BF6E2A8A76D90030C026 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		3EF5BF722A8A8EF90030C026 /* ThreeQuestionAgree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionAgree.swift; sourceTree = "<group>"; };
 		3EF9A5D22A700F280095C20A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		3EF9A5D82A7012AC0095C20A /* TestEmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEmailView.swift; sourceTree = "<group>"; };
 		3EF9A5DA2A7062100095C20A /* EmailPwdSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPwdSignIn.swift; sourceTree = "<group>"; };
 		3EF9A5DC2A70A98F0095C20A /* LinkLess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkLess.swift; sourceTree = "<group>"; };
-		3EF9A5DF2A70B5190095C20A /* Habits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
 		A61057F82A7AFB3300C90E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A61057FE2A7C1F3400C90E36 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A61058002A7C7EEC00C90E36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
@@ -337,13 +335,9 @@
 			children = (
 				3EB97A522A6F57FD0089C80B /* ContentView.swift */,
 				3EB97A502A6F579F0089C80B /* HomeScreenView.swift */,
-				3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */,
 				3E987E622A68CBB3005FD9B0 /* libraryView.swift */,
-				3ED0F2B62A904D0E008D0350 /* SuerveyView.swift */,
-				3E987E5C2A68CA8F005FD9B0 /* habitBuilderView.swift */,
 				3EB85BFC2A714C3800D20273 /* Meditation */,
 				3EF9A5DE2A70B4E50095C20A /* HabitBuilder */,
-				3EF9A5D82A7012AC0095C20A /* TestEmailView.swift */,
 				3EB97A542A6F5EBF0089C80B /* DailyCheckin */,
 				3E46A4982A6EBD9A0077EB2D /* ProfileView */,
 				3EC1A7572A6C0D43000C8690 /* SIgnIn */,
@@ -366,6 +360,8 @@
 		3EB97A542A6F5EBF0089C80B /* DailyCheckin */ = {
 			isa = PBXGroup;
 			children = (
+				3ED0F2B62A904D0E008D0350 /* SuerveyView.swift */,
+				3E987E5A2A68C1C6005FD9B0 /* DailyCheckinView.swift */,
 				3EB97A552A6F5ED80089C80B /* TwoQuestionYes.swift */,
 				3EB97A5B2A6F6C750089C80B /* ThreeQuestionHigher.swift */,
 				3EF5BF722A8A8EF90030C026 /* ThreeQuestionAgree.swift */,
@@ -390,7 +386,8 @@
 		3EF9A5DE2A70B4E50095C20A /* HabitBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				3EF9A5DF2A70B5190095C20A /* Habits.swift */,
+				3ED0F2DE2A910E4E008D0350 /* HabitViewModel.swift */,
+				3E987E5C2A68CA8F005FD9B0 /* HabitBuilderView.swift */,
 			);
 			path = HabitBuilder;
 			sourceTree = "<group>";
@@ -571,14 +568,12 @@
 			files = (
 				3ED0F2BF2A905EF4008D0350 /* SharedData.swift in Sources */,
 				3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */,
-				3EF9A5E02A70B5190095C20A /* Habits.swift in Sources */,
 				3EF9A5DB2A7062100095C20A /* EmailPwdSignIn.swift in Sources */,
-				3EF9A5D92A7012AC0095C20A /* TestEmailView.swift in Sources */,
 				3ED0F2B72A904D0E008D0350 /* SuerveyView.swift in Sources */,
 				3EF9A5D32A700F280095C20A /* UserModel.swift in Sources */,
 				3EB97A5C2A6F6C750089C80B /* ThreeQuestionHigher.swift in Sources */,
 				3E46A4972A6EB95A0077EB2D /* StreakView.swift in Sources */,
-				3E987E5D2A68CA8F005FD9B0 /* habitBuilderView.swift in Sources */,
+				3E987E5D2A68CA8F005FD9B0 /* HabitBuilderView.swift in Sources */,
 				3E46A49D2A6F1D850077EB2D /* UserData.swift in Sources */,
 				A6EAB8CD2A7DABCA00B5AEBC /* ArticleView.swift in Sources */,
 				3EF9A5DD2A70A98F0095C20A /* LinkLess.swift in Sources */,
@@ -586,6 +581,7 @@
 				3E46A49F2A6F22510077EB2D /* ModelData.swift in Sources */,
 				A6EAB8CB2A7DA12500B5AEBC /* Article.swift in Sources */,
 				3E6EF4122A843C1A00333226 /* Measure.swift in Sources */,
+				3ED0F2DF2A910E4E008D0350 /* HabitViewModel.swift in Sources */,
 				A61058012A7C7EEC00C90E36 /* FirebaseManager.swift in Sources */,
 				3E4860902A6C86250074AC7C /* EmailView.swift in Sources */,
 				3E46A4952A6EAB5A0077EB2D /* ProfilePicture.swift in Sources */,

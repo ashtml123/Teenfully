@@ -85,7 +85,7 @@ struct HomeScreenView: View {
                 description: "Relearn your relationship with your phone.",
                 imageName: "HabitBuilderInside",
                 linkText: "Continue",
-                destination: habitBuilderView()
+                destination: HabitBuilderView()
             )
             .frame(maxWidth: .infinity, alignment: .leading)
             
