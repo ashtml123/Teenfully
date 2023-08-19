@@ -30,13 +30,14 @@
 		3EB97A512A6F579F0089C80B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A502A6F579F0089C80B /* HomeScreenView.swift */; };
 		3EB97A532A6F57FD0089C80B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A522A6F57FD0089C80B /* ContentView.swift */; };
 		3EB97A562A6F5ED80089C80B /* TwoQuestionYes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A552A6F5ED80089C80B /* TwoQuestionYes.swift */; };
-		3EB97A582A6F67200089C80B /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A572A6F67200089C80B /* Questions.swift */; };
+		3EB97A582A6F67200089C80B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A572A6F67200089C80B /* Question.swift */; };
 		3EB97A5A2A6F691E0089C80B /* dailyQuestionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EB97A592A6F691E0089C80B /* dailyQuestionData.json */; };
 		3EB97A5C2A6F6C750089C80B /* ThreeQuestionHigher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97A5B2A6F6C750089C80B /* ThreeQuestionHigher.swift */; };
 		3EC1A7592A6C0D51000C8690 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1A7582A6C0D51000C8690 /* SignInView.swift */; };
 		3ED0F2B72A904D0E008D0350 /* SuerveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F2B62A904D0E008D0350 /* SuerveyView.swift */; };
 		3ED0F2BD2A90527F008D0350 /* survey.json in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0F2BC2A90527F008D0350 /* survey.json */; };
 		3ED0F2BF2A905EF4008D0350 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F2BE2A905EF4008D0350 /* SharedData.swift */; };
+		3ED0F2C12A9062B1008D0350 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F2C02A9062B1008D0350 /* Questions.swift */; };
 		3EF5BF6B2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
 		3EF5BF6C2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
 		3EF5BF6D2A8A6F010030C026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */; };
@@ -136,13 +137,14 @@
 		3EB97A502A6F579F0089C80B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		3EB97A522A6F57FD0089C80B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3EB97A552A6F5ED80089C80B /* TwoQuestionYes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoQuestionYes.swift; sourceTree = "<group>"; };
-		3EB97A572A6F67200089C80B /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		3EB97A572A6F67200089C80B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		3EB97A592A6F691E0089C80B /* dailyQuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyQuestionData.json; sourceTree = "<group>"; };
 		3EB97A5B2A6F6C750089C80B /* ThreeQuestionHigher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionHigher.swift; sourceTree = "<group>"; };
 		3EC1A7582A6C0D51000C8690 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3ED0F2B62A904D0E008D0350 /* SuerveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuerveyView.swift; sourceTree = "<group>"; };
 		3ED0F2BC2A90527F008D0350 /* survey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = survey.json; sourceTree = "<group>"; };
 		3ED0F2BE2A905EF4008D0350 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		3ED0F2C02A9062B1008D0350 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		3EF5BF6A2A8A6F010030C026 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EF5BF6E2A8A76D90030C026 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		3EF5BF722A8A8EF90030C026 /* ThreeQuestionAgree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeQuestionAgree.swift; sourceTree = "<group>"; };
@@ -242,7 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				3E46A49C2A6F1D850077EB2D /* UserData.swift */,
-				3EB97A572A6F67200089C80B /* Questions.swift */,
+				3EB97A572A6F67200089C80B /* Question.swift */,
+				3ED0F2C02A9062B1008D0350 /* Questions.swift */,
 				3E46A49E2A6F22510077EB2D /* ModelData.swift */,
 				3EF9A5D22A700F280095C20A /* UserModel.swift */,
 				A6EAB8C62A7DA05E00B5AEBC /* Articles.swift */,
@@ -600,7 +603,8 @@
 				3E46A49A2A6EBDB10077EB2D /* ProfileInterface.swift in Sources */,
 				3E46A4922A6EA9B00077EB2D /* AccountTab.swift in Sources */,
 				A61057FF2A7C1F3400C90E36 /* SignUpView.swift in Sources */,
-				3EB97A582A6F67200089C80B /* Questions.swift in Sources */,
+				3EB97A582A6F67200089C80B /* Question.swift in Sources */,
+				3ED0F2C12A9062B1008D0350 /* Questions.swift in Sources */,
 				3E987E5F2A68CB46005FD9B0 /* meditateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
